@@ -7,13 +7,13 @@ import WordRotate from "./ui/word-rotate";
 export default function About() {
   return (
     <section className="text-left flex-col  space-y-13 ">
-      <div className="flex text-center mx-auto font-bold justify-center">
+      <div className="flex text-center mx-auto font-bold justify-center -mt-12 -mb-16">
         <WordRotate
-          className="text-9xl uppercase font-[800] text-white dark:text-white"
+          className="text-[11rem] uppercase font-[800] text-white dark:text-white"
           words={["ABOUT"]}
         />
         <WordRotate
-          className="text-9xl ml-2  uppercase font-[800] text-[#04F7A4] dark:text-white"
+          className="text-[11rem] ml-2  uppercase font-[800] text-[#04F7A4] dark:text-white"
           words={["ME"]}
         />
       </div>

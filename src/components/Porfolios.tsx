@@ -2,13 +2,22 @@ import React from "react";
 import Image from "next/image";
 import { languages } from "@/app/db/languages";
 import MySkills from "./MySkills";
+import WordRotate from "./ui/word-rotate";
 
 export default function Portfolios() {
   return (
     <section>
-      <h2 className="font-['Poppins'] font-[800] uppercase text-9xl text-center">
-        <span className="text-[#04F7A4]">my</span> <p>PORTFOLIOS</p>
-      </h2>
+      <div className="flex text-center mx-auto font-bold justify-center -mt-6 -mb-16">
+        <WordRotate
+          className="text-[9.6rem] uppercase font-[800] text-white dark:text-white"
+          words={["MY"]}
+        />
+        <WordRotate
+          className="text-[9.6rem] ml-2  uppercase font-[800] text-[#04F7A4] dark:text-white"
+          words={["PROJETS"]}
+        />
+      </div>
+
       <div className="">
         <div>
           <p className="text-3xl font-bold text-center mt-6">MY SKILLS</p>
