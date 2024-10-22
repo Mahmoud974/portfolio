@@ -5,11 +5,10 @@ import { FaFacebook } from "react-icons/fa6";
 
 export default function Profile() {
   return (
-    <div className=" ">
-      {" "}
-      {/* `sticky` avec `top-16` */}
-      <section className="bg-[#0f0f0f] h-max px-8 py-16 rounded-2xl relative overflow-visible mt-12">
-        <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 w-32 h-32 bg-red-900 rounded-full text-left"></div>
+    <div className="flex justify-end">
+      {/* Section de profil avec `sticky` */}
+      <section className="bg-[#0f0f0f] h-max px-8 py-16 rounded-2xl mt-16 overflow-visible sticky top-24">
+        <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 w-32 h-32 bg-[#04F7A4] rounded-full text-left"></div>
         <div className="flex flex-col items-center">
           <ul>
             <li className="text-5xl mb-4">
