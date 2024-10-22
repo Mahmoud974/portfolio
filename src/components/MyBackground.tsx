@@ -1,28 +1,9 @@
-import { Education, education } from "@/app/db/education"; // Importe aussi "experience" si tu as un fichier similaire
+import { Education, education } from "@/app/db/education";
 import React, { useState } from "react";
 import Image from "next/image";
 import WordRotate from "./ui/word-rotate";
-import { GraduationCap, Briefcase } from "lucide-react"; // Import des icônes
-
-// Fake data pour l'exemple, remplace avec tes données d'expérience
-const experience = [
-  {
-    title: "Développeur Front-end",
-    description: [
-      "Développement d'applications web avec React et Next.js",
-      "Optimisation des performances et accessibilité",
-      "Création de composants UI réutilisables",
-    ],
-  },
-  {
-    title: "Développeur Back-end",
-    description: [
-      "Conception et maintenance d'API REST",
-      "Gestion de bases de données relationnelles avec PostgreSQL",
-      "Mise en place d'authentification sécurisée avec JWT",
-    ],
-  },
-];
+import { GraduationCap, Briefcase } from "lucide-react";
+import { experience } from "@/app/db/experience";
 
 export default function MyBackground() {
   const [showEducation, setShowEducation] = useState(true);
@@ -44,7 +25,7 @@ export default function MyBackground() {
           id="background-heading"
           className="text-3xl font-bold text-center mt-6"
         >
-          {showEducation ? "EDUCATIONS" : "EXPERIENCE"}
+          {showEducation ? "EDUCATIONS" : "EXPERIENCES"}
         </h2>
         <div className="h-2 mt-2 w-20 bg-[#04F7A4] mx-auto relative"></div>
       </div>
@@ -52,7 +33,6 @@ export default function MyBackground() {
       {/* Toggle */}
       <div className="flex justify-center mt-6 items-center gap-2">
         <GraduationCap className="w-6 h-6 text-gray-500" aria-hidden="true" />
-
         <label className="relative inline-flex items-center cursor-pointer">
           <input
             type="checkbox"
@@ -65,21 +45,22 @@ export default function MyBackground() {
           />
           <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-black peer-checked:after:translate-x-full peer-checked:after:border-black after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-black after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#04F7A4]"></div>
         </label>
-
         <Briefcase className="w-6 h-6 text-gray-500" aria-hidden="true" />
       </div>
 
-      <Image
-        className="object-cover w-80 h-auto mt-12 flex justify-start"
-        src={`/images/ocs.png`}
-        alt={`Logo OpenClassrooms`}
-        width={1000}
-        height={1000}
-        priority
-      />
+      {showEducation && (
+        <Image
+          className="object-cover w-80 h-auto mt-7 flex justify-start -mb-5"
+          src={`/images/ocs.png`}
+          alt={`Logo OpenClassrooms`}
+          width={1000}
+          height={1000}
+          priority
+        />
+      )}
 
       {/* Liste dynamique : Education ou Expérience */}
-      <ul className="gap-5 mt-6 flex flex-col justify-center  o" role="list">
+      <ul className="gap-5 flex flex-col justify-center mt-8" role="list">
         {showEducation
           ? education.map((item: Education, index: number) => (
               <li key={index} role="listitem">
@@ -98,7 +79,21 @@ export default function MyBackground() {
           : experience.map((item, index) => (
               <li key={index} role="listitem">
                 <div className="flex flex-col">
-                  <h3 className="text-2xl my-2">{item.title}</h3>
+                  <h3 className="text-2xl   ">{item.title} </h3>
+                  <span className="  mb-3 text-gray-500 text-lg ">
+                    {item.role.join(", ")}
+                  </span>
+
+                  <ul className="flex gap-3 flex-wrap mb-3">
+                    {item.organization.map((tag, id) => (
+                      <li
+                        key={id}
+                        className="bg-emerald-950 text-[#04F7A4] rounded-full px-3 py-1"
+                      >
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
                   <ul>
                     {item.description?.map((description, index) => (
                       <li key={index} className="text-lg text-gray-600 w-5/6">
