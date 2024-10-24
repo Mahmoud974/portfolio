@@ -10,7 +10,7 @@ export default function MyBackground() {
 
   return (
     <section
-      className="justify-center flex flex-col"
+      className="justify-center flex flex-col "
       aria-labelledby="background-heading"
     >
       <div className="md:flex hidden text-center mx-auto font-bold justify-center -mt-6 -mb-16">
@@ -55,7 +55,7 @@ export default function MyBackground() {
 
       {showEducation && (
         <Image
-          className="object-cover w-80 h-auto mt-7 flex justify-start -mb-5"
+          className="object-cover w-80 h-auto mt-7 mx-auto flex justify-start -mb-5"
           src={`/images/ocs.png`}
           alt={`Logo OpenClassrooms`}
           width={1000}
@@ -69,13 +69,13 @@ export default function MyBackground() {
         {showEducation
           ? education.map((item: Education, index: number) => (
               <li key={index} role="listitem">
-                <div className="flex flex-col">
-                  <h3 className="text-2xl my-2">{item.title}</h3>
-                  <ul>
+                <div className="flex flex-col md:text-left   ">
+                  <h3 className="md:text-2xl text-lg my-2">{item.title}</h3>
+                  <ul className="">
                     {item.description?.map((description, index) => (
                       <li
                         key={index}
-                        className="md:text-lg text-md  text-gray-600 w-5/6"
+                        className="md:text-lg text-md  text-gray-600 md:w-5/6 "
                       >
                         {description}
                       </li>
@@ -87,8 +87,8 @@ export default function MyBackground() {
           : experience.map((item, index) => (
               <li key={index} role="listitem">
                 <div className="flex flex-col">
-                  <h3 className="text-2xl   ">{item.title} </h3>
-                  <span className="  mb-3 text-gray-500 text-lg ">
+                  <h3 className="text-2xl  font-bold  ">{item.title} </h3>
+                  <span className="  mb-3 text-white text-lg ">
                     {item.role.join(", ")}
                   </span>
 
@@ -96,7 +96,7 @@ export default function MyBackground() {
                     {item.organization.map((tag, id) => (
                       <li
                         key={id}
-                        className="bg-emerald-950 text-[#04F7A4] rounded-full px-3 py-1"
+                        className="bg-emerald-950 text-[#04F7A4] text-md rounded-full px-3 py-1"
                       >
                         {tag}
                       </li>
@@ -106,7 +106,7 @@ export default function MyBackground() {
                     {item.description?.map((description, index) => (
                       <li
                         key={index}
-                        className="md:text-lg text-md  text-gray-600 w-5/6"
+                        className="md:text-lg text-md  text-gray-600 md:w-5/6"
                       >
                         {description}
                       </li>

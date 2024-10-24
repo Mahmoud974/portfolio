@@ -1,7 +1,7 @@
 import React from "react";
-import { BsGithub } from "react-icons/bs";
-import { FaLinkedin } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa6";
+// import { BsGithub } from "react-icons/bs";
+// import { FaLinkedin } from "react-icons/fa";
+// import { FaFacebook } from "react-icons/fa6";
 import Image from "next/image";
 
 // Mini base de données pour les stacks
@@ -22,7 +22,7 @@ const stacks = [
 export default function Profile() {
   return (
     <div className="flex justify-end">
-      <section className="bg-[#0f0f0f] h-max  px-5  mx-auto py-16 rounded-2xl mt-16 overflow-visible sticky top-24">
+      <section className="bg-[#0f0f0f] h-max px-5  mx-auto py-16 rounded-2xl mt-16 overflow-visible sticky top-24">
         <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 w-32 h-32 bg-[#04F7A4] rounded-full text-left"></div>
         <div className="flex flex-col items-center">
           <ul>

@@ -14,7 +14,7 @@ export const portfolios: Portfolio[] = [
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
     image: "/path/to/spotify-profile-image1.png",
-    tags: ["React", "Express", "Spotify API", "Heroku"],
+    tags: ["React", "Express", "Spotify", "Heroku"],
     link: "https://example.com/spotify-profile",
   },
   {
@@ -23,7 +23,7 @@ export const portfolios: Portfolio[] = [
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
     image: "/path/to/spotify-profile-image2.png",
-    tags: ["React", "Express", "Spotify API", "Heroku"],
+    tags: ["React", "Express", "Spotify", "Heroku"],
     link: "https://example.com/spotify-profile-2",
   },
   {
@@ -32,7 +32,7 @@ export const portfolios: Portfolio[] = [
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
     image: "/path/to/car-profile-image.png",
-    tags: ["React", "Express", "Spotify API", "Heroku"],
+    tags: ["React", "Express", "Spotify ", "Heroku"],
     link: "https://example.com/car-profile",
   },
 ];
