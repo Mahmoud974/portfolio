@@ -6,64 +6,70 @@ import WordRotate from "./ui/word-rotate";
 
 export default function About() {
   return (
-    <section className="text-left flex-col  space-y-13 ">
-      <div className="flex text-center mx-auto font-bold justify-center -mt-12 -mb-16">
+    <section className="text-center flex-col items-center space-y-13">
+      <div className="md:flex hidden text-center mx-auto font-bold justify-center -mt-12 -mb-16">
         <WordRotate
           className="text-[11rem] uppercase font-[800] text-white dark:text-white"
           words={["ABOUT"]}
         />
         <WordRotate
-          className="text-[11rem] ml-2  uppercase font-[800] text-[#04F7A4] dark:text-white"
+          className="text-[11rem] ml-2 uppercase font-[800] text-[#04F7A4] dark:text-white"
           words={["ME"]}
         />
       </div>
+      <div>
+        <h1 className="md:hidden mt-8 text-6xl uppercase font-[800] text-white dark:text-white">
+          ABOUT ME
+        </h1>
+      </div>
 
       <div className="max-w-4xl ">
-        <p className="w-3/3 mt-4 text-3xl  text-left text-white ">
+        <p className="mt-4 md:text-3xl md:text-left text-white">
           Nemo design enim ipsam voluptatem quim voluptas sit aspernatur aut
           odit auting fugit sed thisnquia consequuntur magni dolores eos
           designer heresm qui ratione 💪
         </p>
-        <Button className="mx-auto my-6 bg-[#04F7A4]   px-12 py-6  rounded-none ">
-          <p className="text-xl text-black mr-2"> Télécharger CV</p>{" "}
+        <Button className="my-6 bg-[#04F7A4] px-12 py-6 rounded-none">
+          <p className="text-xl text-black mr-2">Télécharger CV</p>
           <AiOutlineDownload className="text-xl text-black" />
         </Button>
       </div>
-      <ul className="flex justify-start space-x-16 ">
-        <li className="flex flex-col text-7xl">
-          <div className="flex text-8xl">
+
+      <ul className="flex md:flex-row flex-col md:justify-start space-y-14 md:space-y-0 md:space-x-16 justify-center items-center">
+        <li className="flex flex-col items-center text-7xl">
+          <div className="flex items-center text-8xl">
             <span className="text-5xl font-[900] text-[#04F7A4]">+</span>
-            <NumberTicker value={20} className="text-white font-bold ml-2 " />
+            <NumberTicker value={20} className="text-white font-bold ml-2" />
           </div>
           <div className="flex items-start">
             <div className="bg-[#04F7A4] w-8 h-1 mt-3"></div>
-            <div className="text-3xl ml-2">
+            <div className="text-3xl ml-2 text-center">
               <p>PROJECTS</p>
               <p>COMPLETER</p>
             </div>
           </div>
         </li>
-        <li className="flex flex-col text-7xl">
-          <div className="flex text-8xl">
+        <li className="flex flex-col items-center text-7xl">
+          <div className="flex items-center text-8xl">
             <span className="text-5xl font-[900] text-[#04F7A4]">+</span>
-            <NumberTicker value={91} className="text-white font-bold ml-2 " />
+            <NumberTicker value={91} className="text-white font-bold ml-2" />
           </div>
           <div className="flex items-start">
             <div className="bg-[#04F7A4] w-8 h-1 mt-3"></div>
-            <div className="text-3xl ml-2">
+            <div className="text-3xl ml-2 text-center">
               <p>HAPPY</p>
               <p>CUSTOMERS</p>
             </div>
           </div>
         </li>
-        <li className="flex flex-col text-7xl">
-          <div className="flex text-8xl">
+        <li className="flex flex-col items-center text-7xl">
+          <div className="flex items-center text-8xl">
             <span className="text-5xl font-[900] text-[#04F7A4]">+</span>
-            <NumberTicker value={53} className="text-white font-bold ml-2 " />
+            <NumberTicker value={53} className="text-white font-bold ml-2" />
           </div>
           <div className="flex items-start">
             <div className="bg-[#04F7A4] w-8 h-1 mt-3"></div>
-            <div className="text-3xl ml-2">
+            <div className="text-3xl ml-2 text-center">
               <p>AWARDS</p>
               <p>WON</p>
             </div>

@@ -13,11 +13,16 @@ export default function MyBackground() {
       className="justify-center flex flex-col"
       aria-labelledby="background-heading"
     >
-      <div className="flex text-center mx-auto font-bold justify-center -mt-6 -mb-16">
+      <div className="md:flex hidden text-center mx-auto font-bold justify-center -mt-6 -mb-16">
         <WordRotate
           className="text-[8rem] uppercase font-[800] text-white dark:text-white"
           words={["BACKGROUND"]}
         />
+      </div>
+      <div>
+        <h1 className="md:hidden mt-8 text-5xl uppercase font-[800] text-white dark:text-white">
+          BACKGROUND
+        </h1>
       </div>
 
       <div>
@@ -68,7 +73,10 @@ export default function MyBackground() {
                   <h3 className="text-2xl my-2">{item.title}</h3>
                   <ul>
                     {item.description?.map((description, index) => (
-                      <li key={index} className="text-lg text-gray-600 w-5/6">
+                      <li
+                        key={index}
+                        className="md:text-lg text-md  text-gray-600 w-5/6"
+                      >
                         {description}
                       </li>
                     ))}
@@ -96,7 +104,10 @@ export default function MyBackground() {
                   </ul>
                   <ul>
                     {item.description?.map((description, index) => (
-                      <li key={index} className="text-lg text-gray-600 w-5/6">
+                      <li
+                        key={index}
+                        className="md:text-lg text-md  text-gray-600 w-5/6"
+                      >
                         {description}
                       </li>
                     ))}
