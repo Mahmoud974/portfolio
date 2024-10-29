@@ -10,28 +10,28 @@ export type Portfolio = {
 export const portfolios: Portfolio[] = [
   {
     id: 1,
-    title: "Spotify Profile",
+    title: "Les petits plats",
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    image: "/path/to/spotify-profile-image1.png",
-    tags: ["React", "Express", "Spotify", "Heroku"],
-    link: "https://example.com/spotify-profile",
+    image: "/images/portfolio/meals.png",
+    tags: ["Html", "Tailwindcss", "Javascript", "Netlify"],
+    link: "https://new-les-petits-plats.netlify.app/",
   },
   {
     id: 2,
-    title: "Spotify Profile",
+    title: "Product list with cart",
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    image: "/path/to/spotify-profile-image2.png",
-    tags: ["React", "Express", "Spotify", "Heroku"],
-    link: "https://example.com/spotify-profile-2",
+    image: "/images/portfolio/dessert.png",
+    tags: ["Nextjs", "Tailwindcss", "Shadcn/ui", "React-query", "Vercel"],
+    link: "https://product-cart-plum.vercel.app/",
   },
   {
     id: 3,
     title: "Car Profile",
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    image: "/path/to/car-profile-image.png",
+    image: "/images/portfolio/meals.png",
     tags: ["React", "Express", "Spotify ", "Heroku"],
     link: "https://example.com/car-profile",
   },
