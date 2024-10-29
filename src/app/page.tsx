@@ -5,10 +5,11 @@ import About from "@/components/About";
 import Porfolios from "@/components/Porfolios";
 import MyBackground from "@/components/MyBackground";
 import Contact from "@/components/Contact";
-
+import AnimatedCursor from "react-animated-cursor";
 export default function Home() {
   return (
     <>
+      <AnimatedCursor />
       <main className=" container  flex-col justify-center h-full mx-auto flex md:flex-row mt-12    ">
         <Profile />
 

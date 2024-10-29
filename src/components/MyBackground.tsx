@@ -55,7 +55,7 @@ export default function MyBackground() {
 
       {showEducation && (
         <Image
-          className="object-cover w-80 h-auto mt-7 mx-auto flex justify-start -mb-5"
+          className="object-cover w-80 h-auto mt-7 md:mx-0 mx-auto flex justify-start -mb-5"
           src={`/images/ocs.png`}
           alt={`Logo OpenClassrooms`}
           width={1000}
