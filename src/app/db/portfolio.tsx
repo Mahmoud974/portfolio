@@ -28,11 +28,18 @@ export const portfolios: Portfolio[] = [
   },
   {
     id: 3,
-    title: "Car Profile",
+    title: "Green Comores",
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    image: "/images/portfolio/meals.png",
-    tags: ["React", "Express", "Spotify ", "Heroku"],
+    image: "/images/portfolio/greencomores.png",
+    tags: [
+      "Nextjs",
+      "Three.js",
+      "Illustrator",
+      "Blender ",
+      "Tailwindcss",
+      "Emailjs",
+    ],
     link: "https://example.com/car-profile",
   },
 ];

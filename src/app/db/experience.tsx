@@ -9,7 +9,7 @@ export type Exp = {
 export const experience: Exp[] = [
   {
     id: 1,
-    title: "Green Comores  ",
+    title: "Green Comores",
     organization: ["Figma", "Nextjs", "SEO", "Emailjs", "Suite Adobe"],
     role: ["Développeur front-end", "Infographiste"],
     description: [
