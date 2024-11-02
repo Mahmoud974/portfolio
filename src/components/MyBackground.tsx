@@ -64,7 +64,6 @@ export default function MyBackground() {
         />
       )}
 
-      {/* Liste dynamique : Education ou Expérience */}
       <ul className="gap-5 flex flex-col justify-center mt-8" role="list">
         {showEducation
           ? education.map((item: Education, index: number) => (
