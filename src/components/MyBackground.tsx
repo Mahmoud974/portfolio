@@ -35,7 +35,6 @@ export default function MyBackground() {
         <div className="h-2 mt-2 w-20 bg-[#04F7A4] mx-auto relative"></div>
       </div>
 
-      {/* Toggle */}
       <div className="flex justify-center mt-6 items-center gap-2">
         <GraduationCap className="w-6 h-6 text-gray-500" aria-hidden="true" />
         <label className="relative inline-flex items-center cursor-pointer">
