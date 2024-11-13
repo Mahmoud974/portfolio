@@ -51,4 +51,13 @@ export const portfolios: Portfolio[] = [
     tags: ["Nextjs", "Typescript", "Tailwindcss", "Zod"],
     link: "https://tip-calculator-new.vercel.app/",
   },
+  {
+    id: 5,
+    title: "Noucia Adams",
+    description:
+      "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+    image: "/images/portfolio/noucia.png",
+    tags: ["Nextjs", "Typescript", "Tailwindcss", "Magic-Ui"],
+    link: "https://tip-calculator-new.vercel.app/",
+  },
 ];

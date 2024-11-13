@@ -68,10 +68,10 @@ export const languages: Languages[] = [
   },
   {
     id: 14,
-    tool: "Slack",
+    tool: "aws",
   },
   {
     id: 15,
-    tool: "VsCode",
+    tool: "angular",
   },
 ];

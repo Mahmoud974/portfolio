@@ -68,4 +68,15 @@ export const experience: Exp[] = [
       "- Assuré la cohérence visuelle à travers tous les supports et plateformes.",
     ],
   },
+  {
+    id: 6,
+    title: "Noucia Adams",
+    organization: ["Adobe Illustrator", "Adobe Photoshop"],
+    role: ["Infographiste", "Développeur front-end"],
+    description: [
+      "- Créé un logo original pour représenter l'identité visuelle de The Plank.",
+      "- Conçu les menus pour le fast-food, assurant une présentation claire et attrayante.",
+      "- Assuré la cohérence visuelle à travers tous les supports et plateformes.",
+    ],
+  },
 ];

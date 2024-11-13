@@ -36,7 +36,7 @@ export default function Portfolios() {
             >
               <Image
                 className="object-cover w-auto h-auto p-3"
-                src={`/images/${item.tool.toLowerCase()}.webp`}
+                src={`/images/${item.tool.toLowerCase()}.png`}
                 alt={item.tool.toUpperCase()}
                 width={1000}
                 height={1000}
