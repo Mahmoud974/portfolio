@@ -35,7 +35,7 @@ export default function Portfolios() {
               key={index}
             >
               <Image
-                className="object-cover w-auto h-auto p-3"
+                className="object-cover w-auto h-auto p-5"
                 src={`/images/${item.tool.toLowerCase()}.png`}
                 alt={item.tool.toUpperCase()}
                 width={1000}

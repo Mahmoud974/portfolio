@@ -38,7 +38,7 @@ export const languages: Languages[] = [
   },
   {
     id: 9,
-    tool: "Git",
+    tool: "Github",
   },
   {
     id: 10,
@@ -60,7 +60,7 @@ export const languages: Languages[] = [
 
   {
     id: 12,
-    tool: "Postman",
+    tool: "jest",
   },
   {
     id: 13,
