@@ -60,4 +60,22 @@ export const portfolios: Portfolio[] = [
     tags: ["Nextjs", "Typescript", "Tailwindcss", "Magic-Ui"],
     link: "https://tip-calculator-new.vercel.app/",
   },
+  {
+    id: 6,
+    title: "Sofachic",
+    description:
+      "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+    image: "/images/portfolio/sofachic.png",
+    tags: ["Nextjs", "Typescript", "Tailwindcss", "Zod"],
+    link: "https://tip-calculator-new.vercel.app/",
+  },
+  {
+    id: 7,
+    title: "crowdown",
+    description:
+      "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+    image: "/images/portfolio/crowdown.png",
+    tags: ["Angular", "AWS EC2", "Tailwindcss", "DailyUi"],
+    link: "https://tip-calculator-new.vercel.app/",
+  },
 ];

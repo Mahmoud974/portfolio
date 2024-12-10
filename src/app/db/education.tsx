@@ -7,19 +7,6 @@ export type Education = {
 
 export const education: Education[] = [
   {
-    id: 0,
-    title: "Expert en développement logiciel, RNCP niveau VII  (bac +5)",
-    organization: "OpenClassrooms",
-    description: [
-      "- Concevoir et développer des interfaces utilisateurs avec React",
-      "- Collaborer avec des designers pour traduire des maquettes en applications fonctionnelles",
-      "- Optimiser les applications pour maximiser leur vitesse et leur efficacité",
-      "- Intégrer des données provenant de diverses sources back-end et bases de données",
-      "- Assurer la maintenance et la mise à jour des applications existantes",
-    ],
-  },
-
-  {
     id: 1,
     title: "Développeur concepteur logiciel, RNCP niveau VI  (bac +3/4)",
     organization: "OpenClassrooms",
