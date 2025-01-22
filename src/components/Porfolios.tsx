@@ -31,7 +31,7 @@ export default function Portfolios() {
         <div className=" flex flex-wrap sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-5 mt-12 justify-center items-center mx-auto">
           {languages.map((item, index) => (
             <div
-              className="bg-[#fff] h-24 w-24 flex items-center  justify-center rounded-xl"
+              className="bg-[#fff] h-24 w-24 flex   items-center  justify-center rounded-xl"
               key={index}
             >
               <Image

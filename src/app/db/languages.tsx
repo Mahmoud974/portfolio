@@ -45,8 +45,8 @@ export const languages: Languages[] = [
     tool: "Wordpress",
   },
   {
-    id: 11,
-    tool: "Python",
+    id: 13,
+    tool: "Docker",
   },
 
   {
@@ -55,7 +55,11 @@ export const languages: Languages[] = [
   },
   {
     id: 13,
-    tool: "NPM",
+    tool: "Illustrator",
+  },
+  {
+    id: 16,
+    tool: "Photoshop",
   },
 
   {
@@ -63,9 +67,10 @@ export const languages: Languages[] = [
     tool: "jest",
   },
   {
-    id: 13,
-    tool: "Docker",
+    id: 11,
+    tool: "terraform",
   },
+
   {
     id: 14,
     tool: "aws",
@@ -73,5 +78,9 @@ export const languages: Languages[] = [
   {
     id: 15,
     tool: "angular",
+  },
+  {
+    id: 16,
+    tool: "slack",
   },
 ];

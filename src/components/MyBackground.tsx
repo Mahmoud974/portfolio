@@ -94,7 +94,7 @@ export default function MyBackground() {
               ))}
           </ul>
           <Image
-            className="object-cover w-64 h-auto mt-7  "
+            className="object-cover w-64 h-auto mt-7 -ml-1  "
             src={`/images/ocs.png`}
             alt="Logo OpenClassrooms"
             width={1000}

@@ -34,18 +34,17 @@ export const experience: Exp[] = [
     ],
   },
   {
-    id: 3,
-    title: "NTKL Clothing",
-    organization: ["Figma", "WordPress", "SEO", "Suite Adobe"],
-    role: ["Développeur Wordpress", "Infographiste"],
+    id: 4,
+    title: "RS deliv",
+    organization: ["Figma", "Next.js", "SEO", "Email.js"],
+    role: ["Développeur Front-end"],
     description: [
-      "- Créé un logo original pour représenter l'identité visuelle de NTKL Clothing.",
-      "- Conçu des maquettes pour des t-shirts, des survêtements et des casquettes.",
-      "- Développé une interface pour les réseaux sociaux Facebook et Instagram.",
-      "- Créé un site e-commerce avec WordPress, en mettant en place un système de paiement fonctionnel.",
+      "- Créé un logo original pour représenter l'identité visuelle de Manuscrit Graphisme.",
+      "- Réalisé l'interface avec les portfolios et un formulaire de contact.",
       "- Assuré la cohérence visuelle à travers tous les supports et plateformes.",
     ],
   },
+
   {
     id: 4,
     title: "Manuscrit Graphisme",
@@ -79,4 +78,21 @@ export const experience: Exp[] = [
       "- Assuré la cohérence visuelle à travers tous les supports et plateformes.",
     ],
   },
+  // {
+  //   id: 6,
+  //   title: "Photobooth NH",
+  //   organization: [
+  //     "Adobe Illustrator",
+  //     "Adobe Photoshop",
+  //     "Figma",
+  //     "Next.js",
+  //     "Tailwindcss",
+  //   ],
+  //   role: ["Infographiste", "Développeur front-end"],
+  //   description: [
+  //     "- Créé un logo original pour représenter l'identité visuelle de The Plank.",
+  //     "- Conçu les menus pour le fast-food, assurant une présentation claire et attrayante.",
+  //     "- Assuré la cohérence visuelle à travers tous les supports et plateformes.",
+  //   ],
+  // },
 ];
