@@ -9,6 +9,18 @@ export type Education = {
 export const education: Education[] = [
   {
     id: 5,
+    title: "AWS Certified Solutions Architect - Associate",
+    organization: "Amazon Web Services (AWS)",
+    description: [
+      "- Développer des applications cloud sur AWS",
+      "- Utiliser les services AWS pour implémenter des solutions serverless",
+      "- Apprendre à dépanner et à surveiller des applications sur AWS",
+    ],
+    logo: "/images/aws-logo.png",
+  },
+
+  {
+    id: 5,
     title: "AWS Certified Developer - Associate",
     organization: "Amazon Web Services (AWS)",
     description: [
@@ -16,7 +28,7 @@ export const education: Education[] = [
       "- Utiliser les services AWS pour implémenter des solutions serverless",
       "- Apprendre à dépanner et à surveiller des applications sur AWS",
     ],
-    logo: "/images/aws-logo.png", // Lien vers le logo AWS Developer Associate
+    logo: "/images/aws-logo.png",
   },
   {
     id: 4,
@@ -27,7 +39,7 @@ export const education: Education[] = [
       "- Gérer les ressources AWS et les solutions basées sur AWS",
       "- Apprendre à sécuriser et à conformer les environnements cloud sur AWS",
     ],
-    logo: "/images/aws-logo.png", // Lien vers le logo AWS Cloud Practitioner
+    logo: "/images/aws-logo.png",
   },
 
   {
@@ -41,7 +53,7 @@ export const education: Education[] = [
       "- Intégrer des données provenant de diverses sources back-end et bases de données",
       "- Assurer la maintenance et la mise à jour des applications existantes",
     ],
-    logo: "/images/ocs.png", // Lien vers le logo OpenClassrooms
+    logo: "/images/ocs.png",
   },
   {
     id: 2,
@@ -53,7 +65,7 @@ export const education: Education[] = [
       "- Optimiser les performances et l’accessibilité de sites web existants pour permettre leur fonctionnement optimal et une bonne visibilité sur les moteurs de recherche (SEO)",
       "- Gérer un projet web de A à Z : de la planification du projet à la présentation de la solution au client, en passant par la rédaction des spécifications techniques",
     ],
-    logo: "/images/ocs.png", // Lien vers le logo OpenClassrooms
+    logo: "/images/ocs.png",
   },
   {
     id: 3,
@@ -66,6 +78,6 @@ export const education: Education[] = [
       "- Améliorer le référencement d'un site web",
       "- Assurer la compatibilité avec les différents navigateurs du marché ainsi que les appareils mobiles",
     ],
-    logo: "/images/ocs.png", // Lien vers le logo OpenClassrooms
+    logo: "/images/ocs.png",
   },
 ];

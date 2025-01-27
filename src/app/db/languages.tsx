@@ -77,10 +77,15 @@ export const languages: Languages[] = [
   },
   {
     id: 15,
-    tool: "angular",
+    tool: "gitlab",
   },
   {
     id: 16,
     tool: "slack",
+  },
+
+  {
+    id: 16,
+    tool: "Kubernetes",
   },
 ];

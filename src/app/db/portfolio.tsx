@@ -14,8 +14,8 @@ export const portfolios: Portfolio[] = [
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
     image: "/images/portfolio/meals.png",
-    tags: ["Html", "Tailwindcss", "Javascript", "Netlify"],
-    link: "https://new-les-petits-plats.netlify.app/",
+    tags: ["HTML", "Tailwindcss", "JS Vanilla", "AWS S3", "AWS Cloudfront"],
+    link: "https://d3udmvfw6yelnx.cloudfront.net/Les_petits_plats_project-master/index.html",
   },
   {
     id: 2,
