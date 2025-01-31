@@ -27,7 +27,7 @@ export default function About() {
         <p className="mt-4 md:text-3xl md:text-left text-white">
           Nemo design enim ipsam voluptatem quim voluptas sit aspernatur aut
           odit auting fugit sed thisnquia consequuntur magni dolores eos
-          designer heresm qui ratione 💪
+          designer heresm qui rationessss 💪
         </p>
         <Button className="my-6 bg-[#04F7A4] px-12 py-6 rounded-none">
           <p className="text-xl text-black mr-2">Télécharger CV</p>
