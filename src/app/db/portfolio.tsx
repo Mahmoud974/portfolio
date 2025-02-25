@@ -71,10 +71,10 @@ export const portfolios: Portfolio[] = [
   },
   {
     id: 7,
-    title: "crowdown",
+    title: "Website plombier",
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    image: "/images/portfolio/crowdown.png",
+    image: "/images/portfolio/plombeer.png",
     tags: ["Angular", "AWS EC2", "Tailwindcss", "DailyUi"],
     link: "https://tip-calculator-new.vercel.app/",
   },
