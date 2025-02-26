@@ -58,8 +58,8 @@ export const experience: Exp[] = [
   },
   {
     id: 5,
-    title: "The Plank",
-    organization: ["Adobe Illustrator", "Adobe Photoshop"],
+    title: "SVB PRESTA",
+    organization: ["Figma", "Adobe Photoshop"],
     role: ["Infographiste"],
     description: [
       "- Créé un logo original pour représenter l'identité visuelle de The Plank.",

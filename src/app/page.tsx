@@ -14,6 +14,7 @@ export default function Home() {
 
         <section className="max-w-4xl justify-center flex flex-col md:ml-16 md:px-0 px-12 cursor-pointer">
           <About />
+
           <Porfolios />
           <MyBackground />
           <Contact />
