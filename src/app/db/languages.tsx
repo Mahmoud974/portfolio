@@ -54,11 +54,11 @@ export const languages: Languages[] = [
   },
   {
     id: 13,
-    tool: "illustrator",
+    tool: "ansible",
   },
   {
     id: 14,
-    tool: "photoshop",
+    tool: "python",
   },
   {
     id: 15,

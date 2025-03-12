@@ -64,6 +64,36 @@ export default function MyBackground() {
         <>
           <Image
             className="object-cover w-24 h-auto mt-7  "
+            src={`/images/k8s.png`}
+            alt="k8s"
+            width={1000}
+            height={1000}
+            priority
+          />
+          <ul className="gap-5 flex flex-col justify-center mt-3" role="list">
+            {education
+              .filter((item) => item.organization === "K8S")
+              .map((item, index) => (
+                <li key={index} role="listitem">
+                  <div className="flex flex-col md:text-left">
+                    <h3 className="md:text-2xl text-lg my-2">{item.title}</h3>
+                    <ul>
+                      {item.description?.map((desc, idx) => (
+                        <li
+                          key={idx}
+                          className="md:text-lg text-md text-gray-600 md:w-5/6"
+                        >
+                          {desc}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </li>
+              ))}
+          </ul>
+
+          <Image
+            className="object-cover w-24 h-auto mt-7  "
             src={`/images/awslogo.png`}
             alt="Logo AWS"
             width={1000}

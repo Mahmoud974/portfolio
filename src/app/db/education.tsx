@@ -3,12 +3,23 @@ export type Education = {
   title: string;
   organization: string;
   description: string[] | undefined;
-  logo?: string; // Ajout du champ pour le logo
+  logo?: string;
 };
 
 export const education: Education[] = [
   {
-    id: 5,
+    id: 7,
+    title: "Certified Kubernetes Administrator (CKA)",
+    organization: "K8S",
+    description: [
+      "- Développer des applications cloud sur AWS",
+      "- Utiliser les services AWS pour implémenter des solutions serverless",
+      "- Apprendre à dépanner et à surveiller des applications sur AWS",
+    ],
+    logo: "/images/k8s.png",
+  },
+  {
+    id: 6,
     title: "AWS Certified Solutions Architect - Associate",
     organization: "Amazon Web Services (AWS)",
     description: [
