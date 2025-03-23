@@ -19,7 +19,7 @@ export const portfolios: Portfolio[] = [
   },
   {
     id: 2,
-    title: "Product list with cart",
+    title: "Dashboard Trackly",
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
     image: "/images/portfolio/dashboard.png",
@@ -35,7 +35,7 @@ export const portfolios: Portfolio[] = [
   },
   {
     id: 2,
-    title: "Dashboard Trackly",
+    title: "Product list with cart ",
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
     image: "/images/portfolio/dessert.png",
@@ -92,7 +92,16 @@ export const portfolios: Portfolio[] = [
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
     image: "/images/portfolio/comments.png",
-    tags: ["Next.js front & back", "Typescript", "Zod", "zustand", "aws lex"],
+    tags: ["React.js", "Typescript", "Zod", "Tailwindcss"],
+    link: "https://tip-calculator-new.vercel.app/",
+  },
+  {
+    id: 8,
+    title: "Interactive commentaires",
+    description:
+      "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+    image: "/images/portfolio/smartfix.png",
+    tags: ["React.js", "Typescript", "Zod", "Tailwindcss"],
     link: "https://tip-calculator-new.vercel.app/",
   },
 ];
