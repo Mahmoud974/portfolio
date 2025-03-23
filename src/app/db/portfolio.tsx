@@ -14,7 +14,7 @@ export const portfolios: Portfolio[] = [
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
     image: "/images/portfolio/meals.png",
-    tags: ["HTML", "Tailwindcss", "JS Vanilla", "AWS S3", "AWS Cloudfront"],
+    tags: ["tailwindcss", "js vanilla", "gitlab", "aws s3", "aws cloudfront"],
     link: "https://d3udmvfw6yelnx.cloudfront.net/Les_petits_plats_project-master/index.html",
   },
   {
@@ -22,60 +22,77 @@ export const portfolios: Portfolio[] = [
     title: "Product list with cart",
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    image: "/images/portfolio/dessert.png",
-    tags: ["Nextjs", "Tailwindcss", "Shadcn/ui", "React-query", "Vercel"],
+    image: "/images/portfolio/dashboard.png",
+    tags: [
+      "next.js",
+      "amplify",
+      "aws cognito",
+      "aws iam",
+      "cloudwatch",
+      "aws x-ray",
+    ],
     link: "https://product-cart-plum.vercel.app/",
   },
   {
-    id: 3,
-    title: "Green Comores",
+    id: 2,
+    title: "Dashboard Trackly",
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    image: "/images/portfolio/greencomores.png",
+    image: "/images/portfolio/dessert.png",
     tags: [
-      "Nextjs",
-      "Three.js",
-      "Illustrator",
-      "Blender ",
-      "Tailwindcss",
-      "Emailjs",
+      "React.js",
+      "tailwindcss",
+      "api gateway",
+      "lambda",
+      "cloudwatch",
+      "amplify",
     ],
-    link: "https://example.com/car-profile",
+    link: "https://product-cart-plum.vercel.app/",
   },
+
   {
     id: 4,
     title: "Static job",
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
     image: "/images/portfolio/static-job.png",
-    tags: ["Nextjs", "Typescript", "Tailwindcss", "Zod"],
+    tags: ["Next.js", "Typescript", "Docker", "Kubernetes", "EKS"],
     link: "https://tip-calculator-new.vercel.app/",
   },
   {
     id: 5,
-    title: "Noucia Adams",
+    title: "Ticket generator",
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    image: "/images/portfolio/noucia.png",
-    tags: ["Nextjs", "Typescript", "Tailwindcss", "Magic-Ui"],
+    image: "/images/portfolio/ticket.png",
+    tags: [
+      "React.js",
+      "Typescript",
+      "EmailJS",
+      "Docker",
+      "api gateway",
+      "lambda",
+      "SQS",
+    ],
     link: "https://tip-calculator-new.vercel.app/",
   },
+
   {
     id: 6,
     title: "Sofachic",
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
     image: "/images/portfolio/sofachic.png",
-    tags: ["Nextjs", "Typescript", "Tailwindcss", "Zod"],
+    tags: ["Next.js front & back", "Typescript", "Zod", "zustand", "aws lex"],
     link: "https://tip-calculator-new.vercel.app/",
   },
   {
     id: 7,
-    title: "Website plombier",
+    title: "Interactive commentaires",
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    image: "/images/portfolio/plombeer.png",
-    tags: ["Angular", "AWS EC2", "Tailwindcss", "DailyUi"],
+    image: "/images/portfolio/comments.png",
+    tags: ["Next.js front & back", "Typescript", "Zod", "zustand", "aws lex"],
     link: "https://tip-calculator-new.vercel.app/",
   },
 ];

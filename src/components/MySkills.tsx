@@ -37,11 +37,11 @@ export default function MySkills() {
         ))}
       </div>
       <div>
-        <ul className="md:mt-12 flex flex-col items-center">
+        <ul className="md:mt-12 space-y-12  flex flex-col items-center">
           {currentItems.map((item: Portfolio, index: number) => (
             <li
               key={index}
-              className="mx-auto  flex  md:flex-row flex-col items-center md:gap-6 mb-10 md:mb-0 md:mt-0 mt-12 justify-center"
+              className="mx-auto  flex md:flex-row flex-col  md:gap-6 mb-10 md:mb-0 md:mt-0 mt-12 justify-center"
             >
               <div>
                 <Link
@@ -50,7 +50,7 @@ export default function MySkills() {
                   rel="noopener noreferrer"
                 >
                   <Image
-                    className="object-cover h-40 md:mb-12 mb-3"
+                    className="object-cover h-48  "
                     src={item.image}
                     alt={item.title}
                     width={1000}
@@ -62,11 +62,11 @@ export default function MySkills() {
               <div className="flex md:flex-col flex-col-reverse">
                 <p className="md:text-xl text-3xl font-bold">{item.title}</p>
                 <p className="w-3/3 text-md">{item.description}</p>
-                <ul className="flex flex-wrap  gap-3 lg:-mb-7 md:-mb-0">
+                <ul className="flex flex-wrap  gap-3   md:-mb-0">
                   {item.tags.map((tag: string, tagIndex: number) => (
                     <li
                       key={tagIndex}
-                      className="bg-emerald-950  text-[#04F7A4] md:mt-3 l   rounded-full px-3 py-1 text-md"
+                      className="bg-emerald-950 mt-2  text-[#04F7A4]     rounded-full px-3 py-1 text-md"
                     >
                       {tag}
                     </li>
