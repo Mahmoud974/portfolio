@@ -2,8 +2,9 @@ import { education } from "@/app/db/education";
 import React, { useState } from "react";
 import Image from "next/image";
 import WordRotate from "./ui/word-rotate";
-import { GraduationCap, Briefcase } from "lucide-react";
+import { GraduationCap, Briefcase, Globe } from "lucide-react";
 import { experience } from "@/app/db/experience";
+import { FaBehance } from "react-icons/fa";
 
 export default function MyBackground() {
   const [showEducation, setShowEducation] = useState(true);
@@ -159,7 +160,13 @@ export default function MyBackground() {
           {experience.map((item, index) => (
             <li key={index} role="listitem">
               <div className="flex flex-col">
-                <h3 className="text-2xl font-bold">{item.title}</h3>
+                <h3 className="text-2xl font-bold flex items-center ">
+                  {item.title}
+                  <div className=" ml-1 text-[#04F7A4] flex items-center gap-2">
+                    <Globe />
+                    <FaBehance className="text-3xl" />
+                  </div>
+                </h3>
                 <span className="mb-3 text-white text-lg">
                   {item.role.join(", ")}
                 </span>

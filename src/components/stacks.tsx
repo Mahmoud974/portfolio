@@ -7,37 +7,37 @@ const people = [
     id: 1,
     name: "Next.js",
     designation: "Next.js",
-    image: "/images/nextjs.png",
+    image: "/images/nextjs.webp",
   },
   {
     id: 2,
     name: "TypeScript",
     designation: "Product Manager",
-    image: "/images/typescript.png",
+    image: "/images/typescript.webp",
   },
   {
     id: 3,
     name: "Prisma",
     designation: "Prisma",
-    image: "/images/prisma.png",
+    image: "/images/prisma.webp",
   },
   {
     id: 4,
     name: "NextAuth",
     designation: "NextAuth",
-    image: "/images/nextauth.png",
+    image: "/images/nextauth.webp",
   },
   {
     id: 5,
     name: "PostgreSQL",
     designation: "PostgreSQL",
-    image: "/images/Postgresql.svg",
+    image: "/images/postgres.webp",
   },
   {
     id: 6,
     name: "Tailwindcss",
     designation: "Tailwindcss",
-    image: "/images/tailwindcss.png",
+    image: "/images/tailwindcss.webp",
   },
 ];
 
