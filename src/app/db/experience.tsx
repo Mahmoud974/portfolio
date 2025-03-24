@@ -30,6 +30,7 @@ export const experience: Exp[] = [
     title: "Manuscrit Graphisme",
     organization: [
       "figma",
+      "route 53",
       "next.js",
       "node.js",
       "mongodb",

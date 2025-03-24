@@ -82,6 +82,6 @@ export const languages: Languages[] = [
   },
   {
     id: 20,
-    tool: "kubernetes",
+    tool: "k8s1",
   },
 ];

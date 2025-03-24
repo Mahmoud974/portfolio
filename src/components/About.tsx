@@ -24,18 +24,18 @@ export default function About() {
       </div>
 
       <div className="max-w-4xl ">
-        <p className="mt-4 md:text-3xl md:text-left text-white">
+        <p className="mt-4    md:text-3xl md:text-left text-white">
           Nemo design enim ipsam voluptatem quim voluptas sit aspernatur aut
           odit auting fugit sed thisnquia consequuntur magni dolores eos
           designer heresm qui rationessss 💪
         </p>
-        <Button className="my-6 bg-[#04F7A4] px-12 py-6 rounded-none">
+        <Button className="my-6 bg-[#04F7A4] px-12 py-6  rounded-none">
           <p className="text-xl text-black mr-2">Télécharger CV</p>
           <AiOutlineDownload className="text-xl text-black" />
         </Button>
       </div>
 
-      <ul className="flex md:flex-row flex-col md:justify-start space-y-14 md:space-y-0 md:space-x-16 justify-center items-center">
+      <ul className="flex md:flex-row flex-col md:justify-between space-y-14 md:space-y-0 md:space-x-16 justify-center items-center">
         <li className="flex flex-col items-center text-7xl">
           <div className="flex items-center text-8xl">
             <span className="text-5xl font-[900] text-[#04F7A4]">+</span>
@@ -43,7 +43,7 @@ export default function About() {
           </div>
           <div className="flex items-start">
             <div className="bg-[#04F7A4] w-8 h-1 mt-3"></div>
-            <div className="text-3xl ml-2 text-center">
+            <div className="text-3xl ml-2 text-left">
               <p>PROJECTS</p>
               <p>COMPLETER</p>
             </div>
@@ -52,26 +52,26 @@ export default function About() {
         <li className="flex flex-col items-center text-7xl">
           <div className="flex items-center text-8xl">
             <span className="text-5xl font-[900] text-[#04F7A4]">+</span>
-            <NumberTicker value={91} className="text-white font-bold ml-2" />
+            <NumberTicker value={100} className="text-white font-bold ml-2" />
           </div>
           <div className="flex items-start">
             <div className="bg-[#04F7A4] w-8 h-1 mt-3"></div>
-            <div className="text-3xl ml-2 text-center">
-              <p>HAPPY</p>
-              <p>CUSTOMERS</p>
+            <div className="text-3xl ml-2  text-left">
+              <p>LIGNES DE</p>
+              <p>CODE ÉCRITES</p>
             </div>
           </div>
         </li>
         <li className="flex flex-col items-center text-7xl">
           <div className="flex items-center text-8xl">
             <span className="text-5xl font-[900] text-[#04F7A4]">+</span>
-            <NumberTicker value={53} className="text-white font-bold ml-2" />
+            <NumberTicker value={7} className="text-white font-bold ml-2" />
           </div>
           <div className="flex items-start">
             <div className="bg-[#04F7A4] w-8 h-1 mt-3"></div>
-            <div className="text-3xl ml-2 text-center">
-              <p>AWARDS</p>
-              <p>WON</p>
+            <div className="text-3xl ml-2  text-left">
+              <p>CAFÉS</p>
+              <p>PAR SEMAINE</p>
             </div>
           </div>
         </li>

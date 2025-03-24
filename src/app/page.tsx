@@ -2,9 +2,11 @@
 import React from "react";
 import Profile from "@/components/ui/Profile";
 import About from "@/components/About";
-import Porfolios from "@/components/Porfolios";
+
 import MyBackground from "@/components/MyBackground";
 import Contact from "@/components/Contact";
+import Projets from "@/components/Projets";
+import Technos from "@/components/MySkills";
 
 export default function Home() {
   return (
@@ -14,8 +16,11 @@ export default function Home() {
 
         <section className="max-w-4xl justify-center flex flex-col md:ml-16 md:px-0 px-12 cursor-pointer">
           <About />
+          <Projets />
 
-          <Porfolios />
+          <Technos />
+
+          {/* <Porfolios /> */}
           <MyBackground />
           <Contact />
         </section>

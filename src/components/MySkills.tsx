@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function MySkills() {
+export default function Technos() {
   const [currentPage, setCurrentPage] = useState(0); // Initialiser la page courante à 0
   const itemsPerPage = 3;
 
@@ -18,7 +18,7 @@ export default function MySkills() {
 
   return (
     <>
-      <p className="text-3xl font-bold text-center mt-6">PROJECTS</p>
+      <p className="text-3xl font-bold text-center mt-6">PROJETS</p>
       <div className="h-2 mt-2 w-20 bg-[#04F7A4] mx-auto left-8 relative"></div>
       {/* Pagination controls */}
       <div className="flex justify-center gap-2 mt-6 mb-12">

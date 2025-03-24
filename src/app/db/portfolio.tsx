@@ -13,7 +13,7 @@ export const portfolios: portfolios[] = [
     title: "Les petits plats",
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    image: "/images/portfolios/meals.png",
+    image: "/images/portfolios/meals.webp",
     tags: ["tailwindcss", "js vanilla", "gitlab", "aws s3", "aws cloudfront"],
     link: "https://d3udmvfw6yelnx.cloudfront.net/Les_petits_plats_project-master/index.html",
   },
@@ -22,7 +22,7 @@ export const portfolios: portfolios[] = [
     title: "Dashboard Trackly",
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    image: "/images/portfolios/dashboard.png",
+    image: "/images/portfolios/dashboard.webp",
     tags: [
       "next.js",
       "amplify",
@@ -38,7 +38,7 @@ export const portfolios: portfolios[] = [
     title: "Product list with cart ",
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    image: "/images/portfolios/dessert.png",
+    image: "/images/portfolios/dessert.webp",
     tags: [
       "React.js",
       "tailwindcss",
@@ -55,7 +55,7 @@ export const portfolios: portfolios[] = [
     title: "Static job",
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    image: "/images/portfolios/static-job.png",
+    image: "/images/portfolios/static-job.webp",
     tags: ["Next.js", "Typescript", "Docker", "Kubernetes", "EKS"],
     link: "https://tip-calculator-new.vercel.app/",
   },
@@ -64,7 +64,7 @@ export const portfolios: portfolios[] = [
     title: "Ticket generator",
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    image: "/images/portfolios/ticket.png",
+    image: "/images/portfolios/ticket.webp",
     tags: [
       "React.js",
       "Typescript",
@@ -82,7 +82,7 @@ export const portfolios: portfolios[] = [
     title: "Sofachic",
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    image: "/images/portfolios/sofachic.png",
+    image: "/images/portfolios/sofachic.webp",
     tags: ["Next.js front & back", "Typescript", "Zod", "zustand", "aws lex"],
     link: "https://tip-calculator-new.vercel.app/",
   },
@@ -91,7 +91,7 @@ export const portfolios: portfolios[] = [
     title: "Interactive commentaires",
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    image: "/images/portfolios/comments.png",
+    image: "/images/portfolios/comments.webp",
     tags: ["React.js", "Typescript", "Zod", "Tailwindcss"],
     link: "https://tip-calculator-new.vercel.app/",
   },
@@ -100,7 +100,7 @@ export const portfolios: portfolios[] = [
     title: "Interactive commentaires",
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    image: "/images/portfolios/smartfix.png",
+    image: "/images/portfolios/smartfix.webp",
     tags: ["React.js", "Typescript", "Zod", "Tailwindcss"],
     link: "https://tip-calculator-new.vercel.app/",
   },

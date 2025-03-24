@@ -18,7 +18,7 @@ export default function Profile() {
           <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 w-32 h-32 bg-[#04F7A4] rounded-full flex justify-center items-center">
             <Image
               className="object-cover rounded-full w-full h-full mt-1"
-              src={`/images/md.png`}
+              src={`/images/md.webp`}
               alt="photo profil"
               width={900}
               height={900}

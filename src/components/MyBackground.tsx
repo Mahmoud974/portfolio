@@ -65,7 +65,7 @@ export default function MyBackground() {
         <>
           <Image
             className="object-cover w-24 h-auto mt-7  "
-            src={`/images/k8s.png`}
+            src={`/images/k8s.webp`}
             alt="k8s"
             width={1000}
             height={1000}
@@ -95,7 +95,7 @@ export default function MyBackground() {
 
           <Image
             className="object-cover w-24 h-auto mt-7  "
-            src={`/images/awslogo.png`}
+            src={`/images/awslogo.webp`}
             alt="Logo AWS"
             width={1000}
             height={1000}
@@ -126,7 +126,7 @@ export default function MyBackground() {
           </ul>
           <Image
             className="object-cover w-64 h-auto mt-7 -ml-1  "
-            src={`/images/ocs.png`}
+            src={`/images/ocs.webp`}
             alt="Logo OpenClassrooms"
             width={1000}
             height={1000}

@@ -8,7 +8,7 @@ export default function error() {
   return (
     <main className="flex flex-col h-screen items-center justify-center">
       <Image
-        src={`/images/error.png`}
+        src={`/images/error.webp`}
         width={900}
         height={900}
         className="w-96"
