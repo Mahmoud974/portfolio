@@ -1,4 +1,4 @@
-import { portfolios, Portfolio } from "@/app/db/portfolio";
+import { portfolios } from "@/app/db/portfolio";
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -38,7 +38,7 @@ export default function Technos() {
       </div>
       <div>
         <ul className="md:mt-12 space-y-12  flex flex-col items-center">
-          {currentItems.map((item: Portfolio, index: number) => (
+          {currentItems.map((item: any, index: number) => (
             <li
               key={index}
               className="mx-auto  flex md:flex-row flex-col  md:gap-6 mb-10 md:mb-0 md:mt-0 mt-12 justify-center"
