@@ -83,7 +83,16 @@ export const portfolios: portfolios[] = [
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
     image: "/images/portfolios/sofachic.webp",
-    tags: ["Next.js front & back", "Typescript", "Zod", "zustand", "aws lex"],
+    tags: [
+      "next.js front & back",
+      "typescript",
+      "zod",
+      "zustand",
+      "aws lex",
+      "docker",
+      "k8s",
+      "jest",
+    ],
     link: "https://tip-calculator-new.vercel.app/",
   },
   {

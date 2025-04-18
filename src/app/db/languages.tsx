@@ -42,7 +42,7 @@ export const languages: Languages[] = [
   },
   {
     id: 10,
-    tool: "Wordpress",
+    tool: "linux",
   },
   {
     id: 11,
@@ -78,7 +78,7 @@ export const languages: Languages[] = [
   },
   {
     id: 19,
-    tool: "slack",
+    tool: "nginx",
   },
   {
     id: 20,
