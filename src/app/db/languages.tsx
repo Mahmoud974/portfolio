@@ -28,10 +28,7 @@ export const languages: Languages[] = [
     id: 6,
     tool: "Postgres",
   },
-  {
-    id: 7,
-    tool: "Mongodb",
-  },
+
   {
     id: 8,
     tool: "Typescript",
@@ -62,8 +59,9 @@ export const languages: Languages[] = [
   },
   {
     id: 15,
-    tool: "jest",
+    tool: "n8n",
   },
+
   {
     id: 16,
     tool: "terraform",
@@ -76,12 +74,13 @@ export const languages: Languages[] = [
     id: 18,
     tool: "gitlab",
   },
-  {
-    id: 19,
-    tool: "nginx",
-  },
+
   {
     id: 20,
     tool: "k8s1",
+  },
+  {
+    id: 20,
+    tool: "jira",
   },
 ];
