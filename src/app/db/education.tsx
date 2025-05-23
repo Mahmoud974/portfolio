@@ -30,17 +30,17 @@ export const education: Education[] = [
     logo: "/images/aws-logo.webp",
   },
 
-  {
-    id: 5,
-    title: "AWS Certified Developer - Associate",
-    organization: "Amazon Web Services (AWS)",
-    description: [
-      "- Développer des applications cloud sur AWS",
-      "- Utiliser les services AWS pour implémenter des solutions serverless",
-      "- Apprendre à dépanner et à surveiller des applications sur AWS",
-    ],
-    logo: "/images/aws-logo.webp",
-  },
+  // {
+  //   id: 5,
+  //   title: "AWS Certified Developer - Associate",
+  //   organization: "Amazon Web Services (AWS)",
+  //   description: [
+  //     "- Développer des applications cloud sur AWS",
+  //     "- Utiliser les services AWS pour implémenter des solutions serverless",
+  //     "- Apprendre à dépanner et à surveiller des applications sur AWS",
+  //   ],
+  //   logo: "/images/aws-logo.webp",
+  // },
   {
     id: 4,
     title: "AWS Certified Cloud Practitioner",

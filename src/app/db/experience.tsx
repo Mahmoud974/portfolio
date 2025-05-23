@@ -8,24 +8,6 @@ export type Exp = {
 
 export const experience: Exp[] = [
   {
-    id: 7,
-    title: "Associate jeunes sportifs",
-    organization: [
-      "next.js",
-      "figma",
-      "illustrator & photoshop",
-      "tailwindcss",
-      "typescript",
-      "emailjs",
-    ],
-    role: ["Infographiste", "Développeur front-end"],
-    description: [
-      "- Créé un logo original pour représenter l'identité visuelle de The Plank.",
-      "- Conçu les menus pour le fast-food, assurant une présentation claire et attrayante.",
-      "- Assuré la cohérence visuelle à travers tous les supports et plateformes.",
-    ],
-  },
-  {
     id: 4,
     title: "Manuscrit Graphisme",
     organization: [
@@ -77,17 +59,6 @@ export const experience: Exp[] = [
     title: "SVB PRESTA",
     organization: ["Figma", "Adobe Photoshop"],
     role: ["Infographiste"],
-    description: [
-      "- Créé un logo original pour représenter l'identité visuelle de The Plank.",
-      "- Conçu les menus pour le fast-food, assurant une présentation claire et attrayante.",
-      "- Assuré la cohérence visuelle à travers tous les supports et plateformes.",
-    ],
-  },
-  {
-    id: 6,
-    title: "Noucia Adams",
-    organization: ["Adobe Illustrator", "Adobe Photoshop"],
-    role: ["Infographiste", "Développeur front-end"],
     description: [
       "- Créé un logo original pour représenter l'identité visuelle de The Plank.",
       "- Conçu les menus pour le fast-food, assurant une présentation claire et attrayante.",
