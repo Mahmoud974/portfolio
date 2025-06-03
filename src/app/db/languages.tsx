@@ -39,7 +39,7 @@ export const languages: Languages[] = [
   },
   {
     id: 10,
-    tool: "linux",
+    tool: "elasticsearch",
   },
   {
     id: 11,
@@ -47,7 +47,7 @@ export const languages: Languages[] = [
   },
   {
     id: 12,
-    tool: "React",
+    tool: "prometeus",
   },
   {
     id: 13,
@@ -81,6 +81,10 @@ export const languages: Languages[] = [
   },
   {
     id: 20,
-    tool: "jira",
+    tool: "redis",
+  },
+  {
+    id: 20,
+    tool: "nginx",
   },
 ];
