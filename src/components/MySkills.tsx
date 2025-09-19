@@ -4,40 +4,25 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Technos() {
-  const [currentPage, setCurrentPage] = useState(0); // Initialiser la page courante à 0
+  const [currentPage, setCurrentPage] = useState(0);  
   const itemsPerPage = 3;
 
-  // Calculer les items à afficher pour la page courante
+  
   const currentItems = portfolios.slice(
     currentPage * itemsPerPage,
     currentPage * itemsPerPage + itemsPerPage
   );
 
-  // Calculer le nombre de pages
+ 
   const totalPages = Math.ceil(portfolios.length / itemsPerPage);
 
   return (
     <>
       <p className="text-3xl font-bold text-center mt-6">PROJETS</p>
       <div className="h-2 mt-2 w-20 bg-[#04F7A4] mx-auto left-8 relative"></div>
-      {/* Pagination controls */}
-      <div className="flex justify-center gap-2 mt-6 mb-12">
-        {Array.from({ length: totalPages }, (_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentPage(index)}
-            className={`px-4 py-2 rounded ${
-              index === currentPage
-                ? "bg-emerald-950 text-[#04F7A4]"
-                : "bg-[#1c6d52]"
-            }`}
-          >
-            {index + 1}
-          </button>
-        ))}
-      </div>
+     
       <div>
-        <ul className="md:mt-12 space-y-12  flex flex-col items-center">
+        <ul className="md:mt-9 space-y-12  flex flex-col items-center">
           {currentItems.map((item: any, index: number) => (
             <li
               key={index}
@@ -76,6 +61,22 @@ export default function Technos() {
             </li>
           ))}
         </ul>
+         {/* Pagination controls */}
+      <div className="flex justify-center gap-2 mt-10 mb-12">
+        {Array.from({ length: totalPages }, (_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentPage(index)}
+            className={`px-4 py-2 rounded ${
+              index === currentPage
+                ? "bg-emerald-950 text-[#04F7A4]"
+                : "bg-[#1c6d52]"
+            }`}
+          >
+            {index + 1}
+          </button>
+        ))}
+      </div>
       </div>
     </>
   );

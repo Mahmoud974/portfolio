@@ -63,14 +63,7 @@ export default function MyBackground() {
       {/* Contenu conditionnel basé sur showEducation */}
       {showEducation && (
         <>
-          <Image
-            className="object-cover w-24 h-auto mt-7  "
-            src={`/images/k8s.webp`}
-            alt="k8s"
-            width={1000}
-            height={1000}
-            priority
-          />
+         
           <ul className="gap-5 flex flex-col justify-center mt-3" role="list">
             {education
               .filter((item) => item.organization === "K8S")

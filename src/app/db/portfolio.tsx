@@ -8,21 +8,13 @@ export type portfolios = {
 };
 
 export const portfolios: portfolios[] = [
-  {
-    id: 1,
-    title: "Les petits plats",
-    description:
-      "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    image: "/images/portfolios/meals.webp",
-    tags: ["tailwindcss", "js vanilla", "gitlab", "aws s3", "aws cloudfront"],
-    link: "https://d3udmvfw6yelnx.cloudfront.net/Les_petits_plats_project-master/index.html",
-  },
+ 
   {
     id: 2,
-    title: "Dashboard Trackly",
+    title: "RS deliv",
     description:
       "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    image: "/images/portfolios/dashboard.webp",
+    image: "/images/portfolios/rsdeliv.webp",
     tags: [
       "next.js",
       "amplify",
@@ -90,7 +82,7 @@ export const portfolios: portfolios[] = [
       "zustand",
       "aws lex",
       "docker",
-      "k8s",
+      
       "jest",
     ],
     link: "https://tip-calculator-new.vercel.app/",
@@ -103,5 +95,23 @@ export const portfolios: portfolios[] = [
     image: "/images/portfolios/comments.webp",
     tags: ["React.js", "Typescript", "Zod", "Tailwindcss"],
     link: "https://tip-calculator-new.vercel.app/",
+  },
+  {
+    id: 1,
+    title: "SVB PRESTA",
+    description:
+      "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+    image: "/images/portfolios/svb.webp",
+    tags: ["tailwindcss", "js vanilla", "gitlab", "aws s3", "aws cloudfront"],
+    link: "https://d3udmvfw6yelnx.cloudfront.net/Les_petits_plats_project-master/index.html",
+  },
+  {
+    id: 7,
+    title: "Les petits plats",
+    description:
+      "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+    image: "/images/portfolios/meals.webp",
+    tags: ["tailwindcss", "js vanilla", "gitlab", "aws s3", "aws cloudfront"],
+    link: "https://d3udmvfw6yelnx.cloudfront.net/Les_petits_plats_project-master/index.html",
   },
 ];

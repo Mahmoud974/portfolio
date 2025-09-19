@@ -8,11 +8,11 @@ export default function Projets() {
     <section>
       <div className="md:flex hidden text-center mx-auto font-bold justify-center -mt-6 -mb-16">
         <WordRotate
-          className="text-[9.6rem] uppercase font-[800] text-white dark:text-white"
+          className="text-[9.2rem] uppercase font-[800] text-white dark:text-white"
           words={["MY"]}
         />
         <WordRotate
-          className="text-[9.6rem] ml-2  uppercase font-[800] text-[#04F7A4] dark:text-white"
+          className="text-[9.2rem] ml-2  uppercase font-[800] text-[#04F7A4] dark:text-white"
           words={["PROJETS"]}
         />
       </div>

@@ -38,25 +38,20 @@ export const languages: Languages[] = [
     tool: "Github",
   },
   {
-    id: 10,
-    tool: "elasticsearch",
+    id: 20,
+    tool: "prestashop",
   },
+ 
   {
     id: 11,
     tool: "Docker",
   },
-  {
-    id: 12,
-    tool: "prometeus",
-  },
-  {
-    id: 13,
-    tool: "ansible",
-  },
-  {
-    id: 14,
-    tool: "python",
-  },
+  // {
+  //   id: 12,
+  //   tool: "prometeus",
+  // },
+ 
+  
   {
     id: 15,
     tool: "n8n",
@@ -79,12 +74,14 @@ export const languages: Languages[] = [
     id: 20,
     tool: "k8s1",
   },
-  {
-    id: 20,
-    tool: "redis",
-  },
+  
   {
     id: 20,
     tool: "nginx",
   },
+  {
+    id: 20,
+    tool: "wordpress",
+  },
+ 
 ];

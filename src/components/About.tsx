@@ -3,6 +3,7 @@ import { AiOutlineDownload } from "react-icons/ai";
 import { Button } from "./ui/button";
 import NumberTicker from "./ui/number-ticker";
 import WordRotate from "./ui/word-rotate";
+import { CheckCircle2 } from "lucide-react";
 
 export default function About() {
   return (
@@ -24,19 +25,41 @@ export default function About() {
       </div>
 
       <div className="max-w-4xl ">
-        <p className="mt-4    md:text-3xl md:text-left text-white">
-          Nemo design enim ipsam voluptatem quim voluptas sit aspernatur aut
-          odit auting fugit sed thisnquia consequuntur magni dolores eos
-          designer heresm qui rationessss 💪
-        </p>
-        <Button className="my-6 bg-[#04F7A4] px-12 py-6  rounded-none">
-          <p className="text-xl text-black mr-2">Télécharger CV</p>
-          <AiOutlineDownload className="text-xl text-black" />
-        </Button>
+      <p className="mt-4 md:text-3xl md:text-left text-white">
+  Architecte cloud & développeur front-end passionné, je conçois des applications 
+  modernes et sécurisées. Mon objectif: allier performance, design et scalabilité 
+  pour offrir des expériences utilisateurs innovantes et fiables ☁️✨
+      </p>
+      
+      <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-white/90">
+            <li className="flex items-center gap-2">
+              <CheckCircle2 className="mt-1 text-[#04F7A4]" />
+              <span>Infra cloud fiable (AWS, Terraform, Kubernetes)</span>
+            </li>
+            <li className="flex  items-center gap-2">
+              <CheckCircle2 className="mt-1 text-[#04F7A4]" />
+              <span>Front-end moderne (React/Next.js, UI/UX)</span>
+            </li>
+            <li className="flex  items-center gap-2">
+              <CheckCircle2 className="mt-1 text-[#04F7A4]" />
+              <span>CI/CD et observabilité (GitLab CI, Grafana)</span>
+            </li>
+            <li className="flex  items-center gap-2">
+              <CheckCircle2 className="mt-1 text-[#04F7A4]" />
+              <span>Sécurité & performance by design</span>
+            </li>
+          </ul>
+          <div className="flex justify-start">
+  <Button className="my-6 bg-[#04F7A4] px-12 py-6 rounded-none">
+    <p className="text-xl text-black mr-2">Télécharger CV</p>
+    <AiOutlineDownload className="text-xl text-black" />
+  </Button>
+</div>
+      
       </div>
-
-      <ul className="flex md:flex-row flex-col md:justify-between space-y-14 md:space-y-0 md:space-x-16 justify-center items-center">
-        <li className="flex flex-col items-center text-7xl">
+    
+      <ul className="flex md:flex-row mt-4 flex-col md:justify-between space-y-14 md:space-y-0 md:space-x-16 justify-center items-center">
+        <li className="flex flex-col items-start text-7xl">
           <div className="flex items-center text-8xl">
             <span className="text-5xl font-[900] text-[#04F7A4]">+</span>
             <NumberTicker value={20} className="text-white font-bold ml-2" />
@@ -49,7 +72,7 @@ export default function About() {
             </div>
           </div>
         </li>
-        <li className="flex flex-col items-center text-7xl">
+        <li className="flex flex-col items-start text-7xl">
           <div className="flex items-center text-8xl">
             <span className="text-5xl font-[900] text-[#04F7A4]">+</span>
             <NumberTicker value={100} className="text-white font-bold ml-2" />
@@ -62,7 +85,7 @@ export default function About() {
             </div>
           </div>
         </li>
-        <li className="flex flex-col items-center text-7xl">
+        <li className="flex flex-col items-start text-7xl">
           <div className="flex items-center text-8xl">
             <span className="text-5xl font-[900] text-[#04F7A4]">+</span>
             <NumberTicker value={7} className="text-white font-bold ml-2" />
@@ -76,6 +99,8 @@ export default function About() {
           </div>
         </li>
       </ul>
+      
+      
     </section>
   );
 }

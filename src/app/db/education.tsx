@@ -7,17 +7,7 @@ export type Education = {
 };
 
 export const education: Education[] = [
-  {
-    id: 7,
-    title: "Certified Kubernetes Administrator (CKA)",
-    organization: "K8S",
-    description: [
-      "- Développer des applications cloud sur AWS",
-      "- Utiliser les services AWS pour implémenter des solutions serverless",
-      "- Apprendre à dépanner et à surveiller des applications sur AWS",
-    ],
-    logo: "/images/k8s.webp",
-  },
+   
   {
     id: 6,
     title: "AWS Certified Solutions Architect - Associate",
@@ -29,18 +19,7 @@ export const education: Education[] = [
     ],
     logo: "/images/aws-logo.webp",
   },
-
-  // {
-  //   id: 5,
-  //   title: "AWS Certified Developer - Associate",
-  //   organization: "Amazon Web Services (AWS)",
-  //   description: [
-  //     "- Développer des applications cloud sur AWS",
-  //     "- Utiliser les services AWS pour implémenter des solutions serverless",
-  //     "- Apprendre à dépanner et à surveiller des applications sur AWS",
-  //   ],
-  //   logo: "/images/aws-logo.webp",
-  // },
+ 
   {
     id: 4,
     title: "AWS Certified Cloud Practitioner",
@@ -78,17 +57,5 @@ export const education: Education[] = [
     ],
     logo: "/images/ocs.webp",
   },
-  {
-    id: 3,
-    title: "Intégrateur web (Prépa)",
-    organization: "OpenClassrooms",
-    description: [
-      "- Assembler les pages en HTML5 et CSS3 à partir de maquettes graphiques",
-      "- Respecter les normes d'accessibilité et de référencement (W3C)",
-      "- Mettre en œuvre des effets CSS avancés pour dynamiser les pages",
-      "- Améliorer le référencement d'un site web",
-      "- Assurer la compatibilité avec les différents navigateurs du marché ainsi que les appareils mobiles",
-    ],
-    logo: "/images/ocs.webp",
-  },
+ 
 ];
