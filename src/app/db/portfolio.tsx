@@ -114,4 +114,13 @@ export const portfolios: portfolios[] = [
     tags: ["tailwindcss", "js vanilla", "gitlab", "aws s3", "aws cloudfront"],
     link: "https://d3udmvfw6yelnx.cloudfront.net/Les_petits_plats_project-master/index.html",
   },
+  {
+    id: 10,
+    title: "GreenComores",
+    description:
+      "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+    image: "/images/portfolios/greencomores.png",
+    tags: ["tailwindcss", "js vanilla", "gitlab", "aws s3", "aws cloudfront"],
+    link: "https://d3udmvfw6yelnx.cloudfront.net/Les_petits_plats_project-master/index.html",
+  },
 ];
