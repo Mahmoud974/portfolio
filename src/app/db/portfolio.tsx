@@ -1,124 +1,119 @@
-export type portfolios = {
+export type Portfolio = {
   id: number;
   title: string;
-  description: string;
+  description: string[]; // toujours un tableau
   image: string;
   tags: string[];
   link: string;
 };
 
-export const portfolios: portfolios[] = [
- 
+export const portfolios: Portfolio[] = [
   {
-    id: 2,
-    title: "RS deliv",
-    description:
-      "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+    id: 1,
+    title: "RS Deliv",
+    description: [
+      "Front-end Next.js avec shadcn/ui",
+      "Pipeline GitLab CI/CD → build, tests, audit SEO, déploiement infra/app.",
+      "Infra AWS: EC2 (ASG) derrière ELB, servi via CloudFront (cache, TLS, compression).",
+    ],
     image: "/images/portfolios/rsdeliv.webp",
     tags: [
-      "next.js",
-      "amplify",
-      "aws cognito",
-      "aws iam",
-      "cloudwatch",
-      "aws x-ray",
+      "Next.js",
+      "emailjs",
+      "shadcn/ui",
+      "gitlab",
+      "Terraform",
+      "cloudfront",
+      "elb",
+      "asg",
+      "ec2",
+      "lambda",
     ],
     link: "https://product-cart-plum.vercel.app/",
   },
   {
     id: 2,
-    title: "Product list with cart ",
-    description:
-      "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    image: "/images/portfolios/dessert.webp",
-    tags: [
-      "React.js",
-      "tailwindcss",
-      "api gateway",
-      "lambda",
-      "cloudwatch",
-      "amplify",
+    title: "Product list with cart",
+    description: [
+      "Application e-commerce simple avec gestion du panier.",
+      "Backend serverless AWS (API Gateway + Lambda + CloudWatch).",
     ],
+    image: "/images/portfolios/dessert.webp",
+    tags: ["React.js", "tailwindcss", "api gateway", "lambda", "cloudwatch", "amplify"],
     link: "https://product-cart-plum.vercel.app/",
   },
-
   {
-    id: 4,
+    id: 3,
     title: "Static job",
-    description:
-      "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+    description: [
+      "Déploiement d’une app containerisée avec Docker.",
+      "Orchestrée sur Kubernetes (EKS).",
+    ],
     image: "/images/portfolios/static-job.webp",
     tags: ["Next.js", "Typescript", "Docker", "Kubernetes", "EKS"],
     link: "https://tip-calculator-new.vercel.app/",
   },
   {
-    id: 5,
+    id: 4,
     title: "Ticket generator",
-    description:
-      "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    image: "/images/portfolios/ticket.webp",
-    tags: [
-      "React.js",
-      "Typescript",
-      "EmailJS",
-      "Docker",
-      "api gateway",
-      "lambda",
-      "SQS",
+    description: [
+      "Application pour générer et envoyer des tickets personnalisés.",
+      "Envoi d’emails via EmailJS + AWS (Lambda, SQS).",
     ],
+    image: "/images/portfolios/ticket.webp",
+    tags: ["React.js", "Typescript", "EmailJS", "Docker", "api gateway", "lambda", "SQS"],
     link: "https://tip-calculator-new.vercel.app/",
   },
-
+  {
+    id: 5,
+    title: "Sofachic",
+    description: [
+      "E-commerce spécialisé avec filtres avancés et gestion du panier.",
+      "Chatbot AWS Lex et tests unitaires Jest.",
+    ],
+    image: "/images/portfolios/sofachic.webp",
+    tags: ["next.js front & back", "typescript", "zod", "zustand", "aws lex", "docker", "jest"],
+    link: "https://tip-calculator-new.vercel.app/",
+  },
   {
     id: 6,
-    title: "Sofachic",
-    description:
-      "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
-    image: "/images/portfolios/sofachic.webp",
-    tags: [
-      "next.js front & back",
-      "typescript",
-      "zod",
-      "zustand",
-      "aws lex",
-      "docker",
-      
-      "jest",
-    ],
-    link: "https://tip-calculator-new.vercel.app/",
-  },
-  {
-    id: 7,
     title: "Interactive commentaires",
-    description:
-      "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+    description: [
+      "Application React/TS permettant d’ajouter, modifier et supprimer des commentaires.",
+    ],
     image: "/images/portfolios/comments.webp",
     tags: ["React.js", "Typescript", "Zod", "Tailwindcss"],
     link: "https://tip-calculator-new.vercel.app/",
   },
   {
-    id: 1,
+    id: 7,
     title: "SVB PRESTA",
-    description:
-      "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+    description: [
+      "Site vitrine statique avec hébergement S3 + CloudFront.",
+      "Pipeline CI/CD via GitLab.",
+    ],
     image: "/images/portfolios/svb.webp",
     tags: ["tailwindcss", "js vanilla", "gitlab", "aws s3", "aws cloudfront"],
     link: "https://d3udmvfw6yelnx.cloudfront.net/Les_petits_plats_project-master/index.html",
   },
   {
-    id: 7,
+    id: 8,
     title: "Les petits plats",
-    description:
-      "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+    description: [
+      "Application de recherche de recettes.",
+      "Optimisation d’algorithmes en JavaScript Vanilla.",
+    ],
     image: "/images/portfolios/meals.webp",
     tags: ["tailwindcss", "js vanilla", "gitlab", "aws s3", "aws cloudfront"],
     link: "https://d3udmvfw6yelnx.cloudfront.net/Les_petits_plats_project-master/index.html",
   },
   {
-    id: 10,
+    id: 9,
     title: "GreenComores",
-    description:
-      "Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+    description: [
+      "Site écologique hébergé sur AWS (S3 + CloudFront).",
+      "CI/CD avec GitLab.",
+    ],
     image: "/images/portfolios/greencomores.png",
     tags: ["tailwindcss", "js vanilla", "gitlab", "aws s3", "aws cloudfront"],
     link: "https://d3udmvfw6yelnx.cloudfront.net/Les_petits_plats_project-master/index.html",

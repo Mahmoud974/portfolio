@@ -31,15 +31,17 @@ export const experience: Exp[] = [
   },
   {
     id: 4,
-    title: "RS deliv",
-    organization: ["Figma", "Next.js", "SEO", "Email.js"],
-    role: ["Développeur Front-end"],
+    title: "RS Deliv",
+    organization: ["Next.js", "SEO", "shadcn/ui", "GitLab", "Terraform", "AWS (CloudFront, ELB, ASG EC2)"],
+    role: ["Développeur Full-stack"],
     description: [
-      "- Créé un logo original pour représenter l'identité visuelle de Manuscrit Graphisme.",
-      "- Réalisé l'interface avec les portfolios et un formulaire de contact.",
-      "- Assuré la cohérence visuelle à travers tous les supports et plateformes.",
+      "- Conception et développement d’une application vitrine pour une société de transport & logistique.",
+      "- Intégration d’un formulaire de contact, d’une FAQ et de la mise en avant des offres de location.",
+      "- Optimisation SEO (métadonnées, sitemap, balisage) et performances front.",
+      "- Déploiement scalable sur AWS avec infrastructure automatisée via Terraform et pipeline GitLab CI/CD.",
     ],
   },
+  
   {
     id: 1,
     title: "Green Comores",

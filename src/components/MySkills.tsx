@@ -4,79 +4,104 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Technos() {
-  const [currentPage, setCurrentPage] = useState(0);  
+  const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 3;
 
-  
+  const totalPages = Math.ceil(portfolios.length / itemsPerPage);
   const currentItems = portfolios.slice(
     currentPage * itemsPerPage,
     currentPage * itemsPerPage + itemsPerPage
   );
 
- 
-  const totalPages = Math.ceil(portfolios.length / itemsPerPage);
-
   return (
     <>
-      <p className="text-3xl font-bold text-center mt-6">PROJETS</p>
-      <div className="h-2 mt-2 w-20 bg-[#04F7A4] mx-auto left-8 relative"></div>
-     
-      <div>
-        <ul className="md:mt-9 space-y-12  flex flex-col items-center">
-          {currentItems.map((item: any, index: number) => (
-            <li
-              key={index}
-              className="mx-auto  flex md:flex-row flex-col  md:gap-6 mb-10 md:mb-0 md:mt-0 mt-12 justify-center"
-            >
-              <div>
-                <Link
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    className="object-cover h-48  "
-                    src={item.image}
-                    alt={item.title}
-                    width={1000}
-                    height={1000}
-                    priority
-                  />
-                </Link>
-              </div>
-              <div className="flex md:flex-col flex-col-reverse">
-                <p className="md:text-xl text-3xl font-bold">{item.title}</p>
-                <p className="w-3/3 text-md">{item.description}</p>
-                <ul className="flex flex-wrap  gap-3   md:-mb-0">
-                  {item.tags.map((tag: string, tagIndex: number) => (
+      <h2 className="text-3xl font-extrabold text-center mt-8 tracking-tight">
+        PROJETS
+      </h2>
+      <div className="h-1.5 mt-3 w-24 bg-[#04F7A4] mx-auto rounded-full" />
+
+      <ul className="mt-10 space-y-8">
+        {currentItems.map((item) => (
+          <li
+            key={item.id}
+            className="mx-auto w-full h-auto max-w-5xl overflow-hidden rounded-2xl bg-[#0a1714] ring-1 ring-emerald-900/30 shadow-lg hover:shadow-emerald-600/20 transition-shadow"
+          >
+            <div className="md:flex">
+              
+              <Link
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block md:w-2/5"
+              >
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  width={1200}
+                  height={800}
+                  priority
+                  className="h-56 w-full object-cover md:h-full"
+                />
+              </Link>
+
+              {/* Content */}
+              <div className="md:w-3/5 p-5 md:p-6 flex flex-col gap-4">
+              {/* Title */}
+              <h3 className="text-xl md:text-2xl font-bold">{item.title}</h3>
+                <ul className="flex flex-wrap gap-1">
+                  {item.tags.map((tag, i) => (
                     <li
-                      key={tagIndex}
-                      className="bg-emerald-950 mt-2  text-[#04F7A4]     rounded-full px-3 py-1 text-md"
+                      key={i}
+                      className="rounded-full bg-emerald-950/70 text-[#04F7A4] px-3 py-1 text-xs md:text-sm"
                     >
                       {tag}
                     </li>
                   ))}
                 </ul>
+
+               
+
+                {/* Description (list) */}
+                <ul className="list-disc pl-5 text-sm md:text-base leading-relaxed text-neutral-200 space-y-1">
+                  {item.description.map((line, i) => (
+                    <li key={i}>{line}</li>
+                  ))}
+                </ul>
+
+                {/* CTA */}
+                <div className="pt-2">
+                  <Link
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl bg-[#04F7A4] px-4 py-2 text-sm font-semibold text-emerald-950 hover:brightness-95 active:translate-y-[1px] transition"
+                  >
+                    Voir le projet
+                    <span aria-hidden>↗</span>
+                  </Link>
+                </div>
               </div>
-            </li>
-          ))}
-        </ul>
-         {/* Pagination controls */}
+            </div>
+          </li>
+        ))}
+      </ul>
+
+      {/* Pagination */}
       <div className="flex justify-center gap-2 mt-10 mb-12">
-        {Array.from({ length: totalPages }, (_, index) => (
+        {Array.from({ length: totalPages }, (_, i) => (
           <button
-            key={index}
-            onClick={() => setCurrentPage(index)}
-            className={`px-4 py-2 rounded ${
-              index === currentPage
-                ? "bg-emerald-950 text-[#04F7A4]"
-                : "bg-[#1c6d52]"
-            }`}
+            key={i}
+            onClick={() => setCurrentPage(i)}
+            className={`h-9 min-w-9 px-3 rounded-full text-sm font-medium transition
+              ${i === currentPage
+                ? "bg-emerald-950 text-[#04F7A4] ring-1 ring-emerald-700"
+                : "bg-[#153c31] text-emerald-100 hover:bg-[#1a4a3c]"
+              }`}
+            aria-current={i === currentPage ? "page" : undefined}
           >
-            {index + 1}
+            {i + 1}
           </button>
         ))}
-      </div>
       </div>
     </>
   );
