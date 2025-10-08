@@ -92,7 +92,7 @@ export default function Technos() {
           <button
             key={i}
             onClick={() => setCurrentPage(i)}
-            className={`h-9 min-w-9 px-3 rounded-full text-sm font-medium transition
+            className={`h-9 min-w-9 px-3 rounded-full text-sm font-medium transition cursor-pointer
               ${i === currentPage
                 ? "bg-emerald-950 text-[#04F7A4] ring-1 ring-emerald-700"
                 : "bg-[#153c31] text-emerald-100 hover:bg-[#1a4a3c]"
