@@ -13,7 +13,7 @@ export default function MyBackground() {
       className="justify-center flex flex-col"
       aria-labelledby="background-heading"
     >
-      {/* Section de titre avec animation pour les grands écrans */}
+      
       <div className="md:flex hidden text-center mx-auto font-bold justify-center -mt-6 -mb-16">
         <WordRotate
           className="text-[8rem] uppercase font-[800] text-white dark:text-white"
@@ -21,14 +21,14 @@ export default function MyBackground() {
         />
       </div>
 
-      {/* Titre pour les petits écrans */}
+      
       <div>
         <h1 className="md:hidden mt-8 text-5xl uppercase font-[800] text-white dark:text-white">
           BACKGROUND
         </h1>
       </div>
 
-      {/* Sous-titre et ligne décorative */}
+ 
       <div>
         <h2
           id="background-heading"
@@ -38,8 +38,7 @@ export default function MyBackground() {
         </h2>
         <div className="h-2 mt-2 w-20 bg-[#04F7A4] mx-auto"></div>
       </div>
-
-      {/* Commutateur entre éducation et expérience */}
+ 
       <div className="flex justify-center mt-6 items-center gap-2">
         <GraduationCap className="w-6 h-6 text-gray-500" aria-hidden="true" />
         <label className="relative inline-flex items-center cursor-pointer">

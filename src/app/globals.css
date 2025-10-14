@@ -171,15 +171,15 @@ body {
  
 body {
   position: relative;
-  background-color: #000;  
+  background-color: #00000;  
   color: white;
   font-family: "Poppins", "Montserrat";
   overflow-x: hidden;
 
    
   background-image:
-    linear-gradient(to right, rgba(0, 255, 120, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 255, 120, 0.02) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 255, 120, 0.08) 0.1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 255, 120, 0.08) 0.1px, transparent 1px);
   background-size: 60px 60px;
   background-attachment: fixed;
   z-index: 0;
@@ -188,19 +188,5 @@ body {
 
  
  
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-  background:
-    radial-gradient(circle at 10% center, rgba(0, 255, 120, 0.1), transparent 70%),
-    radial-gradient(circle at 90% center, rgba(0, 255, 120, 0.1), transparent 70%);
-  filter: blur(120px);
-  opacity: 0.5;
-  animation: greenFlow 8s ease-in-out infinite alternate,
-             moveGlow 25s linear infinite;
-}
-
+ 
   

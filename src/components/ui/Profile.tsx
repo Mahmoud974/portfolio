@@ -15,8 +15,8 @@ export default function Profile() {
     <>
       <div className="flex justify-end">
       <section
-  className=" h-[28rem] px-5 mx-auto py-16 rounded-2xl overflow-visible sticky top-24 
-             backdrop-blur-md bg-black/90   shadow-[0_0_20px_rgba(0,255,120,0.01)]"
+  className="  h-[28rem] px-5 mx-auto py-16 rounded-2xl overflow-visible sticky top-24 
+             backdrop-blur-md bg-black/60   border-white/10 shadow-[0_0_20px_rgba(0,255,120,0.03)]"
 >
 
           {/* Photo de profil */}

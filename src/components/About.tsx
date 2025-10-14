@@ -8,7 +8,7 @@ import { CheckCircle2 } from "lucide-react";
 export default function About() {
   return (
     <section className="text-center flex-col items-center space-y-13">
-      <div className="md:flex hidden text-center mx-auto font-bold justify-center -mt-12 -mb-16">
+      <div className="md:flex hidden text-center mx-auto font-bold justify-center -mt-20 -mb-16">
         <WordRotate
           className="text-[11rem] uppercase font-[800] text-white dark:text-white"
           words={["ABOUT"]}
