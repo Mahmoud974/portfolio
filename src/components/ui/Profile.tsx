@@ -14,7 +14,11 @@ export default function Profile() {
   return (
     <>
       <div className="flex justify-end">
-        <section className="bg-[#0f0f0f] h-[28rem] px-5 mx-auto py-16 rounded-2xl overflow-visible sticky top-24">
+      <section
+  className=" h-[28rem] px-5 mx-auto py-16 rounded-2xl overflow-visible sticky top-24 
+             backdrop-blur-md bg-black/90   shadow-[0_0_20px_rgba(0,255,120,0.01)]"
+>
+
           {/* Photo de profil */}
           <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 w-32 h-32 bg-[#04F7A4] rounded-full flex justify-center items-center">
             <Image
