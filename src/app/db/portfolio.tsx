@@ -8,6 +8,7 @@ export type Portfolio = {
 };
 
 export const portfolios: Portfolio[] = [
+ 
   {
     id: 1,
     title: "RS Deliv",
@@ -117,5 +118,28 @@ export const portfolios: Portfolio[] = [
     image: "/images/portfolios/greencomores.png",
     tags: ["tailwindcss", "js vanilla", "gitlab", "aws s3", "aws cloudfront"],
     link: "https://d3udmvfw6yelnx.cloudfront.net/Les_petits_plats_project-master/index.html",
+  },
+  {
+    id: 10,
+    title: "Manuscrit Graphisme",
+    description: [
+      "Front-end Next.js avec shadcn/ui",
+      "Pipeline GitLab CI/CD → build, tests, audit SEO, déploiement infra/app.",
+      "Infra AWS: EC2 (ASG) derrière ELB, servi via CloudFront (cache, TLS, compression).",
+    ],
+    image: "/images/portfolios/manuscrit-graphisme.webp",
+    tags: [
+      "Next.js",
+      "emailjs",
+      "shadcn/ui",
+      "gitlab",
+      "Terraform",
+      "cloudfront",
+      "elb",
+      "asg",
+      "ec2",
+      "lambda",
+    ],
+    link: "https://product-cart-plum.vercel.app/",
   },
 ];
