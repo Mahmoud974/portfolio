@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect  } from "react";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Button } from "./ui/button";
 import NumberTicker from "./ui/number-ticker";
@@ -6,6 +7,60 @@ import WordRotate from "./ui/word-rotate";
 import { CheckCircle2 } from "lucide-react";
 
 export default function About() {
+  
+
+  useEffect(() => {
+    const sectionIds = ["about", "projects", "skills", "background", "contact"];
+    const elements = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => Boolean(el));
+
+    if (elements.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+       
+        const visible = entries.filter((e) => e.isIntersecting);
+        
+        if (visible.length === 0) return;
+        
+       
+        const sortedByPosition = visible.sort((a, b) => {
+          const aRect = a.boundingClientRect;
+          const bRect = b.boundingClientRect;
+          return aRect.top - bRect.top;
+        });
+ 
+        const bestSection = sortedByPosition.reduce((best, current) => {
+          const currentRatio = current.intersectionRatio;
+          const bestRatio = best.intersectionRatio;
+          const currentTop = current.boundingClientRect.top;
+          const bestTop = best.boundingClientRect.top;
+          
+       
+          if (currentRatio > bestRatio + 0.2) return current;
+          
+        
+          if (Math.abs(currentRatio - bestRatio) < 0.2) {
+            return currentTop < bestTop ? current : best;
+          }
+          
+          return best;
+        });
+        
+        setActiveSection(bestSection.target.id);
+      },
+      {
+        root: null,
+        rootMargin: "0px 0px -20% 0px",
+        threshold: [0.1, 0.3, 0.5, 0.7, 0.9],
+      }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="text-center flex-col items-center space-y-13">
       <div className="md:flex hidden text-center mx-auto font-bold justify-center -mt-20 -mb-16">
@@ -23,6 +78,8 @@ export default function About() {
           ABOUT ME
         </h1>
       </div>
+
+     
 
       <div className="max-w-4xl">
         <p className="mt-4 md:text-3xl md:text-left text-white">
@@ -101,3 +158,7 @@ export default function About() {
     </section>
   );
 }
+function setActiveSection(id: string) {
+  throw new Error("Function not implemented.");
+}
+
