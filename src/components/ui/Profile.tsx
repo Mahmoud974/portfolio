@@ -1,15 +1,44 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Stacks } from "../stacks";
 import TooltipSocial from "../Tooltip";
 
 export default function Profile() {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
 
   const toggleExpanded = () => {
     setIsExpanded(!isExpanded);
   };
+
+  useEffect(() => {
+    const sectionIds = ["about", "projects", "skills", "background", "contact"];
+    const elements = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => Boolean(el));
+
+    if (elements.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (visible[0]) {
+          setActiveSection(visible[0].target.id);
+        }
+      },
+      {
+        root: null,
+        rootMargin: "0px 0px -60% 0px",
+        threshold: [0.2, 0.5, 0.8],
+      }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>
@@ -46,13 +75,13 @@ export default function Profile() {
                 </p>
               </div>
 
-              {/* Réseaux sociaux */}
+             
               <ul>
                 <li className="text-xl font-bold my-3 mt-4">Mes réseaux :</li>
                 <TooltipSocial />
               </ul>
 
-              {/* Stacks */}
+              
               <li className="text-xl font-bold my-3">Mes stacks :</li>
               <ul
                 className={`flex ${
@@ -64,6 +93,37 @@ export default function Profile() {
                 <Stacks />
               </ul>
             </ul>
+         
+            <nav className="mt-6 flex flex-col gap-3 w-72">
+              {[
+                { label: "About", id: "about" },
+                { label: "Projects", id: "projects" },
+                { label: "Skills", id: "skills" },
+                { label: "Background", id: "background" },
+                { label: "Contact", id: "contact" },
+              ].map((item) => {
+                const isActive = activeSection === item.id;
+                return (
+                  <a
+                    key={item.id}
+                    href={`#${item.id}`}
+                    onClick={() => setActiveSection(item.id)}
+                    className={`group  relative flex items-center gap-3 px-3 py-2 rounded-xl transition-colors border ${
+                      isActive
+                        ? "border-[#04F7A4] bg-[#04F7A4]/20 bg-black text-white"
+                        : "border-white/10 bg-black text-white/90 hover:text-white hover:border-[#04F7A4]/40 hover:bg-[#04F7A4]/10"
+                    }`}
+                  >
+                    <span
+                      className={`inline-block h-2 w-2 rounded-full transition-colors ${
+                        isActive ? "bg-[#04F7A4]" : "bg-white/40 group-hover:bg-[#04F7A4]"
+                      }`}
+                    ></span>
+                    <span className="font-medium">{item.label}</span>
+                  </a>
+                );
+              })}
+            </nav>
           </div>
         </section>
       </div>
