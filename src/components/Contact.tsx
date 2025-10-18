@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Title from "./Title";
 import { z } from "zod";
+import WordRotate from "./ui/word-rotate";
 
 const ContactSchema = z.object({
   name: z.string().min(1, "Name is required").max(100),
@@ -60,21 +61,25 @@ export default function Contact() {
   };
   return (
     <div className="mb-12">
-      <div className="md:flex hidden">
-        <Title>
-          Contact <span className="text-[#04F7A4]">me</span>
-        </Title>
+      <div className="md:flex hidden text-center mx-auto font-bold justify-center -mt-6 -mb-16">
+        <WordRotate
+          className="text-[7rem] uppercase font-[800] text-white dark:text-white"
+          words={["CONTACTEZ"]}
+        />
+        <WordRotate
+          className="text-[7rem] ml-2  uppercase font-[800] text-[#04F7A4] dark:text-white"
+          words={["MOI"]}
+        />
       </div>
       <div>
-        <h1 className="md:hidden mt-8 text-5xl uppercase font-[800] text-white dark:text-white">
-          CONTACT ME
-        </h1>
+      
       </div>
-      <p className="w-3/3 mt-4 md:text-3xl text-md   text-left text-white ">
-        Nemo design enim ipsam voluptatem quim voluptas sit aspernatur aut odit
-        auting fugit sed thisnquia consequuntur magni dolores eos designer
-        heresm qui ratione 💪
-      </p>
+      <p className="w-3/3 mt-4 md:text-3xl text-md text-left text-white">
+  Envie de collaborer sur un site moderne, une app ou un design unique ? 
+  Je suis disponible pour vos projets. 🚀
+</p>
+
+
       <div className="  mx-auto w-full   font-[sans-serif]">
         <form className="mt-8 space-y-4 " onSubmit={onSubmit}>
           <div>

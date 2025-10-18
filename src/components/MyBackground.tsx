@@ -14,22 +14,24 @@ export default function MyBackground() {
       className="justify-center flex flex-col"
       aria-labelledby="background-heading"
     >
-      {/* Section de titre avec animation pour les grands écrans */}
-      <div className="md:flex hidden text-center mx-auto font-bold justify-center -mt-6 -mb-16">
+     
+     <div className="md:flex hidden text-center mx-auto font-bold justify-center -mt-6 -mb-16">
         <WordRotate
-          className="text-[8rem] uppercase font-[800] text-white dark:text-white"
-          words={["BACKGROUND"]}
+          className="text-[7.5rem] uppercase font-[800] text-white dark:text-white"
+          words={["MON"]}
+        />
+        <WordRotate
+          className="text-[7.5rem] ml-2  uppercase font-[800] text-[#04F7A4] dark:text-white"
+          words={["PARCOURS"]}
         />
       </div>
 
-      {/* Titre pour les petits écrans */}
+ 
       <div>
-        <h1 className="md:hidden mt-8 text-5xl uppercase font-[800] text-white dark:text-white">
-          BACKGROUND
-        </h1>
+        
       </div>
 
-      {/* Sous-titre et ligne décorative */}
+      
       <div>
         <h2
           id="background-heading"
@@ -60,7 +62,7 @@ export default function MyBackground() {
         <Briefcase className="w-6 h-6 text-gray-500" aria-hidden="true" />
       </div>
 
-      {/* Contenu conditionnel basé sur showEducation */}
+    
       {showEducation && (
         <>
          

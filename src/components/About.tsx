@@ -49,6 +49,8 @@ export default function About() {
         });
         
         setActiveSection(bestSection.target.id);
+   
+        
       },
       {
         root: null,
@@ -63,16 +65,17 @@ export default function About() {
 
   return (
     <section className="text-center flex-col items-center space-y-13">
-      <div className="md:flex hidden text-center mx-auto font-bold justify-center -mt-20 -mb-16">
-        <WordRotate
-          className="text-[11rem] uppercase font-[800] text-white dark:text-white"
-          words={["ABOUT"]}
-        />
-        <WordRotate
-          className="text-[11rem] ml-2 uppercase font-[800] text-[#04F7A4] dark:text-white"
-          words={["ME"]}
-        />
-      </div>
+     <div className="md:flex hidden text-center mx-auto font-bold justify-center -mt-12 -mb-16">
+  <WordRotate
+    className="text-[8rem] uppercase font-[800] text-white dark:text-white"
+    words={["PRESENTA"]}
+  />
+  <WordRotate
+    className="text-[8rem] ml-2 uppercase font-[800] text-[#04F7A4] dark:text-white"
+    words={["TION"]}
+  />
+</div>
+
       <div>
         <h1 className="md:hidden mt-8 text-6xl uppercase font-[800] text-white dark:text-white">
           ABOUT ME
@@ -83,28 +86,33 @@ export default function About() {
 
       <div className="max-w-4xl">
         <p className="mt-4 md:text-3xl md:text-left text-white">
-          Développeur Front-End passionné, je conçois des interfaces modernes, performantes et accessibles. 
-          Mon objectif : allier design, fluidité et fiabilité pour offrir des expériences utilisateurs de haute qualité. ✨
+        <p className="mt-4 md:text-3xl md:text-left text-white">
+  <strong>Développeur Front-End</strong> passionné spécialisé en <strong>React</strong> et <strong>Next.js</strong>, je conçois des interfaces web modernes, performantes et accessibles. 
+  Mon objectif est d’allier <strong>design</strong>, <strong>expérience utilisateur</strong> et <strong>performance</strong> pour créer des applications fluides, fiables et optimisées pour le <strong>SEO</strong>. 
+</p>
+
         </p>
 
         <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-white/90">
-          <li className="flex items-center gap-2">
-            <CheckCircle2 className="mt-1 text-[#04F7A4]" />
-            <span>Moderne avec React, Next.js et TypeScript</span>
-          </li>
-          <li className="flex items-center gap-2">
-            <CheckCircle2 className="mt-1 text-[#04F7A4]" />
-            <span>Création d’interfaces réactives avec TailwindCSS</span>
-          </li>
-          <li className="flex items-center gap-2">
-            <CheckCircle2 className="mt-1 text-[#04F7A4]" />
-            <span>Optimisation des performances et du SEO</span>
-          </li>
-          <li className="flex items-center gap-2">
-            <CheckCircle2 className="mt-1 text-[#04F7A4]" />
-            <span>Animations fluides avec Framer Motion</span>
-          </li>
-        </ul>
+  <li className="flex items-center gap-2">
+    <CheckCircle2 className="mt-1 text-[#04F7A4]" />
+    <span>Développement moderne avec <strong>React</strong>, <strong>Next.js</strong></span>
+  </li>
+  <li className="flex items-center gap-2">
+    <CheckCircle2 className="mt-1 text-[#04F7A4]" />
+    <span>Création d’interfaces réactives et responsives</span>
+  </li>
+  <li className="flex items-center gap-2">
+    <CheckCircle2 className="mt-1 text-[#04F7A4]" />
+    <span>Optimisation  du <strong> SEO</strong> et de l’<strong>accessibilité</strong></span>
+  </li>
+  <li className="flex items-center gap-2">
+    <CheckCircle2 className="mt-1 text-[#04F7A4]" />
+    <span>Collaboration efficace avec les designers</span>
+
+  </li>
+</ul>
+
 
         <div className="flex justify-start">
           <Button className="my-6 bg-[#04F7A4] px-12 py-6 rounded-none">
@@ -118,7 +126,7 @@ export default function About() {
         <li className="flex flex-col items-start text-7xl">
           <div className="flex items-center text-8xl">
             <span className="text-5xl font-[900] text-[#04F7A4]">+</span>
-            <NumberTicker value={20} className="text-white font-bold ml-2" />
+            <NumberTicker value={10} className="text-white font-bold ml-2" />
           </div>
           <div className="flex items-start">
             <div className="bg-[#04F7A4] w-8 h-1 mt-3"></div>
@@ -131,7 +139,7 @@ export default function About() {
         <li className="flex flex-col items-start text-7xl">
           <div className="flex items-center text-8xl">
             <span className="text-5xl font-[900] text-[#04F7A4]">+</span>
-            <NumberTicker value={100} className="text-white font-bold ml-2" />
+            <NumberTicker value={1000} className="text-white font-bold ml-2" />
           </div>
           <div className="flex items-start">
             <div className="bg-[#04F7A4] w-8 h-1 mt-3"></div>
@@ -144,13 +152,13 @@ export default function About() {
         <li className="flex flex-col items-start text-7xl">
           <div className="flex items-center text-8xl">
             <span className="text-5xl font-[900] text-[#04F7A4]">+</span>
-            <NumberTicker value={7} className="text-white font-bold ml-2" />
+            <NumberTicker value={3} className="text-white font-bold ml-2" />
           </div>
           <div className="flex items-start">
             <div className="bg-[#04F7A4] w-8 h-1 mt-3"></div>
             <div className="text-3xl ml-2 text-left">
-              <p>CAFÉS</p>
-              <p>PAR SEMAINE</p>
+              <p className="uppercase">Années</p>
+              <p className="uppercase"> d’expérience</p>
             </div>
           </div>
         </li>

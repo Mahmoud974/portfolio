@@ -9,6 +9,15 @@ export const languages: Languages[] = [
     tool: "Next.js",
   },
   {
+    id: 20,
+    tool: "react",
+  },
+  {
+    id: 22,
+    tool: "seo",
+  },
+ 
+  {
     id: 2,
     tool: "Figma",
   },
@@ -46,16 +55,17 @@ export const languages: Languages[] = [
     id: 11,
     tool: "Docker",
   },
-  // {
-  //   id: 12,
-  //   tool: "prometeus",
-  // },
- 
-  
   {
-    id: 15,
+    id: 23,
     tool: "n8n",
   },
+ 
+ 
+  {
+    id: 23,
+    tool: "jest",
+  },
+ 
 
   {
     id: 16,
@@ -75,10 +85,7 @@ export const languages: Languages[] = [
     tool: "k8s1",
   },
   
-  {
-    id: 20,
-    tool: "nginx",
-  },
+  
   {
     id: 20,
     tool: "wordpress",

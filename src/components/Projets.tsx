@@ -8,23 +8,23 @@ export default function Projets() {
     <section>
       <div className="md:flex hidden text-center mx-auto font-bold justify-center -mt-6 -mb-16">
         <WordRotate
-          className="text-[9.2rem] uppercase font-[800] text-white dark:text-white"
-          words={["MY"]}
+          className="text-[8.9rem] uppercase font-[800] text-white dark:text-white"
+          words={["MES"]}
         />
         <WordRotate
-          className="text-[9.2rem] ml-2  uppercase font-[800] text-[#04F7A4] dark:text-white"
+          className="text-[8.9rem] ml-2  uppercase font-[800] text-[#04F7A4] dark:text-white"
           words={["PROJETS"]}
         />
       </div>
       <div>
-        <h1 className="md:hidden mt-8 text-4xl uppercase font-[800] text-white dark:text-white">
-          MY PROJECTS
-        </h1>
+        <h2 className="md:hidden mt-8 text-4xl uppercase font-[800] text-white dark:text-white">
+          MES PROJETS
+        </h2>
       </div>
 
       <div className="">
         <div>
-          <p className="text-3xl font-bold text-center mt-6">MY SKILLS</p>
+          <p className="text-3xl font-bold text-center mt-6 uppercase">Tech & outils favoris</p>
           <div className="h-2 mt-2 w-20 bg-[#04F7A4] mx-auto"></div>
         </div>
         <div className=" flex flex-wrap sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-5 mt-12 justify-center items-center mx-auto">
