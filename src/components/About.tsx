@@ -157,8 +157,8 @@ export default function About() {
           <div className="flex items-start">
             <div className="bg-[#04F7A4] w-8 h-1 mt-3"></div>
             <div className="text-3xl ml-2 text-left">
-              <p className="uppercase">Années</p>
-              <p className="uppercase"> d’expérience</p>
+              <p>Années</p>
+              <p> d’expérience</p>
             </div>
           </div>
         </li>

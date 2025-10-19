@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Title from "./Title";
 import { z } from "zod";
 import WordRotate from "./ui/word-rotate";
 
@@ -74,7 +73,7 @@ export default function Contact() {
       <div>
       
       </div>
-      <p className="w-3/3 mt-4 md:text-3xl text-md text-left text-white">
+      <p className="w-3/3 mt-9 md:text-3xl text-md text-left text-white">
   Envie de collaborer sur un site moderne, une app ou un design unique ? 
   Je suis disponible pour vos projets. 🚀
 </p>

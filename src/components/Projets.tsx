@@ -30,8 +30,8 @@ export default function Projets() {
         <div className=" flex flex-wrap sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-5 mt-12 justify-center items-center mx-auto">
           {languages.map((item, index) => (
             <div
-              className="bg-[#fff] h-24 w-24 flex   items-center  justify-center rounded-xl"
               key={index}
+              className="relative group bg-[#fff] h-24 w-24 flex items-center justify-center rounded-xl"
             >
               <Image
                 className="object-cover w-auto h-auto p-5"
@@ -41,6 +41,9 @@ export default function Projets() {
                 height={1000}
                 priority
               />
+              <span className="pointer-events-none absolute -bottom-2 translate-y-3 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-200 bg-black text-white text-[10px] font-semibold uppercase px-2 py-1 rounded-full shadow-sm">
+                {item.tool}
+              </span>
             </div>
           ))}
         </div>
