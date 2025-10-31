@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Button } from "./ui/button";
@@ -7,15 +8,14 @@ import WordRotate from "./ui/word-rotate";
 import { CheckCircle2 } from "lucide-react";
 
 export default function About() {
- 
   const [activeSection, setActiveSection] = useState<string>("about");
 
+  // Effet principal : observer les sections visibles
   useEffect(() => {
     const sectionIds = ["about", "projects", "skills", "background", "contact"];
     const elements = sectionIds
       .map((id) => document.getElementById(id))
       .filter((el): el is HTMLElement => Boolean(el));
-console.log(activeSection);
 
     if (elements.length === 0) return;
 
@@ -41,7 +41,6 @@ console.log(activeSection);
           return best;
         });
 
-       
         setActiveSection(bestSection.target.id);
       },
       {
@@ -53,10 +52,16 @@ console.log(activeSection);
 
     elements.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, []);
+  }, []); // ← effet exécuté une seule fois
+
+  // Effet secondaire pour loguer le changement de section active
+  useEffect(() => {
+    console.log("Section active :", activeSection);
+  }, [activeSection]);
 
   return (
     <section id="about" className="text-center flex-col items-center space-y-13">
+      {/* Titre animé desktop */}
       <div className="md:flex hidden text-center mx-auto font-bold justify-center -mt-12 -mb-16">
         <WordRotate
           className="text-[8rem] uppercase font-[800] text-white dark:text-white"
@@ -68,12 +73,14 @@ console.log(activeSection);
         />
       </div>
 
+      {/* Titre mobile */}
       <div>
         <h1 className="md:hidden mt-8 text-6xl uppercase font-[800] text-white dark:text-white">
           ABOUT ME
         </h1>
       </div>
 
+      {/* Texte principal */}
       <div className="max-w-4xl">
         <p className="mt-4 md:text-3xl md:text-left text-white">
           <strong>Développeur Front-End</strong> passionné spécialisé en{" "}
@@ -84,11 +91,13 @@ console.log(activeSection);
           fiables et optimisées pour le <strong>SEO</strong>.
         </p>
 
+        {/* Liste de compétences */}
         <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-white/90">
           <li className="flex items-center gap-2">
             <CheckCircle2 className="mt-1 text-[#04F7A4]" />
             <span>
-              Développement moderne avec <strong>React</strong>, <strong>Next.js</strong>
+              Développement moderne avec <strong>React</strong> et{" "}
+              <strong>Next.js</strong>
             </span>
           </li>
           <li className="flex items-center gap-2">
@@ -107,6 +116,7 @@ console.log(activeSection);
           </li>
         </ul>
 
+        {/* Bouton de téléchargement */}
         <div className="flex justify-start">
           <Button className="my-6 bg-[#04F7A4] px-12 py-6 rounded-none">
             <p className="text-xl text-black mr-2">Télécharger CV</p>
@@ -115,6 +125,7 @@ console.log(activeSection);
         </div>
       </div>
 
+      {/* Statistiques */}
       <ul className="flex md:flex-row mt-4 flex-col md:justify-between space-y-14 md:space-y-0 md:space-x-16 justify-center items-center">
         <li className="flex flex-col items-start text-7xl">
           <div className="flex items-center text-8xl">

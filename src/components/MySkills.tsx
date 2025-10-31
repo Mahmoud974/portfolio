@@ -27,7 +27,7 @@ export default function Technos() {
             className="mx-auto w-full h-auto max-w-5xl overflow-hidden rounded-2xl bg-[#0a1714] ring-1 ring-emerald-900/30 shadow-lg hover:shadow-emerald-600/20 transition-shadow"
           >
             <div className="md:flex">
-              
+              {/* Image */}
               <Link
                 href={item.link}
                 target="_blank"
@@ -44,10 +44,12 @@ export default function Technos() {
                 />
               </Link>
 
-              {/* Content */}
+              {/* Contenu */}
               <div className="md:w-3/5 p-5 md:p-6 flex flex-col gap-4">
-              {/* Title */}
-              <h3 className="text-xl md:text-2xl font-bold">{item.title}</h3>
+                {/* Titre */}
+                <h3 className="text-xl md:text-2xl font-bold">{item.title}</h3>
+
+                {/* Tags */}
                 <ul className="flex flex-wrap gap-1">
                   {item.tags.map((tag, i) => (
                     <li
@@ -59,16 +61,25 @@ export default function Technos() {
                   ))}
                 </ul>
 
-               
+                {/* Description avec scroll */}
+                <div
+                  className="
+                    max-h-36 md:max-h-40 
+                    overflow-y-auto pr-2 
+                    scrollbar-thin scrollbar-thumb-emerald-700 scrollbar-track-transparent
+                    hover:scrollbar-thumb-emerald-500
+                    transition-all
+                    rounded-lg
+                  "
+                >
+                  <ul className="list-disc pl-5 text-sm md:text-base leading-relaxed text-neutral-200 space-y-1">
+                    {item.description.map((line, i) => (
+                      <li key={i}>{line}</li>
+                    ))}
+                  </ul>
+                </div>
 
-                {/* Description (list) */}
-                <ul className="list-disc pl-5 text-sm md:text-base leading-relaxed text-neutral-200 space-y-1">
-                  {item.description.map((line, i) => (
-                    <li key={i}>{line}</li>
-                  ))}
-                </ul>
-
-                {/* CTA */}
+                {/* Bouton */}
                 <div className="pt-2">
                   <Link
                     href={item.link}
@@ -93,9 +104,10 @@ export default function Technos() {
             key={i}
             onClick={() => setCurrentPage(i)}
             className={`h-9 min-w-9 px-3 rounded-full text-sm font-medium transition cursor-pointer
-              ${i === currentPage
-                ? "bg-emerald-950 text-[#04F7A4] ring-1 ring-emerald-700"
-                : "bg-[#153c31] text-emerald-100 hover:bg-[#1a4a3c]"
+              ${
+                i === currentPage
+                  ? "bg-emerald-950 text-[#04F7A4] ring-1 ring-emerald-700"
+                  : "bg-[#153c31] text-emerald-100 hover:bg-[#1a4a3c]"
               }`}
             aria-current={i === currentPage ? "page" : undefined}
           >
