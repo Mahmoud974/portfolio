@@ -196,7 +196,7 @@ export const portfolios: Portfolio[] = [
       "Responsive Design",
    
     ],
-    link: "https://d3udmvfw6yelnx.cloudfront.net/Les_petits_plats_project-master/index.html",
+    link: "https://svb-presta.vercel.app/",
   },
   {
     id: 8,
@@ -253,9 +253,7 @@ export const portfolios: Portfolio[] = [
       "Vercel",
       "Nom de domaine",
     ],
-    link: "https://d3udmvfw6yelnx.cloudfront.net/Les_petits_plats_project-master/index.html",
+    link: "https://green-comores-new-project-2uqs.vercel.app/",
   },
-  
-  
   
 ];
