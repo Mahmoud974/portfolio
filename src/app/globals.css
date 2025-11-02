@@ -8,6 +8,24 @@ body {
   color: white;
 }
 
+/* Scrollbar verte simple */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #04F7A4;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #06ffb0;
+}
+
+* {
+  scrollbar-color: #04F7A4 transparent; /* pour Firefox */
+  scrollbar-width: thin;
+}
 
 @layer base {
   :root {
