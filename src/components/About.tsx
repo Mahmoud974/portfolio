@@ -52,7 +52,7 @@ export default function About() {
 
     elements.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, []); // ← effet exécuté une seule fois
+  }, []);  
 
   // Effet secondaire pour loguer le changement de section active
   useEffect(() => {
@@ -72,8 +72,7 @@ export default function About() {
           words={["TION"]}
         />
       </div>
-
-      {/* Titre mobile */}
+ 
       <div>
         <h1 className="md:hidden mt-8 text-6xl uppercase font-[800] text-white dark:text-white">
           ABOUT ME

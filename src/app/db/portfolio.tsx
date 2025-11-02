@@ -11,7 +11,7 @@ export const portfolios: Portfolio[] = [
  
   {
     id: 1,
-    title: "RS Deliv",
+    title: "ISANO",
     description: [
       "Développement du front-end avec Next.js, TailwindCSS et shadcn/ui pour une interface moderne et responsive.",
       "Mise en place d’un formulaire de contact validé avec Zod et connecté à EmailJS pour l’envoi automatique des messages.",
@@ -27,7 +27,7 @@ export const portfolios: Portfolio[] = [
       "EmailJS",
       "Vercel",
     ],
-    link: "https://product-cart-plum.vercel.app/",
+    link: "https://rsdeliv.vercel.app/",
   },  
   {
     id: 2,
@@ -134,6 +134,7 @@ export const portfolios: Portfolio[] = [
       "Zustand",
       "TailwindCSS",
       "Shadcn/UI",
+      "NexAuth",
       "nuqs",
       "Figma",
       "Vercel",
@@ -145,11 +146,12 @@ export const portfolios: Portfolio[] = [
     title: "Manuscrit Graphisme – Portfolio Next.js optimisé SEO et performant",
     description: [
       "Conception du design sur Figma et développement complet avec Next.js, TailwindCSS et Shadcn/UI.",
-      "Création d’un portfolio moderne, responsive et conforme aux standards W3C.",
-      "Intégration d’un formulaire de contact fonctionnel avec React Hook Form et validation via Zod.",
-      "Optimisation du référencement (SEO), de la vitesse et des performances grâce aux audits Lighthouse.",
-      "Mise en place de la surveillance et du monitoring de l’application avec Prometheus et Grafana pour suivre les métriques de performance en temps réel.",
-      "Déploiement professionnel sur Vercel avec nom de domaine personnalisé et configuration HTTPS.",
+    "Création d’un portfolio moderne, responsive et conforme aux standards W3C.",
+    "Intégration d’un formulaire de contact fonctionnel avec React Hook Form et validation via Zod.",
+    "Ajout d’un espace d’administration sécurisé avec authentification (NextAuth) permettant à l’administrateur de se connecter et de mettre à jour son portfolio en toute autonomie.",
+    "Optimisation du référencement (SEO), de la vitesse et des performances grâce aux audits Lighthouse.",
+    "Mise en place de la surveillance et du monitoring de l’application avec Prometheus et Grafana pour suivre les métriques de performance en temps réel.",
+    "Déploiement professionnel sur Vercel avec nom de domaine personnalisé et configuration HTTPS.",
     ],
     image: "/images/portfolios/manuscrit-graphisme.webp",
     tags: [
@@ -160,7 +162,7 @@ export const portfolios: Portfolio[] = [
       "React Hook Form",
       "Figma",
       "SEO",
-    
+      "NexAuth",
       "Lighthouse",
       "Prometheus",
       "Grafana",
