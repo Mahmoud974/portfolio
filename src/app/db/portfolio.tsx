@@ -167,9 +167,9 @@ export const portfolios: Portfolio[] = [
       "Prometheus",
       "Grafana",
       "Vercel",
-  
+ 
     ],
-    link: "manuscrit-agency-app-d4wp.vercel.app",
+    link: "https://manuscrit-agency-app-d4wp.vercel.app",
   },
   
 
