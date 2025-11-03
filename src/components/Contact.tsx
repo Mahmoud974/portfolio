@@ -59,7 +59,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="mb-12">
+    <div className="mb-12 mt-12">
       {/* Titre animé */}
       <div className="md:flex hidden text-center mx-auto font-bold justify-center -mt-6 -mb-16">
         <WordRotate

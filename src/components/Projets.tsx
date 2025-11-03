@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Projets() {
   return (
     <section>
-      {/* Titre principal */}
+  
       <div className="md:flex hidden text-center mx-auto font-bold justify-center -mt-6 -mb-16">
         <WordRotate
           className="text-[8.9rem] uppercase font-[800] text-white dark:text-white"
@@ -18,7 +18,7 @@ export default function Projets() {
         />
       </div>
 
-      {/* Version mobile du titre */}
+      
       <div>
         <h2 className="md:hidden mt-8 text-4xl uppercase font-[800] text-white dark:text-white text-center">
           MES PROJETS
@@ -32,11 +32,10 @@ export default function Projets() {
         </p>
         <div className="h-2 mt-2 w-20 bg-[#04F7A4] mx-auto"></div>
       </div>
-
-      {/* Grille centrée */}
+ 
       <div className="flex justify-center mt-12">
         <div className="max-w-[800px]">
-          {/* Premières lignes (8 items par ligne) */}
+         
           <div className="grid grid-cols-8 gap-6 justify-items-center mb-6">
             {languages.slice(0, 16).map((item, index) => (
               <div
@@ -58,7 +57,7 @@ export default function Projets() {
             ))}
           </div>
 
-          {/* Dernière ligne centrée */}
+          
           <div className="flex justify-center gap-6">
             {languages.slice(16).map((item, index) => (
               <div

@@ -38,7 +38,7 @@ export default function MyBackground() {
         <div className="h-2 mt-2 w-20 bg-[#04F7A4] mx-auto rounded-full"></div>
       </div>
 
-      {/* ===== SWITCH (corrigé et fluide) ===== */}
+  
       <div className="flex justify-center mt-6 items-center gap-3">
         {/* Icône gauche */}
         <GraduationCap
@@ -70,7 +70,7 @@ export default function MyBackground() {
         />
       </div>
 
-      {/* ===== SECTION EDUCATION ===== */}
+    
       {showEducation && (
         <div className="mt-10 space-y-12 animate-fadeIn">
           {/* AWS */}
@@ -104,8 +104,7 @@ export default function MyBackground() {
                 ))}
             </ul>
           </div>
-
-          {/* OpenClassrooms */}
+ 
           <div className="flex flex-col items-center">
             <Image
               className="object-cover w-64 h-auto mt-4"
@@ -137,7 +136,7 @@ export default function MyBackground() {
         </div>
       )}
 
-      {/* ===== SECTION EXPERIENCE ===== */}
+      
       {!showEducation && (
         <ul
           key="experience-section"
