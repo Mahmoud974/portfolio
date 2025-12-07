@@ -9,27 +9,31 @@ export type Portfolio = {
 
 export const portfolios: Portfolio[] = [
  
-  // {
-  //   id: 1,
-  //   title: "ISANO",
-  //   description: [
-  //     "Développement du front-end avec Next.js, TailwindCSS et shadcn/ui pour une interface moderne et responsive.",
-  //     "Mise en place d’un formulaire de contact validé avec Zod et connecté à EmailJS pour l’envoi automatique des messages.",
-  //     "Gestion des composants réutilisables et design system via shadcn/ui.",
-  //     "Déploiement de l’application sur Vercel avec intégration continue automatique.",
-  //   ],
-  //   image: "/images/portfolios/rsdeliv.webp",
-  //   tags: [
-  //     "Next.js",
-  //     "TailwindCSS",
-  //     "shadcn/ui",
-  //     "Zod",
-  //     "EmailJS",
-  //     "Vercel",
-  //   ],
-  //   link: "https://rsdeliv.vercel.app/",
-  // },  
   {
+    id: 1,
+    title: "THEGROOMLAB",
+    description: [
+      "Développement d’une application vitrine avec Next.js, TailwindCSS et shadcn/ui pour une interface moderne, performante et responsive.",
+      "Conception et provisionnement d’une infrastructure AWS entièrement automatisée via Terraform (S3, CloudFront, ACM, OAC, IAM).",
+      "Mise en place d’un pipeline CI/CD complet : GitHub → CodePipeline → CodeBuild pour automatiser le build, le déploiement sur S3 et l’invalidation CloudFront.",
+      "Implémentation d’un système de monitoring et d’alerting (CloudWatch + SNS) pour assurer l’observabilité et la supervision de l’infrastructure."
+    ]
+    ,
+    image: "/images/portfolios/Thegroomlab.webp",
+    tags: [
+      "Next.js",
+      "TailwindCSS",
+      "Terraform",
+      "AWS S3",
+      "CloudFront",
+      "AWS IAM",
+      "AWS CI/CD",
+      "SNS",
+      "CloudWatch"
+    ],
+    link: "https://dke6djvrpp2ow.cloudfront.net"
+  }
+,  {
     id: 2,
     title: "Product List – Composant React déployé sur AWS",
     description: [

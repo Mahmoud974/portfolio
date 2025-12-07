@@ -40,36 +40,7 @@ export const experience: Exp[] = [
     link: "https://manuscrit-agency-app-d4wp.vercel.app",
   },
 
-  {
-    id: 1,
-    title: "GreenComores – Site de prestations d’élagage Next.js optimisé SEO",
-    organization: [
-      "Next.js",
-      "TailwindCSS",
-      "Shadcn/UI",
-      "React Hook Form",
-      "Zod",
-      "Figma",
-      "SEO",
-      "Performance",
-      "W3C",
-      "Responsive Design",
-      "Lighthouse",
-      "Vercel",
-      "Nom de domaine",
-    ],
-    role: ["Développeur front-end Next.js"],
-    description: [
-      "Conception du design sur Figma et développement complet avec Next.js, TailwindCSS et Shadcn/UI.",
-      "Création d’un site vitrine professionnel pour les services d’élagage et d’entretien des espaces verts.",
-      "Site responsive, conforme aux standards W3C et optimisé pour le SEO.",
-      "Formulaire de contact dynamique avec validation via Zod.",
-      "Vérification des performances via les audits Lighthouse.",
-      "Déploiement sur Vercel avec nom de domaine personnalisé et HTTPS.",
-    ],
-    image: "/images/portfolios/greencomores.png",
-    link: "https://green-comores-new-project-2uqs.vercel.app/",
-  },
+  
 
   {
     id: 5,
