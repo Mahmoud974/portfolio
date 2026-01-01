@@ -62,25 +62,25 @@ export const portfolios: Portfolio[] = [
     id: 3,
     title: "Static job – Déploiement React sur AWS",
     description: [
-      "Développement d’une application statique avec React et TailwindCSS.",
-      "Mise en place d’un pipeline CI/CD automatisé via AWS CodePipeline et CodeBuild.",
-      "Déploiement de l’application sur un bucket S3 configuré pour l’hébergement statique.",
-      "Distribution optimisée et sécurisée grâce à AWS CloudFront (CDN).",
-      "Infrastructure S3 + CloudFront entièrement provisionnée via Terraform (Infrastructure as Code).",
-      "Intégration continue et gestion du code source via GitHub.",
+      "Développement d’une application front-end moderne avec React.js et TailwindCSS.",
+      "Déploiement et hébergement de l’application via AWS Amplify avec intégration directe à GitHub.",
+      "Mise en place d’une intégration et livraison continues (CI/CD) automatisées grâce à AWS Amplify.",
+      "Surveillance des performances et des logs de l’application via AWS CloudWatch.",
+      "Configuration de notifications et d’alertes via AWS SNS pour le suivi des événements et erreurs.",
+      "Application optimisée pour la performance, la maintenabilité et la scalabilité."
     ],
+    
     image: "/images/portfolios/static-job.webp",
     tags: [
-      "React",
+      "React.js",
       "TailwindCSS",
       "TypeScript",
-      "Terraform",
-      "AWS CodeBuild",
-      "AWS CodePipeline",
-      "S3",
-      "AWS CloudFront",
+      "AWS Amplify",
+      "Cloudwatch",
+      "AWS SNS",
+       
     ],
-    link: "https://tip-calculator-new.vercel.app/",
+    link: "https://main.d12sna0yvan4qm.amplifyapp.com/",
   },
   {
     id: 4,

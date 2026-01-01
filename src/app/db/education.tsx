@@ -8,17 +8,17 @@ export type Education = {
 
 export const education: Education[] = [
    
-  // {
-  //   id: 6,
-  //   title: "AWS Certified Solutions Architect - Associate",
-  //   organization: "Amazon Web Services (AWS)",
-  //   description: [
-  //     "- Développer des applications cloud sur AWS",
-  //     "- Utiliser les services AWS pour implémenter des solutions serverless",
-  //     "- Apprendre à dépanner et à surveiller des applications sur AWS",
-  //   ],
-  //   logo: "/images/aws-logo.webp",
-  // },
+  {
+    id: 6,
+    title: "AWS Certified Solutions Architect - Associate (En cours)",
+    organization: "Amazon Web Services (AWS)",
+    description: [
+      "- Développer des applications cloud sur AWS",
+      "- Utiliser les services AWS pour implémenter des solutions serverless",
+      "- Apprendre à dépanner et à surveiller des applications sur AWS",
+    ],
+    logo: "/images/aws-logo.webp",
+  },
  
   {
     id: 4,
