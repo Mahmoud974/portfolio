@@ -5,6 +5,7 @@ export type Portfolio = {
   image: string;
   tags: string[];
   link: string;
+  github: string;    
 };
 
 export const portfolios: Portfolio[] = [
@@ -31,7 +32,8 @@ export const portfolios: Portfolio[] = [
       "SNS",
       "CloudWatch"
     ],
-    link: "https://dke6djvrpp2ow.cloudfront.net"
+    link: "https://dke6djvrpp2ow.cloudfront.net",
+    github: "https://github.com/ton-compte/thegroomlab"
   }
 ,  {
     id: 2,
@@ -55,6 +57,7 @@ export const portfolios: Portfolio[] = [
       "CloudWatch",
     ],
     link: "https://product-cart-plum.vercel.app/",
+    github: "https://github.com/ton-compte/thegroomlab"
   },
   
   
@@ -81,6 +84,7 @@ export const portfolios: Portfolio[] = [
        
     ],
     link: "https://main.d12sna0yvan4qm.amplifyapp.com/",
+    github: "https://github.com/ton-compte/thegroomlab"
   },
   {
     id: 4,
@@ -114,6 +118,7 @@ export const portfolios: Portfolio[] = [
       "Cloudflare",
     ],
     link: "https://tip-calculator-new.vercel.app/",
+    github: "https://github.com/ton-compte/thegroomlab"
   }
   ,
   
@@ -144,6 +149,7 @@ export const portfolios: Portfolio[] = [
       "Vercel",
     ],
     link: "https://tip-calculator-new.vercel.app/",
+    github: "https://github.com/ton-compte/thegroomlab"
   },
   // {
   //   id: 6,
@@ -204,6 +210,7 @@ export const portfolios: Portfolio[] = [
       "Recherche et filtrage",
     ],
     link: "https://d3udmvfw6yelnx.cloudfront.net/Les_petits_plats_project-master/index.html",
+    github: "https://github.com/ton-compte/thegroomlab"
   },
   
  
