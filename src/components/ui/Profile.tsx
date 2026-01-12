@@ -19,7 +19,7 @@ export default function Profile() {
              backdrop-blur-md bg-black/60   border-white/10 shadow-[0_0_20px_rgba(0,255,120,0.03)]"
 >
 
-          {/* Photo de profil */}
+    
           <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 w-32 h-32 bg-[#04F7A4] rounded-full flex justify-center items-center">
             <Image
               className="object-cover rounded-full w-full h-full mt-1"
@@ -35,9 +35,9 @@ export default function Profile() {
             <ul>
               {/* Nom */}
               <div>
-                <li className="text-5xl mb-2">
-                  <p className="font-[400] font-['Poppins']">MOUSSA</p>
-                  <p className="font-[800] font-['Poppins']">MAHMOUD</p>
+                <li className="text-4xl mb-2">
+                 
+                  <p className="font-[400] font-['Poppins']"><span className="font-[800] font-['Poppins']">M. </span> MAHMOUD</p>
                 </li>
 
                 {/* Description courte */}

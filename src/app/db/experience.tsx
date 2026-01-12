@@ -6,9 +6,35 @@ export type Exp = {
   description: string[];
   image: string;
   link: string;
+  github: string;
 };
 
 export const experience: Exp[] = [
+  {
+    id: 1,
+    title: "THEGROOMLAB",
+    organization: [
+      "Next.js",
+      "TailwindCSS",
+      "Terraform",
+      "AWS S3",
+      "CloudFront",
+      "AWS IAM",
+      "AWS CI/CD",
+      "SNS",
+      "CloudWatch"
+    ],
+    role: ["Développeur full-stack"],
+    description: [
+      "Développement d'une application vitrine avec Next.js, TailwindCSS et shadcn/ui pour une interface moderne, performante et responsive.",
+      "Conception et provisionnement d'une infrastructure AWS entièrement automatisée via Terraform (S3, CloudFront, ACM, OAC, IAM).",
+      "Mise en place d'un pipeline CI/CD complet : GitHub → CodePipeline → CodeBuild pour automatiser le build, le déploiement sur S3 et l'invalidation CloudFront.",
+      "Implémentation d'un système de monitoring et d'alerting (CloudWatch + SNS) pour assurer l'observabilité et la supervision de l'infrastructure."
+    ],
+    image: "/images/portfolios/Thegroomlab.webp",
+    link: "https://dke6djvrpp2ow.cloudfront.net",
+    github: "https://github.com/Mahmoud974/thegroomlab"
+  },
   {
     id: 4,
     title: "Manuscrit Graphisme – Portfolio Next.js optimisé SEO et performant",
@@ -37,7 +63,8 @@ export const experience: Exp[] = [
       "Déploiement professionnel sur Vercel avec nom de domaine personnalisé et HTTPS.",
     ],
     image: "/images/portfolios/manuscrit-graphisme.webp",
-    link: "https://manuscrit-agency-app-d4wp.vercel.app",
+    link: "https://manuscrit-agency-app.vercel.app/",
+    github: "https://github.com/Mahmoud974/Manuscrit-Agency-app"
   },
 
   
@@ -63,6 +90,7 @@ export const experience: Exp[] = [
       "Optimisation des performances (vitesse, accessibilité, bonnes pratiques).",
     ],
     image: "/images/portfolios/svb.webp",
-    link: "https://svb-presta.vercel.app/",
+    link: "https://website-plomberie.vercel.app/",
+    github: "https://github.com/Mahmoud974/website-plomberie"
   },
 ];

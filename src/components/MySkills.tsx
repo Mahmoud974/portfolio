@@ -2,6 +2,7 @@ import { portfolios } from "@/app/db/portfolio";
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Github, Globe } from "lucide-react";
 
 export default function Technos() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -78,8 +79,10 @@ export default function Technos() {
                     ))}
                   </ul>
                 </div>
+                {/* Boutons de lien */}
 
-                {/* Bouton */}
+                <div className="flex gap-2"   >
+                  
                 <div className="pt-2">
                   <Link
                     href={item.link}
@@ -87,9 +90,21 @@ export default function Technos() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 rounded-xl bg-[#04F7A4] px-4 py-2 text-sm font-semibold text-emerald-950 hover:brightness-95 active:translate-y-[1px] transition"
                   >
-                    Voir le projet
-                    <span aria-hidden>↗</span>
+                    <Globe />
                   </Link>
+                </div>
+
+                
+                 <div className="pt-2">
+                  <Link
+                    href={item.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl bg-[#04F7A4] px-4 py-2 text-sm font-semibold text-emerald-950 hover:brightness-95 active:translate-y-[1px] transition"
+                  >
+                     <Github />
+                  </Link>
+                </div>
                 </div>
               </div>
             </div>

@@ -96,7 +96,7 @@ export default function Home() {
       </main>
       <footer className="bg-[#04F7A4] h-12 mt-3 flex items-center justify-center cursor-pointer">
         <p className="text-black md:text-2xl text-md text-center">
-          2025 | Made by Mahmoud M.
+          2026 | Made by Mahmoud M.
         </p>
       </footer>
     </>

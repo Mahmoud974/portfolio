@@ -10,32 +10,8 @@ export type Portfolio = {
 
 export const portfolios: Portfolio[] = [
  
-  {
-    id: 1,
-    title: "THEGROOMLAB",
-    description: [
-      "Développement d’une application vitrine avec Next.js, TailwindCSS et shadcn/ui pour une interface moderne, performante et responsive.",
-      "Conception et provisionnement d’une infrastructure AWS entièrement automatisée via Terraform (S3, CloudFront, ACM, OAC, IAM).",
-      "Mise en place d’un pipeline CI/CD complet : GitHub → CodePipeline → CodeBuild pour automatiser le build, le déploiement sur S3 et l’invalidation CloudFront.",
-      "Implémentation d’un système de monitoring et d’alerting (CloudWatch + SNS) pour assurer l’observabilité et la supervision de l’infrastructure."
-    ]
-    ,
-    image: "/images/portfolios/Thegroomlab.webp",
-    tags: [
-      "Next.js",
-      "TailwindCSS",
-      "Terraform",
-      "AWS S3",
-      "CloudFront",
-      "AWS IAM",
-      "AWS CI/CD",
-      "SNS",
-      "CloudWatch"
-    ],
-    link: "https://dke6djvrpp2ow.cloudfront.net",
-    github: "https://github.com/ton-compte/thegroomlab"
-  }
-,  {
+  
+ {
     id: 2,
     title: "Product List – Composant React déployé sur AWS",
     description: [
@@ -84,11 +60,11 @@ export const portfolios: Portfolio[] = [
        
     ],
     link: "https://main.d12sna0yvan4qm.amplifyapp.com/",
-    github: "https://github.com/ton-compte/thegroomlab"
+    github: "https://github.com/Mahmoud974/static-job-main"
   },
   {
     id: 4,
-    title: "Ticket Generator",
+    title: "Ticket Generator - Automatisation serverless de billetterie",
     description: [
       "Développement d’une application React permettant de générer des tickets personnalisés à partir d’un formulaire dynamique.",
       "Validation des champs utilisateur avec Zod et gestion du formulaire via React Hook Form pour une expérience fluide et sécurisée.",
@@ -112,13 +88,11 @@ export const portfolios: Portfolio[] = [
       "AWS Amplify",
       "AWS Lambda",
       "API Gateway",
-      "DynamoDB",
-     
-      "Notion API",
+      "AWS DynamoDB",
       "Cloudflare",
     ],
-    link: "https://tip-calculator-new.vercel.app/",
-    github: "https://github.com/ton-compte/thegroomlab"
+    link: "https://main.d12coea0w84vd9.amplifyapp.com/",
+    github: "https://github.com/Mahmoud974/ticket-generator-aws"
   }
   ,
   
@@ -149,40 +123,9 @@ export const portfolios: Portfolio[] = [
       "Vercel",
     ],
     link: "https://tip-calculator-new.vercel.app/",
-    github: "https://github.com/ton-compte/thegroomlab"
+    github: "https://github.com/Mahmoud974/e-commerce-project"
   },
-  // {
-  //   id: 6,
-  //   title: "Manuscrit Graphisme – Portfolio Next.js optimisé SEO et performant",
-  //   description: [
-  //     "Conception du design sur Figma et développement complet avec Next.js, TailwindCSS et Shadcn/UI.",
-  //   "Création d’un portfolio moderne, responsive et conforme aux standards W3C.",
-  //   "Intégration d’un formulaire de contact fonctionnel avec React Hook Form et validation via Zod.",
-  //   "Ajout d’un espace d’administration sécurisé avec authentification (NextAuth) permettant à l’administrateur de se connecter et de mettre à jour son portfolio en toute autonomie.",
-  //   "Optimisation du référencement (SEO), de la vitesse et des performances grâce aux audits Lighthouse.",
-  //   "Mise en place de la surveillance et du monitoring de l’application avec Prometheus et Grafana pour suivre les métriques de performance en temps réel.",
-  //   "Déploiement professionnel sur Vercel avec nom de domaine personnalisé et configuration HTTPS.",
-  //   ],
-  //   image: "/images/portfolios/manuscrit-graphisme.webp",
-  //   tags: [
-  //     "Next.js",
-  //     "TailwindCSS",
-  //     "Shadcn/UI",
-  //     "Zod",
-  //     "React Hook Form",
-  //     "Figma",
-  //     "SEO",
-  //     "NexAuth",
-  //     "Lighthouse",
-  //     "Prometheus",
-  //     "Grafana",
-  //     "Vercel",
- 
-  //   ],
-  //   link: "https://manuscrit-agency-app-d4wp.vercel.app",
-  // },
-  
-
+   
  
   {
     id: 8,
@@ -210,7 +153,7 @@ export const portfolios: Portfolio[] = [
       "Recherche et filtrage",
     ],
     link: "https://d3udmvfw6yelnx.cloudfront.net/Les_petits_plats_project-master/index.html",
-    github: "https://github.com/ton-compte/thegroomlab"
+    github: "https://github.com/Mahmoud974/Les_petits_plats_project"
   },
   
  

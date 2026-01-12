@@ -4,6 +4,7 @@ export type Education = {
   organization: string;
   description: string[] | undefined;
   logo?: string;
+  link?: string;
 };
 
 export const education: Education[] = [
@@ -31,6 +32,7 @@ export const education: Education[] = [
     
     ],
     logo: "/images/aws-logo.webp",
+    link:"https://www.credly.com/badges/98c84215-df4f-4941-9e70-fcade606c79f"
   },
 
   {
