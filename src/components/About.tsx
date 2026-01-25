@@ -80,7 +80,7 @@ export default function About() {
       </div>
 
       {/* Texte principal */}
-      <div className="max-w-4xl">
+      <div className="xl:max-w-4xl">
         <p className="mt-4 md:text-3xl md:text-left text-white">
           <strong>Développeur Front-End</strong> passionné spécialisé en{" "}
           <strong>React</strong> et <strong>Next.js</strong>, je conçois des

@@ -47,8 +47,6 @@ export const experience: Exp[] = [
       "Figma",
       "SEO",
       "Lighthouse",
-      "Prometheus",
-      "Grafana",
       "Vercel",
       "NextAuth",
     ],
@@ -63,8 +61,8 @@ export const experience: Exp[] = [
       "Déploiement professionnel sur Vercel avec nom de domaine personnalisé et HTTPS.",
     ],
     image: "/images/portfolios/manuscrit-graphisme.webp",
-    link: "https://manuscrit-agency-app.vercel.app/",
-    github: "https://github.com/Mahmoud974/Manuscrit-Agency-app"
+    link: "https://manuscrit-graphisme-app.vercel.app/",
+    github: "https://github.com/Mahmoud974/Manuscrit-graphisme-app#"
   },
 
   
