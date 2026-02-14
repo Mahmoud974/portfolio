@@ -122,7 +122,7 @@ export const portfolios: Portfolio[] = [
       "Figma",
       "Vercel",
     ],
-    link: "https://tip-calculator-new.vercel.app/",
+    link: "https://sofachic-app.vercel.app/",
     github: "https://github.com/Mahmoud974/e-commerce-project"
   },
    
