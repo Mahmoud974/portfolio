@@ -11,30 +11,7 @@ export type Portfolio = {
 export const portfolios: Portfolio[] = [
  
   
- {
-    id: 2,
-    title: "Product List – Composant React déployé sur AWS",
-    description: [
-      "Création d’un composant React interactif affichant une liste de produits avec gestion du panier.",
-      "Interface moderne et responsive développée avec React et TailwindCSS.",
-      "Infrastructure déployée via Terraform (S3, CloudFront) pour l’hébergement statique.",
-      "Pipeline CI/CD et hébergement gérés avec AWS Amplify.",
-      "Surveillance et logs configurés avec AWS CloudWatch.",
-    ],
-    image: "/images/portfolios/dessert.webp",
-    tags: [
-      "React",
-      "TailwindCSS",
-      "Terraform",
-      "AWS Amplify",
-      "S3",
-      "CloudFront",
-      "API Gateway",
-      "CloudWatch",
-    ],
-    link: "https://product-cart-plum.vercel.app/",
-    github: "https://github.com/ton-compte/thegroomlab"
-  },
+
   
   
   {
@@ -124,6 +101,28 @@ export const portfolios: Portfolio[] = [
     ],
     link: "https://sofachic-app.vercel.app/",
     github: "https://github.com/Mahmoud974/e-commerce-project"
+  },
+  {
+    id: 2,
+    title: "Product List – Composant React déployé sur AWS",
+    description: [
+      "Création d’un composant React interactif affichant une liste de produits avec gestion du panier.",
+      "Interface moderne et responsive développée avec React et TailwindCSS.",
+      "Infrastructure déployée via Terraform (S3, CloudFront) pour les images.",
+      "Surveillance et logs configurés avec AWS CloudWatch.",
+    ],
+    image: "/images/portfolios/dessert.webp",
+    tags: [
+      "React",
+      "TailwindCSS",
+      "Terraform",
+      "Vercel",
+      "S3",
+      "CloudFront",
+      "CloudWatch",
+    ],
+    link: "https://product-cart-plum.vercel.app/",
+    github: "https://github.com/Mahmoud974/Product_cart"
   },
    
  
