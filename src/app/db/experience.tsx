@@ -61,7 +61,7 @@ export const experience: Exp[] = [
       "Déploiement professionnel sur Vercel avec nom de domaine personnalisé et HTTPS.",
     ],
     image: "/images/portfolios/manuscrit-graphisme.webp",
-    link: "https://manuscrit-graphisme-app.vercel.app/",
+    link: "https://manuscrit-graphisme.vercel.app/",
     github: "https://github.com/Mahmoud974/Manuscrit-graphisme-app#"
   },
 
