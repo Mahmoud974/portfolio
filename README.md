@@ -3,7 +3,7 @@
 
 Portfolio personnel développé avec **Next.js**, mettant en avant mes projets, mes compétences front-end et mon expertise Cloud AWS.
 
-🔗 Live Demo : https://portfolio-mahmoud-m.vercel.app/
+🔗 Mon portfolio : https://portfolio-mahmoud-m.vercel.app/
 
 ---
 
