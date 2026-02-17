@@ -67,7 +67,7 @@ export default function Home() {
     <>
  
 
-      <main className="container flex-col justify-center h-full mx-auto flex md:flex-row mt-12 cursor-default">
+      <main className="container flex-col justify-center h-full mx-auto flex md:flex-row mt-24 cursor-default">
         <Profile />
 
         <section className="max-w-4xl justify-center flex flex-col md:ml-16 md:px-0 px-12 cursor-pointer">

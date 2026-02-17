@@ -90,33 +90,42 @@ export default function About() {
           fiables et optimisées pour le <strong>SEO</strong>.
         </p>
 
-        {/* Liste de compétences */}
-        <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-white/90">
-          <li className="flex items-center gap-2">
-            <CheckCircle2 className="mt-1 text-[#04F7A4]" />
-            <span>
-              Développement moderne avec <strong>React</strong> et{" "}
-              <strong>Next.js</strong>
-            </span>
-          </li>
-          <li className="flex items-center gap-2">
-            <CheckCircle2 className="mt-1 text-[#04F7A4]" />
-            <span>Création d’interfaces réactives et responsives</span>
-          </li>
-          <li className="flex items-center gap-2">
-            <CheckCircle2 className="mt-1 text-[#04F7A4]" />
-            <span>
-              Optimisation du <strong>SEO</strong> et de l’<strong>accessibilité</strong>
-            </span>
-          </li>
-          <li className="flex items-center gap-2">
-            <CheckCircle2 className="mt-1 text-[#04F7A4]" />
-            <span>Collaboration efficace avec les designers</span>
-          </li>
-        </ul>
+      {/* Liste de compétences */}
+<ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-white/90">
+  <li className="flex items-start gap-3">
+    <CheckCircle2 className="mt-1 h-5 w-5 text-[#04F7A4] shrink-0" />
+    <span className="leading-relaxed">
+      Développement moderne avec <strong>React</strong> et{" "}
+      <strong>Next.js</strong>
+    </span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <CheckCircle2 className="mt-1 h-5 w-5 text-[#04F7A4] shrink-0" />
+    <span className="leading-relaxed">
+      Création d’interfaces réactives et responsives
+    </span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <CheckCircle2 className="mt-1 h-5 w-5 text-[#04F7A4] shrink-0" />
+    <span className="leading-relaxed">
+      Optimisation du <strong>SEO</strong> et de l’
+      <strong>accessibilité</strong>
+    </span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <CheckCircle2 className="mt-1 h-5 w-5 text-[#04F7A4] shrink-0" />
+    <span className="leading-relaxed">
+      Collaboration efficace avec les designers
+    </span>
+  </li>
+</ul>
+
 
         {/* Bouton de téléchargement */}
-        <div className="flex justify-start">
+        <div className="flex justify-center md:justify-center">
           <Button className="my-6 bg-[#04F7A4] px-12 py-6 rounded-none">
             <p className="text-xl text-black mr-2">Télécharger CV</p>
             <AiOutlineDownload className="text-xl text-black" />

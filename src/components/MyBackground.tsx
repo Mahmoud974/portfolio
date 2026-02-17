@@ -49,31 +49,59 @@ export default function MyBackground() {
       </div>
 
       {/* COMMUTATEUR */}
-      <div className="flex justify-center mt-12">
-        <div className="flex items-center bg-[#0a1714] rounded-full p-1">
-          <button
-            onClick={() => setShowEducation(true)}
-            className={`flex items-center gap-2 px-5 py-2 rounded-full font-medium transition-all ${
-              showEducation ? "bg-[#04F7A4] text-black" : "text-gray-400 hover:text-white"
-            }`}
-            type="button"
-          >
-            <GraduationCap className="w-5 h-5" />
-            <span>Formations</span>
-          </button>
+      <div className="flex justify-center mt-12 px-4">
+  <div className="
+    w-full max-w-md
+    flex flex-col lg:flex-row
+    bg-[#0a1714]
+    rounded-2xl lg:rounded-full
+    p-2
+    gap-2 lg:gap-0
+  ">
+    <button
+      onClick={() => setShowEducation(true)}
+      type="button"
+      className={`
+        flex items-center justify-center gap-2
+        w-full
+        py-3
+        rounded-xl lg:rounded-full
+        font-medium
+        transition-all duration-300
+        ${
+          showEducation
+            ? "bg-[#04F7A4] text-black shadow-md"
+            : "text-gray-400 hover:text-white hover:bg-white/5"
+        }
+      `}
+    >
+      <GraduationCap className="w-5 h-5" />
+      <span>Formations</span>
+    </button>
 
-          <button
-            onClick={() => setShowEducation(false)}
-            className={`flex items-center gap-2 px-5 py-2 rounded-full font-medium transition-all ${
-              !showEducation ? "bg-[#04F7A4] text-black" : "text-gray-400 hover:text-white"
-            }`}
-            type="button"
-          >
-            <Briefcase className="w-5 h-5" />
-            <span>Expériences</span>
-          </button>
-        </div>
-      </div>
+    <button
+      onClick={() => setShowEducation(false)}
+      type="button"
+      className={`
+        flex items-center justify-center gap-2
+        w-full
+        py-3
+        rounded-xl lg:rounded-full
+        font-medium
+        transition-all duration-300
+        ${
+          !showEducation
+            ? "bg-[#04F7A4] text-black shadow-md"
+            : "text-gray-400 hover:text-white hover:bg-white/5"
+        }
+      `}
+    >
+      <Briefcase className="w-5 h-5" />
+      <span>Expériences</span>
+    </button>
+  </div>
+</div>
+
 
       {/* SECTION ÉDUCATION */}
       {showEducation && (

@@ -13,7 +13,7 @@ export default function MyBackground() {
       className="flex flex-col justify-center items-center"
       aria-labelledby="background-heading"
     >
-      {/* ===== TITRE ===== */}
+  
       <div className="hidden md:flex text-center mx-auto font-bold justify-center -mt-6 -mb-16">
         <WordRotate
           className="text-[8rem] uppercase font-[800] text-white"
@@ -27,7 +27,7 @@ export default function MyBackground() {
         </h1>
       </div>
 
-      {/* ===== SOUS-TITRE ===== */}
+  
       <div className="mt-6 text-center">
         <h2
           id="background-heading"
