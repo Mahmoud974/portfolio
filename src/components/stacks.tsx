@@ -2,49 +2,64 @@
 import React from "react";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
 
-const people = [
+const stacks = [
+ 
   {
     id: 1,
     name: "Next.js",
-    designation: "Next.js",
+    designation: "React Framework",
     image: "/images/nextjs.webp",
   },
   {
     id: 2,
     name: "TypeScript",
-    designation: "Product Manager",
+    designation: "Typed JavaScript",
     image: "/images/typescript.webp",
   },
   {
     id: 3,
-    name: "Prisma",
-    designation: "Prisma",
-    image: "/images/prisma.webp",
+    name: "Tailwind CSS",
+    designation: "Styling",
+    image: "/images/tailwindcss.webp",
   },
   {
     id: 4,
-    name: "NextAuth",
-    designation: "NextAuth",
-    image: "/images/nextauth.webp",
+    name: "Gitlab",
+    designation: "Styling",
+    image: "/images/gitlab.webp",
+  },
+
+  
+  {
+    id: 7,
+    name: "Docker",
+    designation: "Containerization",
+    image: "/images/docker.webp",
   },
   {
-    id: 5,
-    name: "PostgreSQL",
-    designation: "PostgreSQL",
-    image: "/images/postgres.webp",
+    id: 8,
+    name: "Kubernetes",
+    designation: "Orchestration",
+    image: "/images/k8s1.webp",
   },
   {
-    id: 6,
-    name: "Tailwindcss",
-    designation: "Tailwindcss",
-    image: "/images/tailwindcss.webp",
+    id: 9,
+    name: "AWS",
+    designation: "Cloud Provider",
+    image: "/images/aws.webp",
+  },
+  {
+    id: 10,
+    name: "Terraform",
+    designation: "Infrastructure as Code",
+    image: "/images/terraform.webp",
   },
 ];
 
 export function Stacks() {
   return (
-    <div className="flex cursor-pointer  flex-row items-center justify-center mb-10  ">
-      <AnimatedTooltip items={people} />
+    <div className="flex cursor-pointer flex-row items-center justify-center mb-10">
+      <AnimatedTooltip items={stacks} />
     </div>
   );
 }

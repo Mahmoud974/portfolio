@@ -42,7 +42,7 @@ export default function Profile() {
 
                 {/* Description courte */}
                 <p className="text-xl w-72 text-white/90">
-                  Développeur Front-end React.js/ Next.js/ Cloud AWS
+                 Devops / Développeur front-end React.js / Next.js 
                 </p>
               </div>
 
