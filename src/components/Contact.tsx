@@ -72,7 +72,7 @@ export default function Contact() {
         />
       </div>
 
-      {/* Introduction */}
+     
       <p className="w-3/3 mt-9 md:text-3xl text-md text-left text-white">
         Envie de collaborer sur un site moderne, une app ou un design unique ?{" "}
         Je suis disponible pour vos projets. 🚀
