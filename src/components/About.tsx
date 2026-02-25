@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { AiOutlineDownload } from "react-icons/ai";
-import { Button } from "./ui/button";
+// import { AiOutlineDownload } from "react-icons/ai";
+// import { Button } from "./ui/button";
 import NumberTicker from "./ui/number-ticker";
 import WordRotate from "./ui/word-rotate";
 import { CheckCircle2 } from "lucide-react";
@@ -77,21 +77,19 @@ export default function About() {
       {/* Titre mobile */}
       <div>
         <h1 className="md:hidden mt-8 text-6xl uppercase font-[800] text-white text-center">
-          ABOUT ME
+          ABOUT  <span className="text-[#04F7A4]">ME</span>
         </h1>
       </div>
 
       {/* Texte principal */}
       <div className="xl:max-w-4xl w-full flex flex-col items-center">
-        <p className="mt-4 md:text-3xl text-center md:text-left text-white">
-          <strong>Développeur Front-End</strong> passionné spécialisé en{" "}
-          <strong>React</strong> et <strong>Next.js</strong>, je conçois des
-          interfaces web modernes, performantes et accessibles. Mon objectif est
-         {` d'allier`} <strong>design</strong>,{" "}
-          <strong>expérience utilisateur</strong> et{" "}
-          <strong>performance</strong> pour créer des applications fluides,
-          fiables et optimisées pour le <strong>SEO</strong>.
-        </p>
+      <p className="mt-4 md:text-3xl text-center md:text-left text-white">
+  <strong>Développeur Front-End & DevOps</strong>, je conçois des applications
+  modernes avec <strong>React</strong> et <strong>Next.js</strong> et je déploie
+  des architectures cloud performantes sur <strong>AWS</strong>.
+  J’allie <strong>design</strong>, <strong>performance</strong> et
+  <strong>scalabilité</strong>.
+</p>
 
         {/* Liste de compétences — centrée sur mobile, 2 colonnes sur sm+ */}
         <ul className="mt-6 w-full grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-white/90">
@@ -127,12 +125,12 @@ export default function About() {
         </ul>
 
         {/* Bouton de téléchargement */}
-        <div className="flex justify-center w-full">
+        {/* <div className="flex justify-center w-full">
           <Button className="my-6 bg-[#04F7A4] px-12 py-6 rounded-none">
             <p className="text-xl text-black mr-2">Télécharger CV</p>
             <AiOutlineDownload className="text-xl text-black" />
           </Button>
-        </div>
+        </div> */}
       </div>
 
       {/* Statistiques — centrées sur mobile */}
