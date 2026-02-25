@@ -87,7 +87,7 @@ export default function About() {
           <strong>Développeur Front-End</strong> passionné spécialisé en{" "}
           <strong>React</strong> et <strong>Next.js</strong>, je conçois des
           interfaces web modernes, performantes et accessibles. Mon objectif est
-          d'allier <strong>design</strong>,{" "}
+         {` d'allier`} <strong>design</strong>,{" "}
           <strong>expérience utilisateur</strong> et{" "}
           <strong>performance</strong> pour créer des applications fluides,
           fiables et optimisées pour le <strong>SEO</strong>.
@@ -106,14 +106,14 @@ export default function About() {
           <li className="flex items-start gap-3 justify-center sm:justify-start text-center sm:text-left">
             <CheckCircle2 className="mt-1 h-5 w-5 text-[#04F7A4] shrink-0" />
             <span className="leading-relaxed">
-              Création d'interfaces réactives et responsives
+            {`  Création d'interfaces réactives et responsives`}
             </span>
           </li>
 
           <li className="flex items-start gap-3 justify-center sm:justify-start text-center sm:text-left">
             <CheckCircle2 className="mt-1 h-5 w-5 text-[#04F7A4] shrink-0" />
             <span className="leading-relaxed">
-              Optimisation du <strong>SEO</strong> et de l'
+              Optimisation du <strong>SEO</strong> {`et de l'`}
               <strong>accessibilité</strong>
             </span>
           </li>
@@ -174,7 +174,7 @@ export default function About() {
             <div className="bg-[#04F7A4] w-8 h-1 mt-3"></div>
             <div className="text-3xl ml-2 text-left">
               <p>Années</p>
-              <p>d'expérience</p>
+              <p>{`d'expérience`}</p>
             </div>
           </div>
         </li>
