@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-// import { AiOutlineDownload } from "react-icons/ai";
-// import { Button } from "./ui/button";
+import { AiOutlineDownload } from "react-icons/ai";
+import { Button } from "./ui/button";
 import NumberTicker from "./ui/number-ticker";
 import WordRotate from "./ui/word-rotate";
 import { CheckCircle2 } from "lucide-react";
@@ -87,8 +87,8 @@ export default function About() {
   <strong>Développeur Front-End & DevOps</strong>, je conçois des applications
   modernes avec <strong>React</strong> et <strong>Next.js</strong> et je déploie
   des architectures cloud performantes sur <strong>AWS</strong>.
-  J’allie <strong>design</strong>, <strong>performance</strong> et
-  <strong>scalabilité</strong>.
+  J’allie <strong>design</strong>, <strong>performance</strong> et 
+  <strong> scalabilité</strong>.
 </p>
 
         {/* Liste de compétences — centrée sur mobile, 2 colonnes sur sm+ */}
@@ -125,12 +125,17 @@ export default function About() {
         </ul>
 
         {/* Bouton de téléchargement */}
-        {/* <div className="flex justify-center w-full">
-          <Button className="my-6 bg-[#04F7A4] px-12 py-6 rounded-none">
-            <p className="text-xl text-black mr-2">Télécharger CV</p>
-            <AiOutlineDownload className="text-xl text-black" />
-          </Button>
-        </div> */}
+        <div className="flex cursor-pointer justify-center w-full">
+        <Button
+  asChild
+  className="my-6 bg-[#04F7A4] text-black px-12 py-6 rounded-none"
+>
+  <a href="/cv-mahmoud.pdf" className="" download>
+    Télécharger CV
+    <AiOutlineDownload className="ml-2 text-xl" />
+  </a>
+</Button>
+        </div>
       </div>
 
       {/* Statistiques — centrées sur mobile */}
