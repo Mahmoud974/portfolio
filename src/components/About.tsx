@@ -130,7 +130,7 @@ export default function About() {
   asChild
   className="my-6 bg-[#04F7A4] text-black px-12 py-6 rounded-none"
 >
-  <a href="/cv-mahmoud.pdf" className="" download>
+  <a href="/CV_Mahmoud.pdf" className="" download>
     Télécharger CV
     <AiOutlineDownload className="ml-2 text-xl" />
   </a>
