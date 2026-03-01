@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Profile from "@/components/ui/Profile";
 import About from "@/components/About";
-import Menu from "@/components/Menu";
+ 
 import MyBackground from "@/components/MyBackground";
 import Contact from "@/components/Contact";
 import Projets from "@/components/Projets";
@@ -10,6 +10,7 @@ import Technos from "@/components/MySkills";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<string | null>(null);
+console.log(activeSection);
 
   useEffect(() => {
     const sectionIds = ["about", "projects", "skills", "background", "contact"];
@@ -72,10 +73,7 @@ export default function Home() {
 
         <section className="max-w-4xl justify-center flex flex-col md:ml-16 md:px-0 px-12 cursor-pointer">
           
-          <Menu 
-            activeSection={activeSection} 
-            onSectionClick={setActiveSection} 
-          />
+          
           <div id="about" className="scroll-mt-32">
             <About />
           </div>

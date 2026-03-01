@@ -1,38 +1,24 @@
 import { languages } from "@/app/db/languages";
 import React from "react";
-import WordRotate from "./ui/word-rotate";
+ 
 import Image from "next/image";
 
 export default function Projets() {
   return (
     <section className="px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 py-4 sm:py-6 md:py-8">
       
-      {/* Titre Desktop */}
-      <div className="hidden md:flex text-center mx-auto font-bold justify-center -mt-4 md:-mt-6 lg:-mt-8 -mb-8 md:-mb-12 lg:-mb-16">
-        <WordRotate
-          className="text-[4rem] md:text-[6rem] lg:text-[7rem] xl:text-[8.9rem] uppercase font-[800] text-white"
-          words={["MES"]}
-        />
-        <WordRotate
-          className="text-[4rem] md:text-[6rem] lg:text-[7rem] xl:text-[8.9rem] ml-1 md:ml-2 uppercase font-[800] text-[#04F7A4]"
-          words={["PROJETS"]}
-        />
-      </div>
+{/* Titre Desktop */}
+<div className="  md:flex text-center mx-auto font-bold justify-center -mt-4 md:-mt-6 lg:-mt-8 -mb-8 md:-mb-12 lg:-mb-16">
+  <span className="text-[5rem] md:text-[4.5rem] lg:text-[5.5rem] xl:text-[12rem] uppercase font-[800] text-white">MON</span>
+  <span className="text-[5rem] md:text-[4.5rem] lg:text-[5.5rem] xl:text-[12rem] uppercase font-[800] text-[#04F7A4] ml-3">LAB</span>
+</div>
 
-      {/* Titre Mobile */}
-      <div className="md:hidden">
-        <h2 className="mt-4 sm:mt-6 text-2xl sm:text-3xl uppercase font-[800] text-white text-center">
-          MES <span className="text-[#04F7A4]">PROJETS</span>
-        </h2>
-      </div>
+    
 
-      {/* Sous-titre */}
-      <div className="mt-6 sm:mt-8">
-        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-center uppercase px-2">
-          Tech & outils favoris
-        </p>
-        <div className="h-1.5 sm:h-2 mt-2 w-16 sm:w-20 bg-[#04F7A4] mx-auto"></div>
-      </div>
+      <h2 className="text-3xl font-extrabold text-center mt-8 tracking-tight">
+        MES STACKS
+      </h2>
+      <div className="h-1.5 mt-3 w-24 bg-[#04F7A4] mx-auto rounded-full" />
 
       {/* LOGOS */}
       <div className="flex justify-center mt-8 md:mt-12">

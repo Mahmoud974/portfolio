@@ -6,7 +6,7 @@ import React, { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import WordRotate from "./ui/word-rotate";
-import { GraduationCap, Briefcase, Globe, Github } from "lucide-react";
+import { GraduationCap, Briefcase, Globe, Github, MoveUpRight } from "lucide-react";
 
 type ExternalLinkProps = {
   href?: string;
@@ -140,11 +140,11 @@ export default function MyBackground() {
               .map((item, index) => (
                 <li key={index}>
                   <div className="flex flex-col md:text-left">
-                    <h3 className="md:text-2xl text-lg my-2">
+                    <h3 className="md:text-2xl text-lg my-2 flex items-center gap-2">
                       {item.title}{" "}
                       {item.link ? (
                         <ExternalLink href={item.link} className="text-[#04F7A4] text-4xl">
-                          ↗
+                          <MoveUpRight />
                         </ExternalLink>
                       ) : null}
                     </h3>

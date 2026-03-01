@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Button } from "./ui/button";
 import NumberTicker from "./ui/number-ticker";
-import WordRotate from "./ui/word-rotate";
 import { CheckCircle2 } from "lucide-react";
 
 export default function About() {
@@ -62,17 +61,14 @@ export default function About() {
       id="about"
       className="text-center flex flex-col items-center space-y-13 px-4"
     >
-      {/* Titre animé desktop */}
+ 
       <div className="md:flex hidden text-center mx-auto font-bold justify-center -mt-12 -mb-16">
-        <WordRotate
-          className="text-[8rem] uppercase font-[800] text-white dark:text-white"
-          words={["PRESENTA"]}
-        />
-        <WordRotate
-          className="text-[8rem] ml-2 uppercase font-[800] text-[#04F7A4] dark:text-white"
-          words={["TION"]}
-        />
-      </div>
+      <h1 className="text-[8rem] uppercase font-[800] mb-7">
+  <span className="text-white">QUI SUIS-</span>
+  <span className="text-[#04F7A4]">JE ?</span>
+  </h1>
+
+</div>
 
       {/* Titre mobile */}
       <div>
