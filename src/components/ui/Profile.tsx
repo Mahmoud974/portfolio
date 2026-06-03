@@ -107,7 +107,7 @@ export default function Profile() {
           {/* Badge dispo */}
           <div className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#04F7A4]/5 border border-[#04F7A4]/20 mb-4 w-full justify-center">
             <span className="w-1.5 h-1.5 rounded-full bg-[#04F7A4] animate-pulse shrink-0" />
-            <span className="text-[11px] text-[#04F7A4]">Disponible — Lyon, FR</span>
+            <span className="text-[11px] text-[#04F7A4]">Disponible — Valence, FR</span>
           </div>
 
           <div className="w-full border-t border-white/5 mb-3" />
