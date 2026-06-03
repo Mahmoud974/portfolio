@@ -4,10 +4,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { Github, Globe } from "lucide-react";
 
+const CARD_CLASS =
+  "mx-auto w-full max-w-5xl overflow-hidden rounded-2xl bg-[#0a1714] ring-1 ring-emerald-900/30 shadow-lg hover:shadow-emerald-600/20 transition-shadow";
+
+const TAG_CLASS =
+  "rounded-full bg-emerald-950/70 text-[#04F7A4] px-3 py-1 text-xs md:text-sm";
+
+const BTN_CLASS =
+  "inline-flex items-center justify-center gap-2 rounded-xl bg-[#04F7A4] px-4 py-2 text-sm font-semibold text-emerald-950 hover:brightness-95 active:translate-y-px transition";
+
+const SCROLL_CLASS =
+  "max-h-36 md:max-h-40 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-emerald-700 scrollbar-track-transparent hover:scrollbar-thumb-emerald-500 transition-all rounded-lg";
+
 export default function Technos() {
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 3;
-
   const totalPages = Math.ceil(portfolios.length / itemsPerPage);
   const currentItems = portfolios.slice(
     currentPage * itemsPerPage,
@@ -16,95 +27,63 @@ export default function Technos() {
 
   return (
     <>
-      {/* <h2 className="text-3xl font-extrabold text-center mt-8 tracking-tight">
-        PROJETS
-      </h2> */}
-      {/* <div className="h-1.5 mt-3 w-24 bg-[#04F7A4] mx-auto rounded-full" /> */}
-
-      <ul className="mt-10 space-y-8">
+      <ul className="space-y-6 sm:space-y-8">
         {currentItems.map((item) => (
-          <li
-            key={item.id}
-            className="mx-auto w-full h-auto max-w-5xl overflow-hidden rounded-2xl bg-[#0a1714] ring-1 ring-emerald-900/30 shadow-lg hover:shadow-emerald-600/20 transition-shadow"
-          >
-            <div className="md:flex">
-              {/* Image */}
+          <li key={item.id} className={CARD_CLASS}>
+            <div className="flex flex-col md:flex-row">
               <Link
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block md:w-2/5"
+                className="block md:w-2/5 shrink-0"
               >
                 <Image
                   src={item.image}
                   alt={item.title}
                   width={1200}
                   height={800}
-                  priority
-                  className="h-56 w-full object-cover md:h-full"
+                  className="h-48 sm:h-56 w-full object-cover md:min-h-full md:h-full"
                 />
               </Link>
 
-              {/* Contenu */}
-              <div className="md:w-3/5 p-5 md:p-6 flex flex-col gap-4">
-                {/* Titre */}
-                <h3 className="text-xl md:text-2xl font-bold">{item.title}</h3>
+              <div className="md:w-3/5 p-4 sm:p-5 md:p-6 flex flex-col gap-3 sm:gap-4 min-w-0">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold">{item.title}</h3>
 
-                {/* Tags */}
-                <ul className="flex flex-wrap gap-1">
+                <ul className="flex flex-wrap gap-1.5">
                   {item.tags.map((tag, i) => (
-                    <li
-                      key={i}
-                      className="rounded-full bg-emerald-950/70 text-[#04F7A4] px-3 py-1 text-xs md:text-sm"
-                    >
+                    <li key={i} className={TAG_CLASS}>
                       {tag}
                     </li>
                   ))}
                 </ul>
 
-                {/* Description avec scroll */}
-                <div
-                  className="
-                    max-h-36 md:max-h-40 
-                    overflow-y-auto pr-2 
-                    scrollbar-thin scrollbar-thumb-emerald-700 scrollbar-track-transparent
-                    hover:scrollbar-thumb-emerald-500
-                    transition-all
-                    rounded-lg
-                  "
-                >
+                <div className={SCROLL_CLASS}>
                   <ul className="list-disc pl-5 text-sm md:text-base leading-relaxed text-neutral-200 space-y-1">
                     {item.description.map((line, i) => (
                       <li key={i}>{line}</li>
                     ))}
                   </ul>
                 </div>
-                {/* Boutons de lien */}
 
-                <div className="flex gap-2"   >
-                  
-                <div className="pt-2">
+                <div className="flex flex-wrap gap-2 pt-1">
                   <Link
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-xl bg-[#04F7A4] px-4 py-2 text-sm font-semibold text-emerald-950 hover:brightness-95 active:translate-y-[1px] transition"
+                    className={BTN_CLASS}
+                    aria-label="Voir le projet"
                   >
-                    <Globe />
+                    <Globe className="w-4 h-4" />
                   </Link>
-                </div>
-
-                
-                 <div className="pt-2">
                   <Link
                     href={item.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-xl bg-[#04F7A4] px-4 py-2 text-sm font-semibold text-emerald-950 hover:brightness-95 active:translate-y-[1px] transition"
+                    className={BTN_CLASS}
+                    aria-label="Code source"
                   >
-                     <Github />
+                    <Github className="w-4 h-4" />
                   </Link>
-                </div>
                 </div>
               </div>
             </div>
@@ -112,18 +91,17 @@ export default function Technos() {
         ))}
       </ul>
 
-      {/* Pagination */}
-      <div className="flex justify-center gap-2 mt-10 mb-12">
+      <div className="flex flex-wrap justify-center gap-2 mt-8 sm:mt-10 mb-4 sm:mb-8">
         {Array.from({ length: totalPages }, (_, i) => (
           <button
             key={i}
+            type="button"
             onClick={() => setCurrentPage(i)}
-            className={`h-9 min-w-9 px-3 rounded-full text-sm font-medium transition cursor-pointer
-              ${
-                i === currentPage
-                  ? "bg-emerald-950 text-[#04F7A4] ring-1 ring-emerald-700"
-                  : "bg-[#153c31] text-emerald-100 hover:bg-[#1a4a3c]"
-              }`}
+            className={`h-9 min-w-9 px-3 rounded-full text-sm font-medium transition cursor-pointer ${
+              i === currentPage
+                ? "bg-emerald-950 text-[#04F7A4] ring-1 ring-emerald-700"
+                : "bg-[#153c31] text-emerald-100 hover:bg-[#1a4a3c]"
+            }`}
             aria-current={i === currentPage ? "page" : undefined}
           >
             {i + 1}

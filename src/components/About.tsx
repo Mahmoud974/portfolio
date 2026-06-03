@@ -1,86 +1,65 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Button } from "./ui/button";
 import NumberTicker from "./ui/number-ticker";
 import { CheckCircle2 } from "lucide-react";
+import SectionHeading from "./ui/SectionHeading";
+
+const SKILLS: React.ReactNode[] = [
+  <>
+    Infrastructure as Code avec <strong>Terraform</strong> et <strong>Ansible</strong>
+  </>,
+  <>
+    Pipelines CI/CD avec <strong>GitLab CI</strong> et <strong>AWS Amplify</strong>
+  </>,
+  <>
+    Monitoring et observabilité avec <strong>Grafana</strong>, <strong>Prometheus</strong>{" "}
+    et <strong>CloudWatch</strong>
+  </>,
+  <>
+    Architectures serverless sur <strong>AWS</strong> (Lambda, S3, DynamoDB, API Gateway)
+  </>,
+];
+
+const STATS = [
+  { value: 5, label: ["PROJETS", "AWS / DEVOPS"] },
+  { value: 10, label: ["OUTILS", "DEVOPS"] },
+  { value: 2, label: ["CERTIFICATIONS", "AWS"] },
+] as const;
+
+function StatItem({ value, lines }: { value: number; lines: readonly [string, string] }) {
+  return (
+    <li className="flex flex-col items-center md:items-start">
+      <div className="flex items-center text-5xl sm:text-6xl md:text-7xl">
+        <span className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#04F7A4]">+</span>
+        <NumberTicker value={value} className="text-white font-bold ml-1 sm:ml-2" />
+      </div>
+      <div className="flex items-start mt-1">
+        <div className="bg-[#04F7A4] w-6 sm:w-8 h-1 mt-2 sm:mt-3 shrink-0" />
+        <div className="text-lg sm:text-2xl md:text-3xl ml-2 text-left">
+          <p>{lines[0]}</p>
+          <p>{lines[1]}</p>
+        </div>
+      </div>
+    </li>
+  );
+}
 
 export default function About() {
-  const [activeSection, setActiveSection] = useState<string>("about");
-
-  useEffect(() => {
-    const sectionIds = ["about", "projects", "skills", "background", "contact"];
-    const elements = sectionIds
-      .map((id) => document.getElementById(id))
-      .filter((el): el is HTMLElement => Boolean(el));
-
-    if (elements.length === 0) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries.filter((e) => e.isIntersecting);
-        if (visible.length === 0) return;
-
-        const sortedByPosition = visible.sort(
-          (a, b) => a.boundingClientRect.top - b.boundingClientRect.top
-        );
-
-        const bestSection = sortedByPosition.reduce((best, current) => {
-          const currentRatio = current.intersectionRatio;
-          const bestRatio = best.intersectionRatio;
-          const currentTop = current.boundingClientRect.top;
-          const bestTop = best.boundingClientRect.top;
-
-          if (currentRatio > bestRatio + 0.2) return current;
-          if (Math.abs(currentRatio - bestRatio) < 0.2) {
-            return currentTop < bestTop ? current : best;
-          }
-          return best;
-        });
-
-        setActiveSection(bestSection.target.id);
-      },
-      {
-        root: null,
-        rootMargin: "0px 0px -20% 0px",
-        threshold: [0.1, 0.3, 0.5, 0.7, 0.9],
-      }
-    );
-
-    elements.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    console.log("Section active :", activeSection);
-  }, [activeSection]);
-
   return (
-    <section
-      id="about"
-      className="text-center flex flex-col items-center space-y-13 px-4"
-    >
+    <section className="text-center flex flex-col items-center space-y-8 sm:space-y-10 px-2 sm:px-4">
+      <SectionHeading
+        primary="QUI SUIS-"
+        accent="JE ?"
+        mobilePrimary="ABOUT"
+        mobileAccent="ME"
+      />
 
-      {/* Titre desktop */}
-      <div className="md:flex hidden text-center mx-auto font-bold justify-center -mt-12 -mb-16">
-        <h1 className="text-[8rem] uppercase font-[800] mb-7">
-          <span className="text-white">QUI SUIS-</span>
-          <span className="text-[#04F7A4]">JE ?</span>
-        </h1>
-      </div>
-
-      {/* Titre mobile */}
-      <div>
-        <h1 className="md:hidden mt-8 text-6xl uppercase font-[800] text-white text-center">
-          ABOUT <span className="text-[#04F7A4]">ME</span>
-        </h1>
-      </div>
-
-      {/* Texte principal */}
-      <div className="xl:max-w-4xl w-full flex flex-col items-center">
-        <p className="mt-4 md:text-3xl text-center md:text-left text-white">
-        Passionné par l{"'"}automatisation et le cloud, je suis{" "}
+      <div className="w-full max-w-4xl flex flex-col items-center">
+        <p className="mt-2 text-base sm:text-lg md:text-2xl lg:text-3xl text-center md:text-left text-white leading-relaxed">
+          Passionné par l{"'"}automatisation et le cloud, je suis{" "}
           <strong>Ingénieur DevOps</strong> certifié <strong>AWS</strong>. Je
           conçois des pipelines <strong>CI/CD</strong>, orchestre des conteneurs
           avec <strong>Kubernetes</strong> et supervise les infras avec{" "}
@@ -88,48 +67,24 @@ export default function About() {
           équipes livrent vite et sans stress.
         </p>
 
-        {/* Liste de compétences */}
-        <ul className="mt-6 w-full grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-white/90">
-          <li className="flex items-start gap-3 justify-center sm:justify-start text-center sm:text-left">
-            <CheckCircle2 className="mt-1 h-5 w-5 text-[#04F7A4] shrink-0" />
-            <span className="leading-relaxed">
-              Infrastructure as Code avec <strong>Terraform</strong> et{" "}
-              <strong>Ansible</strong>
-            </span>
-          </li>
-
-          <li className="flex items-start gap-3 justify-center sm:justify-start text-center sm:text-left">
-            <CheckCircle2 className="mt-1 h-5 w-5 text-[#04F7A4] shrink-0" />
-            <span className="leading-relaxed">
-              Pipelines CI/CD avec <strong>GitLab CI</strong> et{" "}
-              <strong>AWS Amplify</strong>
-            </span>
-          </li>
-
-          <li className="flex items-start gap-3 justify-center sm:justify-start text-center sm:text-left">
-            <CheckCircle2 className="mt-1 h-5 w-5 text-[#04F7A4] shrink-0" />
-            <span className="leading-relaxed">
-              Monitoring et observabilité avec <strong>Grafana</strong>,{" "}
-              <strong>Prometheus</strong> et <strong>CloudWatch</strong>
-            </span>
-          </li>
-
-          <li className="flex items-start gap-3 justify-center sm:justify-start text-center sm:text-left">
-            <CheckCircle2 className="mt-1 h-5 w-5 text-[#04F7A4] shrink-0" />
-            <span className="leading-relaxed">
-              Architectures serverless sur <strong>AWS</strong> (Lambda, S3,
-              DynamoDB, API Gateway)
-            </span>
-          </li>
+        <ul className="mt-6 w-full grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 text-white/90">
+          {SKILLS.map((text, index) => (
+            <li
+              key={index}
+              className="flex items-start gap-3 justify-center sm:justify-start text-center sm:text-left"
+            >
+              <CheckCircle2 className="mt-1 h-5 w-5 text-[#04F7A4] shrink-0" />
+              <span className="leading-relaxed text-sm sm:text-base">{text}</span>
+            </li>
+          ))}
         </ul>
 
-        {/* Bouton de téléchargement */}
-        <div className="flex cursor-pointer justify-center w-full">
+        <div className="flex justify-center w-full mt-4">
           <Button
             asChild
-            className="my-6 bg-[#04F7A4] text-black px-12 py-6 rounded-none"
+            className="my-4 sm:my-6 bg-[#04F7A4] text-black px-8 sm:px-12 py-5 sm:py-6 rounded-none hover:bg-[#03d98f] transition-colors"
           >
-            <a href="/CV_Mahmoud.pdf" className="" download>
+            <a href="/CV_Mahmoud.pdf" download>
               Télécharger CV
               <AiOutlineDownload className="ml-2 text-xl" />
             </a>
@@ -137,49 +92,10 @@ export default function About() {
         </div>
       </div>
 
-      {/* Statistiques */}
-      <ul className="flex md:flex-row mt-4 flex-col md:justify-between space-y-14 md:space-y-0 md:space-x-16 justify-center items-center w-full">
-        <li className="flex flex-col items-center md:items-start text-7xl">
-          <div className="flex items-center text-8xl">
-            <span className="text-5xl font-[900] text-[#04F7A4]">+</span>
-            <NumberTicker value={5} className="text-white font-bold ml-2" />
-          </div>
-          <div className="flex items-start">
-            <div className="bg-[#04F7A4] w-8 h-1 mt-3"></div>
-            <div className="text-3xl ml-2 text-left">
-              <p>PROJETS</p>
-              <p>AWS / DEVOPS</p>
-            </div>
-          </div>
-        </li>
-
-        <li className="flex flex-col items-center md:items-start text-7xl">
-          <div className="flex items-center text-8xl">
-            <span className="text-5xl font-[900] text-[#04F7A4]">+</span>
-            <NumberTicker value={10} className="text-white font-bold ml-2" />
-          </div>
-          <div className="flex items-start">
-            <div className="bg-[#04F7A4] w-8 h-1 mt-3"></div>
-            <div className="text-3xl ml-2 text-left">
-              <p>OUTILS</p>
-              <p>DEVOPS</p>
-            </div>
-          </div>
-        </li>
-
-        <li className="flex flex-col items-center md:items-start text-7xl">
-          <div className="flex items-center text-8xl">
-            <span className="text-5xl font-[900] text-[#04F7A4]">+</span>
-            <NumberTicker value={2} className="text-white font-bold ml-2" />
-          </div>
-          <div className="flex items-start">
-            <div className="bg-[#04F7A4] w-8 h-1 mt-3"></div>
-            <div className="text-3xl ml-2 text-left">
-              <p>CERTIFICATIONS</p>
-              <p>AWS</p>
-            </div>
-          </div>
-        </li>
+      <ul className="flex flex-col sm:flex-row flex-wrap gap-10 sm:gap-8 md:gap-12 justify-center items-center w-full max-w-3xl md:max-w-none pt-2">
+        {STATS.map((stat) => (
+          <StatItem key={stat.label[0]} value={stat.value} lines={stat.label} />
+        ))}
       </ul>
     </section>
   );

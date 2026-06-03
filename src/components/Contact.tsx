@@ -1,14 +1,17 @@
 "use client";
+
 import React, { useState } from "react";
 import { z } from "zod";
 import WordRotate from "./ui/word-rotate";
 
-// ✅ Schéma de validation sans "subject"
 const ContactSchema = z.object({
   name: z.string().min(1, "Le nom est requis").max(100),
   email: z.string().email("Adresse e-mail invalide"),
   message: z.string().min(1, "Le message est requis").max(5000),
 });
+
+const inputClass =
+  "w-full rounded-md py-3 px-4 text-white bg-gray-900/80 border border-white/10 focus:border-[#04F7A4]/50 focus:bg-transparent text-sm outline-none transition-colors";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -50,97 +53,92 @@ export default function Contact() {
         throw new Error(data?.error || "Échec de l'envoi du message");
       }
       setStatus("success");
-      setServerMessage("✅ Votre message a été envoyé avec succès.");
+      setServerMessage("Votre message a été envoyé avec succès.");
       setForm({ name: "", email: "", message: "" });
     } catch (err) {
       setStatus("error");
-      setServerMessage((err as Error).message || "❌ Une erreur est survenue.");
+      setServerMessage((err as Error).message || "Une erreur est survenue.");
     }
   };
 
   return (
-    <div className="mb-12 mt-12">
-      {/* Titre animé */}
-      <div className="md:flex hidden text-center mx-auto font-bold justify-center -mt-6 -mb-16">
+    <div className="pb-8 sm:pb-12">
+      <div className="hidden md:flex flex-wrap justify-center gap-x-2 text-center mx-auto font-extrabold uppercase -mt-8 lg:-mt-12 mb-6 lg:mb-12">
         <WordRotate
-          className="text-[7rem] uppercase font-[800] text-white dark:text-white"
+          className="text-5xl lg:text-7xl xl:text-[7.5rem] leading-none text-white"
           words={["CONTACTEZ"]}
         />
         <WordRotate
-          className="text-[7rem] ml-2 uppercase font-[800] text-[#04F7A4] dark:text-white"
+          className="text-5xl lg:text-7xl xl:text-[7.5rem] leading-none text-[#04F7A4] ml-2"
           words={["MOI"]}
         />
       </div>
+      <h2 className="md:hidden mt-6 mb-6 text-4xl sm:text-5xl uppercase font-extrabold text-center text-white">
+        CONTACT <span className="text-[#04F7A4]">MOI</span>
+      </h2>
 
-     
-      <p className="w-3/3 mt-9 md:text-3xl text-md text-left text-white">
-        Envie de collaborer sur un site moderne, une app ou un design unique ?{" "}
-        Je suis disponible pour vos projets. 🚀
+      <p className="mt-4 text-base sm:text-lg md:text-2xl lg:text-3xl text-center md:text-left text-white leading-relaxed">
+        Envie de collaborer sur un site moderne, une app ou un design unique ? Je
+        suis disponible pour vos projets.
       </p>
 
-      {/* Formulaire */}
-      <div className="mx-auto w-full font-[sans-serif]">
-        <form className="mt-8 space-y-4" onSubmit={onSubmit}>
-          {/* Nom */}
-          <div>
-            <input
-              name="name"
-              type="text"
-              placeholder="Nom"
-              value={form.name}
-              onChange={onChange}
-              className="w-full rounded-md py-3 px-4 text-gray-800 bg-gray-900 focus:bg-transparent text-sm outline-blue-500"
-              aria-invalid={!!errors.name}
-            />
-            {errors.name && <p className="text-red-400 text-xs mt-1">{errors.name}</p>}
-          </div>
+      <form className="mt-6 sm:mt-8 max-w-xl md:max-w-none space-y-4" onSubmit={onSubmit}>
+        <div>
+          <input
+            name="name"
+            type="text"
+            placeholder="Nom"
+            value={form.name}
+            onChange={onChange}
+            className={inputClass}
+            aria-invalid={!!errors.name}
+          />
+          {errors.name && <p className="text-red-400 text-xs mt-1">{errors.name}</p>}
+        </div>
 
-          {/* Email */}
-          <div>
-            <input
-              name="email"
-              type="email"
-              placeholder="Email"
-              value={form.email}
-              onChange={onChange}
-              className="w-full rounded-md py-3 px-4 text-gray-800 bg-gray-900 focus:bg-transparent text-sm outline-blue-500"
-              aria-invalid={!!errors.email}
-            />
-            {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email}</p>}
-          </div>
+        <div>
+          <input
+            name="email"
+            type="email"
+            placeholder="Email"
+            value={form.email}
+            onChange={onChange}
+            className={inputClass}
+            aria-invalid={!!errors.email}
+          />
+          {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email}</p>}
+        </div>
 
-          {/* Message */}
-          <div>
-            <textarea
-              name="message"
-              placeholder="Message"
-              rows={6}
-              value={form.message}
-              onChange={onChange}
-              className="w-full rounded-md px-4 bg-gray-900 focus:bg-transparent text-sm pt-3 outline-blue-500"
-              aria-invalid={!!errors.message}
-            ></textarea>
-            {errors.message && (
-              <p className="text-red-400 text-xs mt-1">{errors.message}</p>
-            )}
-          </div>
-
-   
-          <button
-            type="submit"
-            disabled={status === "submitting"}
-            className="text-black bg-[#04F7A4] hover:bg-[#1c6d52] disabled:opacity-60 tracking-wide rounded-md text-sm px-4 py-3 w-full"
-          >
-            {status === "submitting" ? "Envoi..." : "Envoyer"}
-          </button>
-
-          {/* Messages de statut */}
-          {status === "success" && <p className="text-green-400 text-sm">{serverMessage}</p>}
-          {status === "error" && serverMessage && (
-            <p className="text-red-400 text-sm">{serverMessage}</p>
+        <div>
+          <textarea
+            name="message"
+            placeholder="Message"
+            rows={6}
+            value={form.message}
+            onChange={onChange}
+            className={`${inputClass} pt-3 resize-y min-h-[120px]`}
+            aria-invalid={!!errors.message}
+          />
+          {errors.message && (
+            <p className="text-red-400 text-xs mt-1">{errors.message}</p>
           )}
-        </form>
-      </div>
+        </div>
+
+        <button
+          type="submit"
+          disabled={status === "submitting"}
+          className="text-black bg-[#04F7A4] hover:bg-[#03d98f] disabled:opacity-60 tracking-wide rounded-md text-sm px-4 py-3 w-full sm:w-auto sm:min-w-[160px] transition-colors"
+        >
+          {status === "submitting" ? "Envoi..." : "Envoyer"}
+        </button>
+
+        {status === "success" && (
+          <p className="text-green-400 text-sm">{serverMessage}</p>
+        )}
+        {status === "error" && serverMessage && (
+          <p className="text-red-400 text-sm">{serverMessage}</p>
+        )}
+      </form>
     </div>
   );
 }

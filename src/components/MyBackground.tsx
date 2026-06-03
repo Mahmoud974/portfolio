@@ -23,214 +23,167 @@ function ExternalLink({ href, className, children }: ExternalLinkProps) {
   );
 }
 
-export default function MyBackground() {
-  const [showEducation, setShowEducation] = useState(true);
-  const currentPage = 0;
-  const itemsPerPage = 3;
-
-  const currentExperiences = useMemo(() => {
-    return experience.slice(
-      currentPage * itemsPerPage,
-      currentPage * itemsPerPage + itemsPerPage
-    );
-  }, [currentPage]);
+function EducationBlock({
+  filterOrg,
+  logo,
+}: {
+  filterOrg: string;
+  logo?: { src: string; alt: string; className: string };
+}) {
+  const items = education.filter((item) => item.organization === filterOrg);
 
   return (
-    <section className="justify-center flex flex-col" aria-labelledby="background-heading">
-      <div className="md:flex   text-center mx-auto font-bold justify-center -mt-6 -mb-9">
+    <>
+      {logo && (
+        <Image
+          className={logo.className}
+          src={logo.src}
+          alt={logo.alt}
+          width={1000}
+          height={1000}
+          priority
+        />
+      )}
+      <ul className="gap-4 sm:gap-5 flex flex-col mt-3" role="list">
+        {items.map((item, index) => (
+          <li key={index}>
+            <div className="flex flex-col text-center md:text-left">
+              <h3 className="text-lg sm:text-xl md:text-2xl my-2 flex flex-wrap items-center justify-center md:justify-start gap-2">
+                {item.title}
+                {item.link ? (
+                  <ExternalLink href={item.link} className="text-[#04F7A4]">
+                    <MoveUpRight className="w-6 h-6 sm:w-8 sm:h-8" />
+                  </ExternalLink>
+                ) : null}
+              </h3>
+              <ul>
+                {item.description?.map((desc, idx) => (
+                  <li
+                    key={idx}
+                    className="text-sm sm:text-base md:text-lg text-gray-400 md:max-w-[85%] leading-relaxed"
+                  >
+                    {desc}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+}
+
+const CARD_CLASS =
+  "mx-auto w-full max-w-5xl overflow-hidden rounded-2xl bg-[#0a1714] ring-1 ring-emerald-900/30 shadow-lg hover:shadow-emerald-600/20 transition-shadow";
+
+const BTN_CLASS =
+  "inline-flex items-center justify-center gap-2 rounded-xl bg-[#04F7A4] px-4 py-2 text-sm font-semibold text-emerald-950 hover:brightness-95 active:translate-y-px transition";
+
+export default function MyBackground() {
+  const [showEducation, setShowEducation] = useState(true);
+  const currentExperiences = useMemo(() => experience.slice(0, 3), []);
+
+  const tabClass = (active: boolean) =>
+    `flex items-center justify-center gap-2 w-full py-3 rounded-xl lg:rounded-full font-medium transition-all duration-300 ${
+      active
+        ? "bg-[#04F7A4] text-black shadow-md"
+        : "text-gray-400 hover:text-white hover:bg-white/5"
+    }`;
+
+  return (
+    <section className="flex flex-col" aria-labelledby="background-heading">
+      <div className="hidden md:flex flex-wrap justify-center gap-x-2 text-center mx-auto font-extrabold uppercase -mt-6 lg:-mt-8 mb-4 lg:mb-8">
         <WordRotate
-          className="lg:text-[7.5rem] text-6xl lg:mb-0   uppercase font-[800] text-white dark:text-white"
+          className="text-5xl lg:text-7xl xl:text-[7.5rem] leading-none text-white"
           words={["MON"]}
         />
         <WordRotate
-          className="lg:text-[7.5rem] text-6xl lg:mb-0 mb-12 ml-2 uppercase font-[800] text-[#04F7A4] dark:text-white"
+          className="text-5xl lg:text-7xl xl:text-[7.5rem] leading-none text-[#04F7A4] ml-2"
           words={["PARCOURS"]}
         />
       </div>
+      <h2
+        id="background-heading"
+        className="md:hidden text-4xl sm:text-5xl uppercase font-extrabold text-center text-white mb-6"
+      >
+        MON <span className="text-[#04F7A4]">PARCOURS</span>
+      </h2>
 
-      {/* COMMUTATEUR */}
-      <div className="flex justify-center mt-12 px-4">
-  <div className="
-    w-full max-w-md
-    flex flex-col lg:flex-row
-    bg-[#0a1714]
-    rounded-2xl lg:rounded-full
-    p-2
-    gap-2 lg:gap-0
-  ">
-    <button
-      onClick={() => setShowEducation(true)}
-      type="button"
-      className={`
-        flex items-center justify-center gap-2
-        w-full
-        py-3
-        rounded-xl lg:rounded-full
-        font-medium
-        transition-all duration-300
-        ${
-          showEducation
-            ? "bg-[#04F7A4] text-black shadow-md"
-            : "text-gray-400 hover:text-white hover:bg-white/5"
-        }
-      `}
-    >
-      <GraduationCap className="w-5 h-5" />
-      <span>Formations</span>
-    </button>
+      <div className="flex justify-center mt-4 sm:mt-8 px-2 sm:px-4">
+        <div className="w-full max-w-md flex flex-col sm:flex-row bg-[#0a1714] rounded-2xl sm:rounded-full p-2 gap-2">
+          <button
+            type="button"
+            onClick={() => setShowEducation(true)}
+            className={tabClass(showEducation)}
+          >
+            <GraduationCap className="w-5 h-5 shrink-0" />
+            <span>Formations</span>
+          </button>
+          <button
+            type="button"
+            onClick={() => setShowEducation(false)}
+            className={tabClass(!showEducation)}
+          >
+            <Briefcase className="w-5 h-5 shrink-0" />
+            <span>Expériences</span>
+          </button>
+        </div>
+      </div>
 
-    <button
-      onClick={() => setShowEducation(false)}
-      type="button"
-      className={`
-        flex items-center justify-center gap-2
-        w-full
-        py-3
-        rounded-xl lg:rounded-full
-        font-medium
-        transition-all duration-300
-        ${
-          !showEducation
-            ? "bg-[#04F7A4] text-black shadow-md"
-            : "text-gray-400 hover:text-white hover:bg-white/5"
-        }
-      `}
-    >
-      <Briefcase className="w-5 h-5" />
-      <span>Expériences</span>
-    </button>
-  </div>
-</div>
-
-
-      {/* SECTION ÉDUCATION */}
       {showEducation && (
-        <>
-          <ul className="gap-5 flex flex-col justify-center mt-3" role="list">
-            {education
-              .filter((item) => item.organization === "K8S")
-              .map((item, index) => (
-                <li key={index}>
-                  <div className="flex flex-col md:text-left">
-                    <h3 className="md:text-2xl text-lg my-2">{item.title}</h3>
-                    <ul>
-                      {item.description?.map((desc, idx) => (
-                        <li key={idx} className="md:text-lg text-md text-gray-600 md:w-5/6">
-                          {desc}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </li>
-              ))}
-          </ul>
-
-          <Image
-            className="object-cover w-24 h-auto mt-7"
-            src="/images/awslogo.webp"
-            alt="Logo AWS"
-            width={1000}
-            height={1000}
-            priority
+        <div className="mt-4 sm:mt-6 space-y-6">
+          <EducationBlock filterOrg="K8S" />
+          <EducationBlock
+            filterOrg="Amazon Web Services (AWS)"
+            logo={{
+              src: "/images/awslogo.webp",
+              alt: "Logo AWS",
+              className: "object-cover w-20 sm:w-24 h-auto mt-4",
+            }}
           />
-
-          <ul className="gap-5 flex flex-col justify-center mt-3" role="list">
-            {education
-              .filter((item) => item.organization === "Amazon Web Services (AWS)")
-              .map((item, index) => (
-                <li key={index}>
-                  <div className="flex flex-col md:text-left">
-                    <h3 className="md:text-2xl text-lg my-2 flex items-center gap-2">
-                      {item.title}{" "}
-                      {item.link ? (
-                        <ExternalLink href={item.link} className="text-[#04F7A4] text-4xl">
-                          <MoveUpRight />
-                        </ExternalLink>
-                      ) : null}
-                    </h3>
-
-                    <ul>
-                      {item.description?.map((desc, idx) => (
-                        <li key={idx} className="md:text-lg text-md text-gray-600 md:w-5/6">
-                          {desc}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </li>
-              ))}
-          </ul>
-
-          <Image
-            className="object-cover w-64 h-auto mt-7 -ml-1"
-            src="/images/ocs.webp"
-            alt="Logo OpenClassrooms"
-            width={1000}
-            height={1000}
-            priority
+          <EducationBlock
+            filterOrg="OpenClassrooms"
+            logo={{
+              src: "/images/ocs.webp",
+              alt: "Logo OpenClassrooms",
+              className: "object-cover w-48 sm:w-64 h-auto mt-4 max-w-full",
+            }}
           />
-
-          <ul className="gap-5 flex flex-col justify-center mt-3" role="list">
-            {education
-              .filter((item) => item.organization === "OpenClassrooms")
-              .map((item, index) => (
-                <li key={index}>
-                  <div className="flex flex-col md:text-left">
-                    <h3 className="md:text-2xl text-lg my-2">{item.title}</h3>
-                    <ul>
-                      {item.description?.map((desc, idx) => (
-                        <li key={idx} className="md:text-lg text-md text-gray-600 md:w-5/6">
-                          {desc}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </li>
-              ))}
-          </ul>
-        </>
+        </div>
       )}
 
-      {/* SECTION EXPÉRIENCES */}
       {!showEducation && (
-        <ul className="mt-10 space-y-8">
+        <ul className="mt-6 sm:mt-10 space-y-6 sm:space-y-8">
           {currentExperiences.map((item) => (
-            <li
-              key={item.id}
-              className="mx-auto w-full h-auto max-w-5xl overflow-hidden rounded-2xl bg-[#0a1714] ring-1 ring-emerald-900/30 shadow-lg hover:shadow-emerald-600/20 transition-shadow"
-            >
-              <div className="md:flex">
-                {/* Image cliquable seulement si link existe */}
+            <li key={item.id} className={CARD_CLASS}>
+              <div className="flex flex-col md:flex-row">
                 {item.link ? (
-                  <ExternalLink href={item.link} className="block md:w-2/5">
+                  <ExternalLink href={item.link} className="block md:w-2/5 shrink-0">
                     <Image
                       src={item.image}
                       alt={item.title}
                       width={1200}
                       height={800}
-                      priority
-                      className="h-56 w-full object-cover md:h-full"
+                      className="h-48 sm:h-56 w-full object-cover md:min-h-full md:h-full"
                     />
                   </ExternalLink>
                 ) : (
-                  <div className="block md:w-2/5">
+                  <div className="md:w-2/5 shrink-0">
                     <Image
                       src={item.image}
                       alt={item.title}
                       width={1200}
                       height={800}
-                      priority
-                      className="h-56 w-full object-cover md:h-full"
+                      className="h-48 sm:h-56 w-full object-cover md:min-h-full md:h-full"
                     />
                   </div>
                 )}
 
-                {/* Contenu */}
-                <div className="md:w-3/5 p-5 md:p-6 flex flex-col gap-4">
-                  <h3 className="text-xl md:text-2xl font-bold">{item.title}</h3>
+                <div className="md:w-3/5 p-4 sm:p-5 md:p-6 flex flex-col gap-3 sm:gap-4 min-w-0">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold">{item.title}</h3>
 
-                  {/* Tags */}
-                  <ul className="flex flex-wrap gap-1">
+                  <ul className="flex flex-wrap gap-1.5">
                     {item.organization.map((tag: string, i: number) => (
                       <li
                         key={i}
@@ -241,12 +194,7 @@ export default function MyBackground() {
                     ))}
                   </ul>
 
-                  {/* Description */}
-                  <div
-                    className="max-h-36 md:max-h-40 overflow-y-auto pr-2 
-                    scrollbar-thin scrollbar-thumb-emerald-700 scrollbar-track-transparent
-                    hover:scrollbar-thumb-emerald-500 transition-all rounded-lg"
-                  >
+                  <div className="max-h-36 md:max-h-40 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-emerald-700 scrollbar-track-transparent rounded-lg">
                     <ul className="list-disc pl-5 text-sm md:text-base leading-relaxed text-neutral-200 space-y-1">
                       {item.description.map((line: string, i: number) => (
                         <li key={i}>{line}</li>
@@ -254,20 +202,12 @@ export default function MyBackground() {
                     </ul>
                   </div>
 
-                  {/* Boutons (rendus uniquement si liens existent) */}
-                  <div className="flex gap-2 pt-2">
-                    <ExternalLink
-                      href={item.link}
-                      className="inline-flex items-center gap-2 rounded-xl bg-[#04F7A4] px-4 py-2 text-sm font-semibold text-emerald-950 hover:brightness-95 active:translate-y-[1px] transition"
-                    >
-                      <Globe />
+                  <div className="flex flex-wrap gap-2 pt-1">
+                    <ExternalLink href={item.link} className={BTN_CLASS} aria-label="Site">
+                      <Globe className="w-4 h-4" />
                     </ExternalLink>
-
-                    <ExternalLink
-                      href={item.github}
-                      className="inline-flex items-center gap-2 rounded-xl bg-[#04F7A4] px-4 py-2 text-sm font-semibold text-emerald-950 hover:brightness-95 active:translate-y-[1px] transition"
-                    >
-                      <Github />
+                    <ExternalLink href={item.github} className={BTN_CLASS} aria-label="GitHub">
+                      <Github className="w-4 h-4" />
                     </ExternalLink>
                   </div>
                 </div>
