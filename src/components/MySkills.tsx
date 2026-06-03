@@ -16,10 +16,10 @@ export default function Technos() {
 
   return (
     <>
-      <h2 className="text-3xl font-extrabold text-center mt-8 tracking-tight">
+      {/* <h2 className="text-3xl font-extrabold text-center mt-8 tracking-tight">
         PROJETS
-      </h2>
-      <div className="h-1.5 mt-3 w-24 bg-[#04F7A4] mx-auto rounded-full" />
+      </h2> */}
+      {/* <div className="h-1.5 mt-3 w-24 bg-[#04F7A4] mx-auto rounded-full" /> */}
 
       <ul className="mt-10 space-y-8">
         {currentItems.map((item) => (

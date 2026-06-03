@@ -37,7 +37,7 @@ export default function MyBackground() {
 
   return (
     <section className="justify-center flex flex-col" aria-labelledby="background-heading">
-      <div className="md:flex   text-center mx-auto font-bold justify-center -mt-6 -mb-16">
+      <div className="md:flex   text-center mx-auto font-bold justify-center -mt-6 -mb-9">
         <WordRotate
           className="lg:text-[7.5rem] text-6xl lg:mb-0   uppercase font-[800] text-white dark:text-white"
           words={["MON"]}

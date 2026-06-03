@@ -5,7 +5,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import Link from "next/link";
-import { FaLinkedinIn, FaBehance } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 import { ImGithub } from "react-icons/im";
 
 export default function TooltipSocial() {
@@ -39,19 +39,7 @@ export default function TooltipSocial() {
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>
-      {/* Behance */}
-      <TooltipProvider>
-        <Tooltip>
-          <TooltipTrigger>
-            <Link href="https://www.behance.net/manuscrit92d07" target="_blank">
-              <FaBehance className="text-3xl" />
-            </Link>
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>Behance</p>
-          </TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
+      
     </div>
   );
 }

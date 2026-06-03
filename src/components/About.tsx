@@ -61,81 +61,98 @@ export default function About() {
       id="about"
       className="text-center flex flex-col items-center space-y-13 px-4"
     >
- 
-      <div className="md:flex hidden text-center mx-auto font-bold justify-center -mt-12 -mb-16">
-      <h1 className="text-[8rem] uppercase font-[800] mb-7">
-  <span className="text-white">QUI SUIS-</span>
-  <span className="text-[#04F7A4]">JE ?</span>
-  </h1>
 
-</div>
+      {/* Titre desktop */}
+      <div className="md:flex hidden text-center mx-auto font-bold justify-center -mt-12 -mb-16">
+        <h1 className="text-[8rem] uppercase font-[800] mb-7">
+          <span className="text-white">QUI SUIS-</span>
+          <span className="text-[#04F7A4]">JE ?</span>
+        </h1>
+      </div>
 
       {/* Titre mobile */}
       <div>
         <h1 className="md:hidden mt-8 text-6xl uppercase font-[800] text-white text-center">
-          ABOUT  <span className="text-[#04F7A4]">ME</span>
+          ABOUT <span className="text-[#04F7A4]">ME</span>
         </h1>
       </div>
 
       {/* Texte principal */}
       <div className="xl:max-w-4xl w-full flex flex-col items-center">
-      <p className="mt-4 md:text-3xl text-center md:text-left text-white">
-  <strong>Développeur Front-End & DevOps</strong>, je conçois des applications
-  modernes avec <strong>React</strong> et <strong>Next.js</strong> et je déploie
-  des architectures cloud performantes sur <strong>AWS</strong>.
-  J’allie <strong>design</strong>, <strong>performance</strong> et 
-  <strong> scalabilité</strong>.
-</p>
+        <p className="mt-4 md:text-3xl text-center md:text-left text-white">
+        Passionné par l{"'"}automatisation et le cloud, je suis{" "}
+          <strong>Ingénieur DevOps</strong> certifié <strong>AWS</strong>. Je
+          conçois des pipelines <strong>CI/CD</strong>, orchestre des conteneurs
+          avec <strong>Kubernetes</strong> et supervise les infras avec{" "}
+          <strong>Grafana</strong> et <strong>Prometheus</strong> — pour que les
+          équipes livrent vite et sans stress.
+        </p>
 
-        {/* Liste de compétences — centrée sur mobile, 2 colonnes sur sm+ */}
+        {/* Liste de compétences */}
         <ul className="mt-6 w-full grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-white/90">
           <li className="flex items-start gap-3 justify-center sm:justify-start text-center sm:text-left">
             <CheckCircle2 className="mt-1 h-5 w-5 text-[#04F7A4] shrink-0" />
             <span className="leading-relaxed">
-              Développement moderne avec <strong>React</strong> et{" "}
-              <strong>Next.js</strong>
+              Infrastructure as Code avec <strong>Terraform</strong> et{" "}
+              <strong>Ansible</strong>
             </span>
           </li>
 
           <li className="flex items-start gap-3 justify-center sm:justify-start text-center sm:text-left">
             <CheckCircle2 className="mt-1 h-5 w-5 text-[#04F7A4] shrink-0" />
             <span className="leading-relaxed">
-            {`  Création d'interfaces réactives et responsives`}
+              Pipelines CI/CD avec <strong>GitLab CI</strong> et{" "}
+              <strong>AWS Amplify</strong>
             </span>
           </li>
 
           <li className="flex items-start gap-3 justify-center sm:justify-start text-center sm:text-left">
             <CheckCircle2 className="mt-1 h-5 w-5 text-[#04F7A4] shrink-0" />
             <span className="leading-relaxed">
-              Optimisation du <strong>SEO</strong> {`et de l'`}
-              <strong>accessibilité</strong>
+              Monitoring et observabilité avec <strong>Grafana</strong>,{" "}
+              <strong>Prometheus</strong> et <strong>CloudWatch</strong>
             </span>
           </li>
 
           <li className="flex items-start gap-3 justify-center sm:justify-start text-center sm:text-left">
             <CheckCircle2 className="mt-1 h-5 w-5 text-[#04F7A4] shrink-0" />
             <span className="leading-relaxed">
-              Collaboration efficace avec les designers
+              Architectures serverless sur <strong>AWS</strong> (Lambda, S3,
+              DynamoDB, API Gateway)
             </span>
           </li>
         </ul>
 
         {/* Bouton de téléchargement */}
         <div className="flex cursor-pointer justify-center w-full">
-        <Button
-  asChild
-  className="my-6 bg-[#04F7A4] text-black px-12 py-6 rounded-none"
->
-  <a href="/CV_Mahmoud.pdf" className="" download>
-    Télécharger CV
-    <AiOutlineDownload className="ml-2 text-xl" />
-  </a>
-</Button>
+          <Button
+            asChild
+            className="my-6 bg-[#04F7A4] text-black px-12 py-6 rounded-none"
+          >
+            <a href="/CV_Mahmoud.pdf" className="" download>
+              Télécharger CV
+              <AiOutlineDownload className="ml-2 text-xl" />
+            </a>
+          </Button>
         </div>
       </div>
 
-      {/* Statistiques — centrées sur mobile */}
+      {/* Statistiques */}
       <ul className="flex md:flex-row mt-4 flex-col md:justify-between space-y-14 md:space-y-0 md:space-x-16 justify-center items-center w-full">
+        <li className="flex flex-col items-center md:items-start text-7xl">
+          <div className="flex items-center text-8xl">
+            <span className="text-5xl font-[900] text-[#04F7A4]">+</span>
+            <NumberTicker value={5} className="text-white font-bold ml-2" />
+          </div>
+          <div className="flex items-start">
+            <div className="bg-[#04F7A4] w-8 h-1 mt-3"></div>
+            <div className="text-3xl ml-2 text-left">
+              <p>PROJETS</p>
+              <p>AWS / DEVOPS</p>
+            </div>
+          </div>
+        </li>
+
         <li className="flex flex-col items-center md:items-start text-7xl">
           <div className="flex items-center text-8xl">
             <span className="text-5xl font-[900] text-[#04F7A4]">+</span>
@@ -144,8 +161,8 @@ export default function About() {
           <div className="flex items-start">
             <div className="bg-[#04F7A4] w-8 h-1 mt-3"></div>
             <div className="text-3xl ml-2 text-left">
-              <p>PROJETS</p>
-              <p>TERMINÉS</p>
+              <p>OUTILS</p>
+              <p>DEVOPS</p>
             </div>
           </div>
         </li>
@@ -153,27 +170,13 @@ export default function About() {
         <li className="flex flex-col items-center md:items-start text-7xl">
           <div className="flex items-center text-8xl">
             <span className="text-5xl font-[900] text-[#04F7A4]">+</span>
-            <NumberTicker value={1000} className="text-white font-bold ml-2" />
+            <NumberTicker value={2} className="text-white font-bold ml-2" />
           </div>
           <div className="flex items-start">
             <div className="bg-[#04F7A4] w-8 h-1 mt-3"></div>
             <div className="text-3xl ml-2 text-left">
-              <p>LIGNES DE</p>
-              <p>CODE ÉCRITES</p>
-            </div>
-          </div>
-        </li>
-
-        <li className="flex flex-col items-center md:items-start text-7xl">
-          <div className="flex items-center text-8xl">
-            <span className="text-5xl font-[900] text-[#04F7A4]">+</span>
-            <NumberTicker value={3} className="text-white font-bold ml-2" />
-          </div>
-          <div className="flex items-start">
-            <div className="bg-[#04F7A4] w-8 h-1 mt-3"></div>
-            <div className="text-3xl ml-2 text-left">
-              <p>Années</p>
-              <p>{`d'expérience`}</p>
+              <p>CERTIFICATIONS</p>
+              <p>AWS</p>
             </div>
           </div>
         </li>

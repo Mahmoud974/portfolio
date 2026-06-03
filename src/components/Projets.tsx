@@ -1,7 +1,6 @@
-import { languages } from "@/app/db/languages";
+ 
 import React from "react";
  
-import Image from "next/image";
 
 export default function Projets() {
   return (
@@ -14,13 +13,10 @@ export default function Projets() {
 </div>
 
     
+ 
+      {/* <div className="h-1.5 mt-3 w-24 bg-[#04F7A4] mx-auto rounded-full" /> */}
 
-      <h2 className="text-3xl font-extrabold text-center mt-8 tracking-tight">
-        MES STACKS
-      </h2>
-      <div className="h-1.5 mt-3 w-24 bg-[#04F7A4] mx-auto rounded-full" />
-
-      {/* LOGOS */}
+      {/* LOGOS
       <div className="flex justify-center mt-8 md:mt-12">
         <div className="max-w-[1000px] flex flex-wrap justify-center gap-4">
           
@@ -53,7 +49,7 @@ export default function Projets() {
           ))}
 
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
