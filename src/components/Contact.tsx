@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { z } from "zod";
-import WordRotate from "./ui/word-rotate";
+import SectionHeading from "./ui/SectionHeading";
 
 const ContactSchema = z.object({
   name: z.string().min(1, "Le nom est requis").max(100),
@@ -63,54 +63,75 @@ export default function Contact() {
 
   return (
     <div className="pb-8 sm:pb-12">
-      <div className="hidden md:flex flex-wrap justify-center gap-x-2 text-center mx-auto font-extrabold uppercase -mt-8 lg:-mt-12 mb-6 lg:mb-12">
-        <WordRotate
-          className="text-5xl lg:text-7xl xl:text-[7.5rem] leading-none text-white"
-          words={["CONTACTEZ"]}
-        />
-        <WordRotate
-          className="text-5xl lg:text-7xl xl:text-[7.5rem] leading-none text-[#04F7A4] ml-2"
-          words={["MOI"]}
-        />
-      </div>
-      <h2 className="md:hidden mt-6 mb-6 text-4xl sm:text-5xl uppercase font-extrabold text-center text-white">
-        CONTACT <span className="text-[#04F7A4]">MOI</span>
-      </h2>
+      <SectionHeading
+        primary="CONTACTEZ"
+        accent="MOI"
+        mobilePrimary="CONTACT"
+        mobileAccent="MOI"
+      />
 
       <p className="mt-4 text-base sm:text-lg md:text-2xl lg:text-3xl text-center md:text-left text-white leading-relaxed">
-        Envie de collaborer sur un site moderne, une app ou un design unique ? Je
-        suis disponible pour vos projets.
+        Un besoin d&apos;infra cloud, de CI/CD ou d&apos;accompagnement DevOps ?
+        Écrivez-moi, je suis disponible pour échanger.
       </p>
 
-      <form className="mt-6 sm:mt-8 max-w-xl md:max-w-none space-y-4" onSubmit={onSubmit}>
+      <form
+        className="mt-6 sm:mt-8 max-w-xl md:max-w-none space-y-4"
+        onSubmit={onSubmit}
+        noValidate
+      >
         <div>
+          <label htmlFor="contact-name" className="sr-only">
+            Nom
+          </label>
           <input
+            id="contact-name"
             name="name"
             type="text"
             placeholder="Nom"
+            autoComplete="name"
             value={form.name}
             onChange={onChange}
             className={inputClass}
             aria-invalid={!!errors.name}
+            aria-describedby={errors.name ? "contact-name-error" : undefined}
           />
-          {errors.name && <p className="text-red-400 text-xs mt-1">{errors.name}</p>}
+          {errors.name && (
+            <p id="contact-name-error" className="text-red-400 text-xs mt-1">
+              {errors.name}
+            </p>
+          )}
         </div>
 
         <div>
+          <label htmlFor="contact-email" className="sr-only">
+            Email
+          </label>
           <input
+            id="contact-email"
             name="email"
             type="email"
             placeholder="Email"
+            autoComplete="email"
             value={form.email}
             onChange={onChange}
             className={inputClass}
             aria-invalid={!!errors.email}
+            aria-describedby={errors.email ? "contact-email-error" : undefined}
           />
-          {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email}</p>}
+          {errors.email && (
+            <p id="contact-email-error" className="text-red-400 text-xs mt-1">
+              {errors.email}
+            </p>
+          )}
         </div>
 
         <div>
+          <label htmlFor="contact-message" className="sr-only">
+            Message
+          </label>
           <textarea
+            id="contact-message"
             name="message"
             placeholder="Message"
             rows={6}
@@ -118,9 +139,12 @@ export default function Contact() {
             onChange={onChange}
             className={`${inputClass} pt-3 resize-y min-h-[120px]`}
             aria-invalid={!!errors.message}
+            aria-describedby={errors.message ? "contact-message-error" : undefined}
           />
           {errors.message && (
-            <p className="text-red-400 text-xs mt-1">{errors.message}</p>
+            <p id="contact-message-error" className="text-red-400 text-xs mt-1">
+              {errors.message}
+            </p>
           )}
         </div>
 

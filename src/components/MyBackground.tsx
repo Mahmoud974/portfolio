@@ -5,8 +5,8 @@ import { experience } from "@/app/db/experience";
 import React, { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import WordRotate from "./ui/word-rotate";
 import { GraduationCap, Briefcase, Globe, Github, MoveUpRight } from "lucide-react";
+import SectionHeading from "./ui/SectionHeading";
 
 type ExternalLinkProps = {
   href?: string;
@@ -92,23 +92,14 @@ export default function MyBackground() {
     }`;
 
   return (
-    <section className="flex flex-col" aria-labelledby="background-heading">
-      <div className="hidden md:flex flex-wrap justify-center gap-x-2 text-center mx-auto font-extrabold uppercase -mt-6 lg:-mt-8 mb-4 lg:mb-8">
-        <WordRotate
-          className="text-5xl lg:text-7xl xl:text-[7.5rem] leading-none text-white"
-          words={["MON"]}
-        />
-        <WordRotate
-          className="text-5xl lg:text-7xl xl:text-[7.5rem] leading-none text-[#04F7A4] ml-2"
-          words={["PARCOURS"]}
-        />
-      </div>
-      <h2
+    <div className="flex flex-col" aria-labelledby="background-heading">
+      <SectionHeading
         id="background-heading"
-        className="md:hidden text-4xl sm:text-5xl uppercase font-extrabold text-center text-white mb-6"
-      >
-        MON <span className="text-[#04F7A4]">PARCOURS</span>
-      </h2>
+        primary="MON"
+        accent="PARCOURS"
+        mobilePrimary="MON"
+        mobileAccent="PARCOURS"
+      />
 
       <div className="flex justify-center mt-4 sm:mt-8 px-2 sm:px-4">
         <div className="w-full max-w-md flex flex-col sm:flex-row bg-[#0a1714] rounded-2xl sm:rounded-full p-2 gap-2">
@@ -216,6 +207,6 @@ export default function MyBackground() {
           ))}
         </ul>
       )}
-    </section>
+    </div>
   );
 }

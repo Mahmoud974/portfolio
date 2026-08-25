@@ -7,6 +7,7 @@ import MyBackground from "@/components/MyBackground";
 import Contact from "@/components/Contact";
 import Projets from "@/components/Projets";
 import Technos from "@/components/MySkills";
+import Menu from "@/components/Menu";
 
 const SECTIONS = [
   { id: "about", content: <About /> },
@@ -19,7 +20,8 @@ const SECTIONS = [
 export default function Home() {
   return (
     <>
-      <main className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col xl:flex-row xl:items-start gap-8 xl:gap-12 mt-20 sm:mt-24 pb-8">
+      <Menu />
+      <main className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col xl:flex-row xl:items-start gap-8 xl:gap-12 mt-24 sm:mt-28 pb-8">
         <aside className="w-full xl:w-auto xl:shrink-0 flex justify-center xl:sticky xl:top-20 xl:self-start">
           <Profile />
         </aside>

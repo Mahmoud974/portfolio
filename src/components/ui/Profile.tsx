@@ -69,10 +69,12 @@ function Tag({ stack }: { stack: Stack }) {
           : "bg-white/5 border-white/10 text-white/50"
       }`}
     >
-      <img
+      <Image
         src={stack.image}
         alt={stack.name}
-        className="w-3.5 h-3.5 object-contain shrink-0"
+        width={16}
+        height={16}
+        className="w-3.5 h-3.5 shrink-0 object-contain"
       />
       <span className="whitespace-nowrap">{stack.name}</span>
     </span>
@@ -90,7 +92,7 @@ export default function Profile() {
           <Image
             className="object-cover w-full h-full"
             src="/images/md.webp"
-            alt="photo profil"
+            alt="Portrait de Mahmoud Moussa, ingénieur DevOps"
             width={178}
             height={178}
             priority
@@ -98,9 +100,9 @@ export default function Profile() {
         </div>
 
         <div className="flex flex-col items-center">
-          <p className="text-2xl sm:text-3xl font-['Poppins'] mb-1 text-white tracking-wide text-center">
-            <span className="font-extrabold">M. </span>MAHMOUD
-          </p>
+          <h1 className="text-2xl sm:text-3xl font-extrabold mb-1 text-white tracking-wide text-center">
+            M. MAHMOUD
+          </h1>
 
           <p className="text-[11px] sm:text-xs text-white/50 font-mono text-center leading-normal mb-4 px-1">
             DevOps Engineer — AWS · Docker · Terraform

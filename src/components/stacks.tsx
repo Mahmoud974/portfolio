@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 
 type Stack = {
@@ -67,11 +68,14 @@ function Pill({ stack }: { stack: Stack }) {
           : "bg-white/5 border-white/10 text-white/70"
       }`}
     >
-      <img
-        src={stack.image}
-        alt={stack.name}
-        className="w-3.5 h-3.5 object-contain rounded-sm"
-      />
+      
+     <Image
+  src={stack.image}
+  alt={stack.name}
+  width={14}
+  height={14}
+  className="w-3.5 h-3.5 object-contain rounded-sm"
+/>
       {stack.name}
     </span>
   );
