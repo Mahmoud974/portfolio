@@ -6,6 +6,7 @@ type SectionHeadingProps = {
   mobilePrimary?: string;
   mobileAccent?: string;
   className?: string;
+  number?: string;
   id?: string;
 };
 

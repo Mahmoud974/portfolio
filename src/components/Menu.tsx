@@ -17,12 +17,7 @@ export default function Menu() {
         className="mx-auto flex max-w-7xl items-center gap-3 px-4 sm:px-6 lg:px-8 py-3"
         aria-label="Navigation principale"
       >
-        <a
-          href="#about"
-          className="shrink-0 text-sm sm:text-base font-extrabold tracking-wide text-white"
-        >
-          M. <span className="text-[#04F7A4]">MAHMOUD</span>
-        </a>
+       
         <div className="flex-1 h-px bg-gradient-to-r from-[#04F7A4]/40 to-transparent hidden sm:block" />
         <ul className="flex flex-1 sm:flex-none overflow-x-auto justify-end gap-2 pb-0.5 -mr-1">
           {menuItems.map((item) => (

@@ -6,21 +6,23 @@ import { CheckCircle2 } from "lucide-react";
 
 import { Button } from "./ui/button";
 import SectionHeading from "./SectionHeading";
- 
 
 const SKILLS = [
   <>
     Infrastructure as Code avec <strong>Terraform</strong>
   </>,
   <>
-    Automatisation des déploiements avec <strong>CI/CD</strong>
+    Conception et automatisation de pipelines <strong>CI/CD</strong>
   </>,
   <>
-    Conteneurisation avec <strong>Docker</strong> et{" "}
+    Conteneurisation et orchestration avec <strong>Docker</strong> et{" "}
     <strong>Kubernetes</strong>
   </>,
   <>
-    Monitoring avec <strong>CloudWatch</strong>,{" "}
+    Cloud computing et infrastructure avec <strong>AWS</strong>
+  </>,
+  <>
+    Monitoring et observabilité avec <strong>CloudWatch</strong>,{" "}
     <strong>Prometheus</strong> et <strong>Grafana</strong>
   </>,
 ];
@@ -30,14 +32,10 @@ export default function About() {
     <section
       id="about"
       aria-labelledby="about-title"
-      className="w-full px-4 sm:px-6 lg:px-8"
+      className="w-full   "
     >
       <div className="mx-auto w-full max-w-6xl">
-        <SectionHeading
-          number="01"
-          label="à propos"
-          title="À propos"
-        />
+        <SectionHeading number="01" label="à propos" title="À propos" />
 
         <div className="mt-10 grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
           {/* Présentation */}
@@ -46,19 +44,21 @@ export default function About() {
               id="about-title"
               className="max-w-3xl text-lg leading-relaxed text-white/80 sm:text-xl md:text-2xl"
             >
-              Développeur de formation, je me spécialise aujourd&apos;hui
-              dans le <strong className="text-white">Cloud</strong> et le{" "}
-              <strong className="text-white">DevOps</strong>.
+              Ingénieur <strong className="text-white">DevOps</strong>, je
+              conçois, automatise et maintiens des infrastructures cloud
+              fiables, scalables et sécurisées.
             </p>
 
             <p className="mt-5 max-w-3xl text-base leading-relaxed text-white/60 sm:text-lg">
-              Certifié AWS Cloud Practitioner, je construis et automatise des
-              infrastructures avec{" "}
+              Certifié AWS Cloud Practitioner, je travaille avec{" "}
               <strong className="font-semibold text-white">AWS</strong>,{" "}
               <strong className="font-semibold text-white">Terraform</strong>,{" "}
-              <strong className="font-semibold text-white">Docker</strong> et
-              des pipelines{" "}
-              <strong className="font-semibold text-white">CI/CD</strong>.
+              <strong className="font-semibold text-white">Docker</strong>,{" "}
+              <strong className="font-semibold text-white">Kubernetes</strong>{" "}
+              et des pipelines{" "}
+              <strong className="font-semibold text-white">CI/CD</strong> afin
+              d&apos;automatiser les déploiements et d&apos;améliorer la
+              fiabilité des applications.
             </p>
 
             <div className="mt-8">
@@ -91,7 +91,7 @@ export default function About() {
           {/* Compétences principales */}
           <div>
             <p className="mb-5 font-mono text-xs uppercase tracking-[0.18em] text-white/35">
-              {` // compétences principales`}
+              {`// compétences principales`}
             </p>
 
             <ul className="space-y-4">
@@ -104,7 +104,6 @@ export default function About() {
                     className="mt-0.5 h-5 w-5 shrink-0 text-[#04F7A4]"
                     aria-hidden="true"
                   />
-
                   <span>{skill}</span>
                 </li>
               ))}

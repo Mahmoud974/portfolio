@@ -6,7 +6,8 @@ import React, { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { GraduationCap, Briefcase, Globe, Github, MoveUpRight } from "lucide-react";
-import SectionHeading from "./ui/SectionHeading";
+import SectionHeading from "./SectionHeading";
+ 
 
 type ExternalLinkProps = {
   href?: string;
@@ -93,34 +94,33 @@ export default function MyBackground() {
 
   return (
     <div className="flex flex-col" aria-labelledby="background-heading">
-      <SectionHeading
-        id="background-heading"
-        primary="MON"
-        accent="PARCOURS"
-        mobilePrimary="MON"
-        mobileAccent="PARCOURS"
-      />
+   <SectionHeading number="03"
+  label="parcours"
+  title="Parcours & Certifications" />
 
-      <div className="flex justify-center mt-4 sm:mt-8 px-2 sm:px-4">
-        <div className="w-full max-w-md flex flex-col sm:flex-row bg-[#0a1714] rounded-2xl sm:rounded-full p-2 gap-2">
-          <button
-            type="button"
-            onClick={() => setShowEducation(true)}
-            className={tabClass(showEducation)}
-          >
-            <GraduationCap className="w-5 h-5 shrink-0" />
-            <span>Formations</span>
-          </button>
-          <button
-            type="button"
-            onClick={() => setShowEducation(false)}
-            className={tabClass(!showEducation)}
-          >
-            <Briefcase className="w-5 h-5 shrink-0" />
-            <span>Expériences</span>
-          </button>
-        </div>
-      </div>
+<div className="mt-6 flex items-center gap-5">
+  <button
+    type="button"
+    onClick={() => setShowEducation(true)}
+    className={tabClass(showEducation)}
+    aria-pressed={showEducation}
+  >
+    <GraduationCap className="h-4 w-4" />
+    <span>Formations</span>
+  </button>
+
+  <span className="h-4 w-px bg-white/10" />
+
+  <button
+    type="button"
+    onClick={() => setShowEducation(false)}
+    className={tabClass(!showEducation)}
+    aria-pressed={!showEducation}
+  >
+    <Briefcase className="h-4 w-4" />
+    <span>Expériences</span>
+  </button>
+</div>
 
       {showEducation && (
         <div className="mt-4 sm:mt-6 space-y-6">

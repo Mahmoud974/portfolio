@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import { z } from "zod";
-import SectionHeading from "./ui/SectionHeading";
+import SectionHeading from "./SectionHeading";
+ 
 
 const ContactSchema = z.object({
   name: z.string().min(1, "Le nom est requis").max(100),
@@ -62,17 +63,12 @@ export default function Contact() {
   };
 
   return (
-    <div className="pb-8 sm:pb-12">
-      <SectionHeading
-        primary="CONTACTEZ"
-        accent="MOI"
-        mobilePrimary="CONTACT"
-        mobileAccent="MOI"
-      />
+    <div className="pb-8 mt-12 sm:mt-16 sm:pb-12">
+      <SectionHeading number="05" label="Contact" title="contactez-moi" />
 
-      <p className="mt-4 text-base sm:text-lg md:text-2xl lg:text-3xl text-center md:text-left text-white leading-relaxed">
-        Un besoin d&apos;infra cloud, de CI/CD ou d&apos;accompagnement DevOps ?
-        Écrivez-moi, je suis disponible pour échanger.
+      <p className="mt-4 text-base sm:text-lg md:text-2xl lg:text-1xl text-center md:text-left text-white leading-relaxed">
+      {`  Un besoin d' infra cloud, de CI/CD ou d' accompagnement DevOps ?
+        Écrivez-moi, je suis disponible pour échanger.`}
       </p>
 
       <form

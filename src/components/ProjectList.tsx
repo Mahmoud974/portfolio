@@ -1,116 +1,150 @@
 "use client";
 
-import { portfolios } from "@/app/db/portfolio";
-import React, { useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Github, Globe } from "lucide-react";
 
+import { portfolios } from "@/app/db/portfolio";
+
+const ITEMS_PER_PAGE = 3;
+
 const CARD_CLASS =
-  "mx-auto w-full max-w-5xl overflow-hidden rounded-2xl bg-[#0a1714] ring-1 ring-emerald-900/30 shadow-lg hover:shadow-emerald-600/20 transition-shadow";
+  "w-full overflow-hidden rounded-2xl bg-[#0a1714] shadow-lg ring-1 ring-emerald-900/30 transition-shadow hover:shadow-emerald-600/20";
 
 const TAG_CLASS =
-  "rounded-full bg-emerald-950/70 text-[#04F7A4] px-3 py-1 text-xs md:text-sm";
+  "rounded-full bg-emerald-950/70 px-3 py-1 text-xs text-[#04F7A4] md:text-sm";
 
 const BTN_CLASS =
-  "inline-flex items-center justify-center gap-2 rounded-xl bg-[#04F7A4] px-4 py-2 text-sm font-semibold text-emerald-950 hover:brightness-95 active:translate-y-px transition";
+  "inline-flex items-center justify-center rounded-xl bg-[#04F7A4] px-4 py-2 text-sm font-semibold text-emerald-950 transition hover:brightness-95 active:translate-y-px";
 
 const SCROLL_CLASS =
-  "max-h-36 md:max-h-40 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-emerald-700 scrollbar-track-transparent hover:scrollbar-thumb-emerald-500 transition-all rounded-lg";
+  "max-h-36 overflow-y-auto rounded-lg pr-2 transition-all scrollbar-thin scrollbar-track-transparent scrollbar-thumb-emerald-700 hover:scrollbar-thumb-emerald-500 md:max-h-40";
 
 export default function ProjectList() {
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 3;
-  const totalPages = Math.ceil(portfolios.length / itemsPerPage);
-  const currentItems = portfolios.slice(
-    currentPage * itemsPerPage,
-    currentPage * itemsPerPage + itemsPerPage
-  );
+
+  const totalPages = Math.ceil(portfolios.length / ITEMS_PER_PAGE);
+
+  const startIndex = currentPage * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+
+  const currentItems = portfolios.slice(startIndex, endIndex);
 
   return (
-    <>
-      <ul className="space-y-6 sm:space-y-8">
+    <div className="mx-auto w-full max-w-5xl">
+    
+      {/* Liste des projets */}
+      <ul className="space-y-6 sm:space-y-8 mt-9">
         {currentItems.map((item) => (
           <li key={item.id} className={CARD_CLASS}>
-            <div className="flex flex-col md:flex-row">
+            <article className="flex flex-col md:flex-row">
+              {/* Aperçu */}
               <Link
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block md:w-2/5 shrink-0"
+                className="block shrink-0 overflow-hidden md:w-2/5"
+                aria-label={`Voir le projet ${item.title}`}
               >
                 <Image
                   src={item.image}
                   alt={`Aperçu du projet ${item.title}`}
                   width={1200}
                   height={800}
-                  className="h-48 sm:h-56 w-full object-cover md:min-h-full md:h-full"
+                  className="h-48 w-full object-cover transition-transform duration-300 hover:scale-[1.02] sm:h-56 md:h-full md:min-h-full"
                 />
               </Link>
 
-              <div className="md:w-3/5 p-4 sm:p-5 md:p-6 flex flex-col gap-3 sm:gap-4 min-w-0">
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold">{item.title}</h3>
+              {/* Contenu */}
+              <div className="flex min-w-0 flex-col gap-3 p-4 sm:gap-4 sm:p-5 md:w-3/5 md:p-6">
+                <h3 className="text-lg font-bold leading-tight text-white sm:text-xl md:text-2xl">
+                  {item.title}
+                </h3>
 
-                <ul className="flex flex-wrap gap-1.5">
-                  {item.tags.map((tag, i) => (
-                    <li key={i} className={TAG_CLASS}>
+                {/* Tags */}
+                <ul
+                  className="flex flex-wrap gap-1.5"
+                  aria-label={`Technologies utilisées pour ${item.title}`}
+                >
+                  {item.tags.map((tag) => (
+                    <li key={`${item.id}-${tag}`} className={TAG_CLASS}>
                       {tag}
                     </li>
                   ))}
                 </ul>
 
+                {/* Description */}
                 <div className={SCROLL_CLASS}>
-                  <ul className="list-disc pl-5 text-sm md:text-base leading-relaxed text-neutral-200 space-y-1">
-                    {item.description.map((line, i) => (
-                      <li key={i}>{line}</li>
+                  <ul className="list-disc space-y-1 pl-5 text-sm leading-relaxed text-neutral-300 md:text-base">
+                    {item.description.map((line, index) => (
+                      <li key={`${item.id}-description-${index}`}>{line}</li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="flex flex-wrap gap-2 pt-1">
-                  <Link
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={BTN_CLASS}
-                    aria-label={`Voir le projet ${item.title}`}
-                  >
-                    <Globe className="w-4 h-4" />
-                  </Link>
-                  <Link
-                    href={item.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={BTN_CLASS}
-                    aria-label={`Code source de ${item.title}`}
-                  >
-                    <Github className="w-4 h-4" />
-                  </Link>
+                {/* Actions */}
+                <div className="mt-auto flex flex-wrap gap-2 pt-1">
+                  {item.link && (
+                    <Link
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={BTN_CLASS}
+                      aria-label={`Voir le projet ${item.title}`}
+                      title="Voir le projet"
+                    >
+                      <Globe className="h-4 w-4" aria-hidden="true" />
+                    </Link>
+                  )}
+
+                  {item.github && (
+                    <Link
+                      href={item.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={BTN_CLASS}
+                      aria-label={`Voir le code source de ${item.title}`}
+                      title="Voir le code source"
+                    >
+                      <Github className="h-4 w-4" aria-hidden="true" />
+                    </Link>
+                  )}
                 </div>
               </div>
-            </div>
+            </article>
           </li>
         ))}
       </ul>
 
-      <nav className="flex flex-wrap justify-center gap-2 mt-8 sm:mt-10 mb-4 sm:mb-8" aria-label="Pagination des projets">
-        {Array.from({ length: totalPages }, (_, i) => (
-          <button
-            key={i}
-            type="button"
-            onClick={() => setCurrentPage(i)}
-            className={`h-9 min-w-9 px-3 rounded-full text-sm font-medium transition cursor-pointer ${
-              i === currentPage
-                ? "bg-emerald-950 text-[#04F7A4] ring-1 ring-emerald-700"
-                : "bg-[#153c31] text-emerald-100 hover:bg-[#1a4a3c]"
-            }`}
-            aria-current={i === currentPage ? "page" : undefined}
-            aria-label={`Page ${i + 1}`}
-          >
-            {i + 1}
-          </button>
-        ))}
-      </nav>
-    </>
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <nav
+          className="mb-4 mt-8 flex flex-wrap justify-center gap-2 sm:mb-8 sm:mt-10"
+          aria-label="Pagination des projets"
+        >
+          {Array.from({ length: totalPages }, (_, index) => {
+            const isActive = index === currentPage;
+
+            return (
+              <button
+                key={index}
+                type="button"
+                onClick={() => setCurrentPage(index)}
+                className={`h-9 min-w-9 cursor-pointer rounded-full px-3 text-sm font-medium transition ${
+                  isActive
+                    ? "bg-emerald-950 text-[#04F7A4] ring-1 ring-emerald-700"
+                    : "bg-[#153c31] text-emerald-100 hover:bg-[#1a4a3c]"
+                }`}
+                aria-current={isActive ? "page" : undefined}
+                aria-label={`Afficher la page ${index + 1}`}
+              >
+                {index + 1}
+              </button>
+            );
+          })}
+        </nav>
+      )}
+    </div>
   );
 }

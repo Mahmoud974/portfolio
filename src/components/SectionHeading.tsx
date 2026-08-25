@@ -11,7 +11,7 @@ export default function SectionHeading({
     <header className="w-full">
       <div className="flex items-center gap-4">
         <p className="shrink-0 font-mono text-xs uppercase tracking-[0.16em] text-[#04F7A4] sm:text-base md:text-lg">
-          {`// section: ${label}`}
+          {`// ${label}`}
         </p>
 
         <div

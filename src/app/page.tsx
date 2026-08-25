@@ -6,13 +6,13 @@ import About from "@/components/About";
 import MyBackground from "@/components/MyBackground";
 import Contact from "@/components/Contact";
 import Projets from "@/components/Projets";
-import Technos from "@/components/MySkills";
+ 
 import Menu from "@/components/Menu";
 
 const SECTIONS = [
   { id: "about", content: <About /> },
   { id: "projects", content: <Projets /> },
-  { id: "skills", content: <Technos /> },
+ 
   { id: "background", content: <MyBackground /> },
   { id: "contact", content: <Contact /> },
 ] as const;
@@ -26,7 +26,7 @@ export default function Home() {
           <Profile />
         </aside>
 
-        <div className="w-full min-w-0 flex-1 max-w-4xl mx-auto xl:mx-0 flex flex-col gap-16 sm:gap-20 md:gap-24">
+        <div className="w-full min-w-0 flex-1 max-w-4xl mx-auto xl:mx-0 flex flex-col  ">
           {SECTIONS.map(({ id, content }) => (
             <section key={id} id={id} className="scroll-mt-24 sm:scroll-mt-28">
               {content}
