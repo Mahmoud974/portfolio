@@ -64,7 +64,7 @@ export default function Contact() {
 
   return (
     <div className="pb-8 mt-12 sm:mt-16 sm:pb-12">
-      <SectionHeading number="05" label="Contact" title="contactez-moi" />
+      <SectionHeading number="04" label="Contact" title="contactez-moi" />
 
       <p className="mt-4 text-base sm:text-lg md:text-2xl lg:text-1xl text-center md:text-left text-white leading-relaxed">
       {`  Un besoin d' infra cloud, de CI/CD ou d' accompagnement DevOps ?

@@ -12,7 +12,6 @@ import Menu from "@/components/Menu";
 const SECTIONS = [
   { id: "about", content: <About /> },
   { id: "projects", content: <Projets /> },
- 
   { id: "background", content: <MyBackground /> },
   { id: "contact", content: <Contact /> },
 ] as const;
