@@ -9,7 +9,7 @@ type SectionHeadingProps = {
 export default function SectionHeading({
   number,
   label,
-  title,
+ 
 }: SectionHeadingProps) {
   return (
     <header className="w-full">
@@ -23,10 +23,7 @@ export default function SectionHeading({
           aria-hidden="true"
         />
       </div>
-
-      <h2 className="mt-3 text-2xl font-bold text-white sm:text-3xl">
-        {title}
-      </h2>
+ 
     </header>
   );
 }

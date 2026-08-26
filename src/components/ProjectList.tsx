@@ -41,10 +41,7 @@ export default function ProjectList() {
       <ul className="mt-8 space-y-6 sm:mt-10 sm:space-y-8">
         {currentItems.map((item) => (
           <li key={item.id} className={CARD_CLASS}>
-            {/*
-              Vertical jusqu'à 1277px.
-              Horizontal uniquement à partir de 1278px.
-            */}
+          
             <article className="flex flex-col min-[1278px]:flex-row">
               {/* Image */}
               <Link
@@ -99,9 +96,22 @@ export default function ProjectList() {
                 "
               >
                 {/* Titre */}
-                <h3 className="text-xl font-bold leading-tight tracking-tight text-white sm:text-2xl lg:text-[1.7rem]">
-                  {item.title}
-                </h3>
+                <h3
+  className="
+    text-[1.05rem]
+    font-bold
+    leading-[1.35]
+    tracking-tight
+    text-white
+
+    min-[375px]:text-lg
+    min-[425px]:text-xl
+    sm:text-2xl
+    lg:text-[1.7rem]
+  "
+>
+  {item.title}
+</h3>
 
                 {/* Tags */}
                 <ul

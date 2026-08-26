@@ -37,7 +37,7 @@ export default function About() {
       <div className="mx-auto w-full max-w-6xl">
         <SectionHeading number="01" label="à propos" title="À propos" />
 
-        <div className="mt-10 grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
+        <div className="  grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
           {/* Présentation */}
           <div>
             <p
