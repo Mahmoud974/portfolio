@@ -34,12 +34,12 @@ export default function About() {
       aria-labelledby="about-title"
       className="w-full   "
     >
-      <div className="mx-auto w-full max-w-6xl">
-        <SectionHeading number="01" label="à propos" title="À propos" /> 
+      <div className="mx-auto w-full max-w-6xl  ">
+        <SectionHeading number="01" label="à propos" title="À propos"  /> 
 
         <div className="  grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
           {/* Présentation */}
-          <div>
+          <div className="mt-5 sm:mt-8">
             <p
               id="about-title"
               className="max-w-3xl text-lg leading-relaxed text-white/80 sm:text-xl md:text-2xl"
@@ -61,11 +61,11 @@ export default function About() {
               fiabilité des applications.
             </p>
 
-            <div className="mt-8">
+            <div className="mt-8 ">
               <Button
                 asChild
                 className="
-                  rounded-none
+                   
                   bg-[#04F7A4]
                   px-7
                   py-6
@@ -75,6 +75,7 @@ export default function About() {
                   transition-colors
                   hover:bg-[#03d98f]
                   sm:px-9
+                  rounded-xl
                 "
               >
                 <a href="/CV_Mahmoud.pdf" download>

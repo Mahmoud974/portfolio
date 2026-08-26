@@ -73,81 +73,81 @@ export const portfolios: Portfolio[] = [
   }
   ,
   
-  {
-    id: 5,
-    title: "Sofachic – Application e-commerce Next.js fullstack avec Supabase",
-    description: [
-      "Conception du design sur Figma.",
-      "Développement d’une application e-commerce complète avec filtres avancés, gestion du panier et profils utilisateurs personnalisés.",
-      "Architecture fullstack réalisée avec Next.js (front-end et API routes) et base de données PostgreSQL hébergée sur Supabase.",
-      "Intégration de Zustand pour la gestion globale des états et des sessions utilisateurs.",
-      "Interface moderne et accessible réalisée avec Shadcn/UI et TailwindCSS.",
-      "Implémentation d’une page dynamique pour chaque produit via une route paramétrée.",
-      "Déploiement et hébergement continus sur Vercel, avec configuration optimisée des performances.",
-    ],
-    image: "/images/portfolios/sofachic.webp",
-    tags: [
-      "Next.js (Fullstack)",
-      "TypeScript",
-      "Supabase",
-      "PostgreSQL",
-      "Zustand",
-      "TailwindCSS",
-      "Shadcn/UI",
-      "NexAuth",
-      "nuqs",
-      "Figma",
-      "Vercel",
-    ],
-    link: "https://sofachic-app.vercel.app/",
-    github: "https://github.com/Mahmoud974/e-commerce-project"
-  },
-  {
-    id: 2,
-    title: "Product List – Composant React déployé sur AWS",
-    description: [
-      "Création d’un composant React interactif affichant une liste de produits avec gestion du panier.",
-      "Interface moderne et responsive développée avec React et TailwindCSS.",
-      "Infrastructure déployée via Terraform (S3, CloudFront) pour les images.",
-      "Surveillance et logs configurés avec AWS CloudWatch.",
-    ],
-    image: "/images/portfolios/dessert.webp",
-    tags: [
-      "React",
-      "TailwindCSS",
-      "Terraform",
-      "Vercel",
-      "S3",
-      "CloudFront",
-      "CloudWatch",
-    ],
-    link: "https://product-cart-plum.vercel.app/",
-    github: "https://github.com/Mahmoud974/Product_cart"
-  },
+  // {
+  //   id: 5,
+  //   title: "Sofachic – Application e-commerce Next.js fullstack avec Supabase",
+  //   description: [
+  //     "Conception du design sur Figma.",
+  //     "Développement d’une application e-commerce complète avec filtres avancés, gestion du panier et profils utilisateurs personnalisés.",
+  //     "Architecture fullstack réalisée avec Next.js (front-end et API routes) et base de données PostgreSQL hébergée sur Supabase.",
+  //     "Intégration de Zustand pour la gestion globale des états et des sessions utilisateurs.",
+  //     "Interface moderne et accessible réalisée avec Shadcn/UI et TailwindCSS.",
+  //     "Implémentation d’une page dynamique pour chaque produit via une route paramétrée.",
+  //     "Déploiement et hébergement continus sur Vercel, avec configuration optimisée des performances.",
+  //   ],
+  //   image: "/images/portfolios/sofachic.webp",
+  //   tags: [
+  //     "Next.js (Fullstack)",
+  //     "TypeScript",
+  //     "Supabase",
+  //     "PostgreSQL",
+  //     "Zustand",
+  //     "TailwindCSS",
+  //     "Shadcn/UI",
+  //     "NexAuth",
+  //     "nuqs",
+  //     "Figma",
+  //     "Vercel",
+  //   ],
+  //   link: "https://sofachic-app.vercel.app/",
+  //   github: "https://github.com/Mahmoud974/e-commerce-project"
+  // },
+  // {
+  //   id: 2,
+  //   title: "Product List – Composant React déployé sur AWS",
+  //   description: [
+  //     "Création d’un composant React interactif affichant une liste de produits avec gestion du panier.",
+  //     "Interface moderne et responsive développée avec React et TailwindCSS.",
+  //     "Infrastructure déployée via Terraform (S3, CloudFront) pour les images.",
+  //     "Surveillance et logs configurés avec AWS CloudWatch.",
+  //   ],
+  //   image: "/images/portfolios/dessert.webp",
+  //   tags: [
+  //     "React",
+  //     "TailwindCSS",
+  //     "Terraform",
+  //     "Vercel",
+  //     "S3",
+  //     "CloudFront",
+  //     "CloudWatch",
+  //   ],
+  //   link: "https://product-cart-plum.vercel.app/",
+  //   github: "https://github.com/Mahmoud974/Product_cart"
+  // },
    
  
-  {
-    id: 8,
-    title: "Les Petits Plats – Application de recherche de recettes",
-    description: [
-     "Mise en place d'un pipeline GitLab CI/CD complet pour automatiser le build et le déploiement.",
-"Hébergement et distribution des assets statiques via AWS S3 et CloudFront (CDN global).",
-"Configuration des règles de cache CloudFront pour optimiser les temps de chargement.",
-"Déploiement automatisé à chaque push sur la branche main — zéro intervention manuelle.",
-    ],
-    image: "/images/portfolios/meals.webp",
-    tags: [
-      "GitLab CI/CD",
-      "TailwindCSS",
-      "Responsive Design",
-      "GitLab CI/CD",
-      "AWS S3",
-      "CloudFront",
+//   {
+//     id: 8,
+//     title: "Les Petits Plats – Application de recherche de recettes",
+//     description: [
+//      "Mise en place d'un pipeline GitLab CI/CD complet pour automatiser le build et le déploiement.",
+// "Hébergement et distribution des assets statiques via AWS S3 et CloudFront (CDN global).",
+// "Configuration des règles de cache CloudFront pour optimiser les temps de chargement.",
+// "Déploiement automatisé à chaque push sur la branche main — zéro intervention manuelle.",
+//     ],
+//     image: "/images/portfolios/meals.webp",
+//     tags: [
+//       "GitLab CI/CD",
+//       "TailwindCSS",
+//       "Responsive Design",
+//       "GitLab CI/CD",
+//       "AWS S3",
+//       "CloudFront",
      
-    ],
-    link: "https://d3udmvfw6yelnx.cloudfront.net/Les_petits_plats_project-master/index.html",
-    github: "https://github.com/Mahmoud974/Les_petits_plats_project"
-  },
+//     ],
+//     link: "https://d3udmvfw6yelnx.cloudfront.net/Les_petits_plats_project-master/index.html",
+//     github: "https://github.com/Mahmoud974/Les_petits_plats_project"
+//   },
   
  
   

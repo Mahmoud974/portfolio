@@ -192,7 +192,7 @@ export default function MyBackground() {
 
   return (
     <div
-      className="flex w-full flex-col"
+      className="flex w-full flex-col mt-8"
       aria-labelledby="background-heading"
     >
       <SectionHeading
@@ -228,7 +228,7 @@ export default function MyBackground() {
 
       {/* Formations */}
       {showEducation && (
-        <div className="mt-6 space-y-10 sm:mt-8 sm:space-y-12">
+        <div className="space-y-5  sm:space-y-12">
           <EducationBlock filterOrg="K8S" />
 
           <EducationBlock
