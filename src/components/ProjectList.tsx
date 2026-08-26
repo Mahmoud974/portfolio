@@ -3,23 +3,27 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Github, Globe } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 
 import { portfolios } from "@/app/db/portfolio";
 
 const ITEMS_PER_PAGE = 3;
 
 const CARD_CLASS =
-  "w-full overflow-hidden rounded-2xl bg-[#0a1714] shadow-lg ring-1 ring-emerald-900/30 transition-shadow hover:shadow-emerald-600/20";
+  "w-full overflow-hidden rounded-[1.75rem] border border-emerald-900/30 bg-[#071713] shadow-lg transition-all duration-300 hover:border-emerald-700/40 hover:shadow-emerald-950/30";
 
 const TAG_CLASS =
-  "rounded-full bg-emerald-950/70 px-3 py-1 text-xs text-[#04F7A4] md:text-sm";
+  "inline-flex items-center rounded-full border border-emerald-800/20 bg-emerald-950/70 px-3 py-1.5 text-xs font-medium text-[#04F7A4] sm:text-sm";
 
 const BTN_CLASS =
-  "inline-flex items-center justify-center rounded-xl bg-[#04F7A4] px-4 py-2 text-sm font-semibold text-emerald-950 transition hover:brightness-95 active:translate-y-px";
+  "group inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-[#04F7A4]/20 bg-[#04F7A4] px-4 py-2.5 text-sm font-semibold text-[#05251c] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#16f5ae] hover:shadow-[0_8px_30px_rgba(4,247,164,0.15)] active:translate-y-0";
 
+/*
+ * On garde volontairement le scroll.
+ * Hauteur plus confortable selon la largeur d'écran.
+ */
 const SCROLL_CLASS =
-  "max-h-36 overflow-y-auto rounded-lg pr-2 transition-all scrollbar-thin scrollbar-track-transparent scrollbar-thumb-emerald-700 hover:scrollbar-thumb-emerald-500 md:max-h-40";
+  "max-h-36 overflow-y-auto pr-2 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-emerald-800 hover:scrollbar-thumb-emerald-600 sm:max-h-40 lg:max-h-44 min-[1278px]:max-h-48";
 
 export default function ProjectList() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -32,19 +36,31 @@ export default function ProjectList() {
   const currentItems = portfolios.slice(startIndex, endIndex);
 
   return (
-    <div className="mx-auto w-full max-w-5xl">
-    
-      {/* Liste des projets */}
-      <ul className="space-y-6 sm:space-y-8 mt-9">
+    <div className="mx-auto w-full max-w-6xl">
+      {/* Projets */}
+      <ul className="mt-8 space-y-6 sm:mt-10 sm:space-y-8">
         {currentItems.map((item) => (
           <li key={item.id} className={CARD_CLASS}>
-            <article className="flex flex-col md:flex-row">
-              {/* Aperçu */}
+            {/*
+              Vertical jusqu'à 1277px.
+              Horizontal uniquement à partir de 1278px.
+            */}
+            <article className="flex flex-col min-[1278px]:flex-row">
+              {/* Image */}
               <Link
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block shrink-0 overflow-hidden md:w-2/5"
+                className="
+                  group
+                  relative
+                  block
+                  w-full
+                  shrink-0
+                  overflow-hidden
+
+                  min-[1278px]:w-[43%]
+                "
                 aria-label={`Voir le projet ${item.title}`}
               >
                 <Image
@@ -52,19 +68,44 @@ export default function ProjectList() {
                   alt={`Aperçu du projet ${item.title}`}
                   width={1200}
                   height={800}
-                  className="h-48 w-full object-cover transition-transform duration-300 hover:scale-[1.02] sm:h-56 md:h-full md:min-h-full"
+                  className="
+                    aspect-[16/9]
+                    w-full
+                    object-cover
+                    transition-transform
+                    duration-500
+                    group-hover:scale-[1.025]
+
+                    sm:aspect-[16/8]
+                    min-[1278px]:h-full
+                    min-[1278px]:min-h-[430px]
+                    min-[1278px]:aspect-auto
+                  "
                 />
               </Link>
 
               {/* Contenu */}
-              <div className="flex min-w-0 flex-col gap-3 p-4 sm:gap-4 sm:p-5 md:w-3/5 md:p-6">
-                <h3 className="text-lg font-bold leading-tight text-white sm:text-xl md:text-2xl">
+              <div
+                className="
+                  flex
+                  min-w-0
+                  flex-1
+                  flex-col
+                  p-5
+
+                  sm:p-6
+                  lg:p-7
+                  min-[1278px]:p-8
+                "
+              >
+                {/* Titre */}
+                <h3 className="text-xl font-bold leading-tight tracking-tight text-white sm:text-2xl lg:text-[1.7rem]">
                   {item.title}
                 </h3>
 
                 {/* Tags */}
                 <ul
-                  className="flex flex-wrap gap-1.5"
+                  className="mt-4 flex flex-wrap gap-2"
                   aria-label={`Technologies utilisées pour ${item.title}`}
                 >
                   {item.tags.map((tag) => (
@@ -74,27 +115,45 @@ export default function ProjectList() {
                   ))}
                 </ul>
 
-                {/* Description */}
-                <div className={SCROLL_CLASS}>
-                  <ul className="list-disc space-y-1 pl-5 text-sm leading-relaxed text-neutral-300 md:text-base">
+                {/* Description scrollable */}
+                <div className={`mt-5 ${SCROLL_CLASS}`}>
+                  <ul className="list-disc space-y-2 pl-5 text-sm leading-7 text-neutral-300 sm:text-[15px] lg:text-base">
                     {item.description.map((line, index) => (
-                      <li key={`${item.id}-description-${index}`}>{line}</li>
+                      <li
+                        key={`${item.id}-description-${index}`}
+                        className="pl-1 marker:text-[#04F7A4]"
+                      >
+                        {line}
+                      </li>
                     ))}
                   </ul>
                 </div>
 
                 {/* Actions */}
-                <div className="mt-auto flex flex-wrap gap-2 pt-1">
+                <div
+                  className="
+                    mt-5
+                    flex
+                    flex-wrap
+                    gap-3
+
+                    min-[1278px]:mt-6
+                  "
+                >
                   {item.link && (
                     <Link
                       href={item.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={BTN_CLASS}
+                      className={`${BTN_CLASS} flex-1 sm:flex-none`}
                       aria-label={`Voir le projet ${item.title}`}
-                      title="Voir le projet"
                     >
-                      <Globe className="h-4 w-4" aria-hidden="true" />
+                      <ExternalLink
+                        className="h-[18px] w-[18px] transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                        aria-hidden="true"
+                      />
+
+                      <span>Voir le projet</span>
                     </Link>
                   )}
 
@@ -103,11 +162,42 @@ export default function ProjectList() {
                       href={item.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={BTN_CLASS}
+                      className="
+                        group
+                        inline-flex
+                        min-h-11
+                        flex-1
+                        items-center
+                        justify-center
+                        gap-2
+                        rounded-xl
+                        border
+                        border-white/10
+                        bg-white/[0.04]
+                        px-4
+                        py-2.5
+                        text-sm
+                        font-semibold
+                        text-white
+                        transition-all
+                        duration-200
+
+                        hover:-translate-y-0.5
+                        hover:border-[#04F7A4]/40
+                        hover:bg-[#04F7A4]/10
+                        hover:text-[#04F7A4]
+
+                        active:translate-y-0
+                        sm:flex-none
+                      "
                       aria-label={`Voir le code source de ${item.title}`}
-                      title="Voir le code source"
                     >
-                      <Github className="h-4 w-4" aria-hidden="true" />
+                      <Github
+                        className="h-[18px] w-[18px] transition-transform duration-200 group-hover:scale-105"
+                        aria-hidden="true"
+                      />
+
+                      <span>Code source</span>
                     </Link>
                   )}
                 </div>
@@ -120,7 +210,7 @@ export default function ProjectList() {
       {/* Pagination */}
       {totalPages > 1 && (
         <nav
-          className="mb-4 mt-8 flex flex-wrap justify-center gap-2 sm:mb-8 sm:mt-10"
+          className="mb-6 mt-8 flex flex-wrap items-center justify-center gap-2 sm:mb-10 sm:mt-10"
           aria-label="Pagination des projets"
         >
           {Array.from({ length: totalPages }, (_, index) => {
@@ -131,11 +221,27 @@ export default function ProjectList() {
                 key={index}
                 type="button"
                 onClick={() => setCurrentPage(index)}
-                className={`h-9 min-w-9 cursor-pointer rounded-full px-3 text-sm font-medium transition ${
-                  isActive
-                    ? "bg-emerald-950 text-[#04F7A4] ring-1 ring-emerald-700"
-                    : "bg-[#153c31] text-emerald-100 hover:bg-[#1a4a3c]"
-                }`}
+                className={`
+                  flex
+                  h-10
+                  min-w-10
+                  cursor-pointer
+                  items-center
+                  justify-center
+                  rounded-xl
+                  border
+                  px-3
+                  text-sm
+                  font-semibold
+                  transition-all
+                  duration-200
+
+                  ${
+                    isActive
+                      ? "border-[#04F7A4]/40 bg-[#04F7A4] text-[#05251c] shadow-[0_5px_20px_rgba(4,247,164,0.12)]"
+                      : "border-white/10 bg-white/[0.04] text-neutral-300 hover:border-[#04F7A4]/30 hover:bg-[#04F7A4]/10 hover:text-[#04F7A4]"
+                  }
+                `}
                 aria-current={isActive ? "page" : undefined}
                 aria-label={`Afficher la page ${index + 1}`}
               >

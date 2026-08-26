@@ -87,7 +87,7 @@ const linkBtnClass =
 export default function Profile() {
   return (
     <div className="w-full max-w-[420px] sm:max-w-[450px] lg:max-w-[340px] xl:max-w-[310px] mx-auto">
-      <section className="relative w-full px-4 sm:px-6 pt-14 pb-6 rounded-2xl backdrop-blur-md bg-black/60 border border-white/10 shadow-2xl">
+      <section className="relative w-full mt-7 px-4 sm:px-6 pt-14 pb-6 rounded-2xl backdrop-blur-md bg-black/60 border border-white/10 shadow-2xl">
         <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-16 h-16 sm:w-20 sm:h-20 rounded-full ring-2 ring-[#04F7A4] z-10 bg-black overflow-hidden">
           <Image
             className="object-cover w-full h-full"
