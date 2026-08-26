@@ -120,7 +120,7 @@ function EducationBlock({
               </div>
 
               {/* Description */}
-              {item.description?.length > 0 && (
+              {item.description && item.description.length > 0 && (
                 <ul
                   className="
                     mt-4
