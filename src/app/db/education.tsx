@@ -8,6 +8,19 @@ export type Education = {
 };
 
 export const education: Education[] = [
+
+{
+  id: 7,
+  title: "Certified Kubernetes Administrator - CKA (En cours)",
+  organization: "CKA",
+  description: [
+    "- Administrer et configurer des clusters Kubernetes",
+    "- Gérer les déploiements, services, réseaux et volumes persistants",
+    "- Assurer le monitoring, le dépannage et la maintenance des clusters Kubernetes",
+  ],
+  logo: "/images/kubernetes-logo.webp",
+},
+
    
   {
     id: 6,
@@ -37,7 +50,7 @@ export const education: Education[] = [
 
   {
     id: 1,
-    title: "Développeur concepteur logiciel, RNCP niveau VI (bac +3/4)",
+    title: "Développeur concepteur logiciel, RNCP niveau VI (bac +3)",
     organization: "OpenClassrooms",
     description: [
       "- Concevoir et développer des interfaces utilisateurs avec React",
@@ -48,17 +61,17 @@ export const education: Education[] = [
     ],
     logo: "/images/ocs.webp",
   },
-  {
-    id: 2,
-    title: "Développeur informatique, RNCP niveau III (bac +2)",
-    organization: "OpenClassrooms",
-    description: [
-      "- Contribuer à un site web responsive et dynamique graduellement tout au long du projet, de l’intégration des éléments des maquettes graphiques (développement front-end avec HTML, CSS, JavaScript et React)",
-      "- Créer des API et des bases de données pour développer des fonctionnalités complexes et évoluer en back-end (Node.js, Express et MongoDB)",
-      "- Optimiser les performances et l’accessibilité de sites web existants pour permettre leur fonctionnement optimal et une bonne visibilité sur les moteurs de recherche (SEO)",
-      "- Gérer un projet web de A à Z : de la planification du projet à la présentation de la solution au client, en passant par la rédaction des spécifications techniques",
-    ],
-    logo: "/images/ocs.webp",
-  },
+  // {
+  //   id: 2,
+  //   title: "Développeur informatique, RNCP niveau III (bac +2)",
+  //   organization: "OpenClassrooms",
+  //   description: [
+  //     "- Contribuer à un site web responsive et dynamique graduellement tout au long du projet, de l’intégration des éléments des maquettes graphiques (développement front-end avec HTML, CSS, JavaScript et React)",
+  //     "- Créer des API et des bases de données pour développer des fonctionnalités complexes et évoluer en back-end (Node.js, Express et MongoDB)",
+  //     "- Optimiser les performances et l’accessibilité de sites web existants pour permettre leur fonctionnement optimal et une bonne visibilité sur les moteurs de recherche (SEO)",
+  //     "- Gérer un projet web de A à Z : de la planification du projet à la présentation de la solution au client, en passant par la rédaction des spécifications techniques",
+  //   ],
+  //   logo: "/images/ocs.webp",
+  // },
  
 ];

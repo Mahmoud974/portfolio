@@ -40,26 +40,30 @@ export default function About() {
         <div className="  grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
           {/* Présentation */}
           <div className="mt-5 sm:mt-8">
-            <p
-              id="about-title"
-              className="max-w-3xl text-lg leading-relaxed text-white/80 sm:text-xl md:text-2xl"
-            >
-              Ingénieur <strong className="text-white">DevOps</strong>, je
-              conçois, automatise et maintiens des infrastructures cloud
-              fiables, scalables et sécurisées.
-            </p>
+            
+<p
+  id="about-title"
+  className="max-w-3xl text-lg leading-relaxed text-white/80 sm:text-xl md:text-2xl"
+>
+  Ingénieur <strong className="text-white">DevOps & Cloud</strong>,
+  je conçois et automatise des infrastructures cloud fiables,
+  sécurisées et évolutives.
+</p>
 
-            <p className="mt-5 max-w-3xl text-base leading-relaxed text-white/60 sm:text-lg">
-              Certifié AWS Cloud Practitioner, je travaille avec{" "}
-              <strong className="font-semibold text-white">AWS</strong>,{" "}
-              <strong className="font-semibold text-white">Terraform</strong>,{" "}
-              <strong className="font-semibold text-white">Docker</strong>,{" "}
-              <strong className="font-semibold text-white">Kubernetes</strong>{" "}
-              et des pipelines{" "}
-              <strong className="font-semibold text-white">CI/CD</strong> afin
-              d&apos;automatiser les déploiements et d&apos;améliorer la
-              fiabilité des applications.
-            </p>
+<p className="mt-5 max-w-3xl text-base leading-relaxed text-white/60 sm:text-lg">
+  J{`'`}évolue dans un environnement{" "}
+  <strong className="font-semibold text-white">
+    AWS, Terraform, Docker et Kubernetes
+  </strong>, avec une approche orientée{" "}
+  <strong className="font-semibold text-white">CI/CD</strong>.
+  Je prépare actuellement les certifications{" "}
+  <strong className="font-semibold text-white">
+    AWS Solutions Architect – Associate
+  </strong>{" "}
+  et{" "}
+  <strong className="font-semibold text-white">CKA</strong>.
+</p>
+
 
             <div className="mt-8 ">
               <Button
@@ -75,7 +79,7 @@ export default function About() {
                   transition-colors
                   hover:bg-[#03d98f]
                   sm:px-9
-                  rounded-xl
+                  rounded
                 "
               >
                 <a href="/CV_Mahmoud.pdf" download>

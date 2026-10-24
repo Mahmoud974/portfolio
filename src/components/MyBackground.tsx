@@ -230,26 +230,46 @@ export default function MyBackground() {
       {showEducation && (
         <div className="space-y-5  sm:space-y-12">
           <EducationBlock filterOrg="K8S" />
+         
+          
+{/* Formations */}
+{showEducation && (
+  <div className="space-y-5 sm:space-y-12">
 
-          <EducationBlock
-            filterOrg="Amazon Web Services (AWS)"
-            logo={{
-              src: "/images/awslogo.webp",
-              alt: "Logo AWS",
-              className:
-                "h-auto w-24 object-contain sm:w-28 md:w-32",
-            }}
-          />
+    {/* Kubernetes CKA */}
+    <EducationBlock
+      filterOrg="CKA"
+      logo={{
+        src: "/images/k8s1.webp",
+        alt: "Logo Kubernetes",
+        className:
+          "h-auto w-24 object-contain sm:w-28 md:w-32",
+      }}
+    />
 
-          <EducationBlock
-            filterOrg="OpenClassrooms"
-            logo={{
-              src: "/images/ocs.webp",
-              alt: "Logo OpenClassrooms",
-              className:
-                "h-auto w-52 max-w-full object-contain sm:w-64 md:w-72",
-            }}
-          />
+    {/* AWS */}
+    <EducationBlock
+      filterOrg="Amazon Web Services (AWS)"
+      logo={{
+        src: "/images/awslogo.webp",
+        alt: "Logo AWS",
+        className: "h-auto w-24 object-contain sm:w-28 md:w-32",
+      }}
+    />
+
+    {/* OpenClassrooms */}
+    <EducationBlock
+      filterOrg="OpenClassrooms"
+      logo={{
+        src: "/images/ocs.webp",
+        alt: "Logo OpenClassrooms",
+        className: "h-auto w-52 max-w-full object-contain sm:w-64 md:w-72",
+      }}
+    />
+
+  </div>
+)}
+
         </div>
       )}
 

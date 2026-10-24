@@ -16,24 +16,35 @@ export const portfolios: Portfolio[] = [
   
   {
     id: 3,
-    title: "Static job – Déploiement React sur AWS",
-    description: [
-      "Développement d’une application front-end moderne avec React.js et TailwindCSS.",
-      "Déploiement et hébergement de l’application via AWS Amplify avec intégration directe à GitHub.",
-      "Mise en place d’une intégration et livraison continues (CI/CD) automatisées grâce à AWS Amplify.",
-      "Surveillance des performances et des logs de l’application via AWS CloudWatch.",
-      "Configuration de notifications et d’alertes via AWS SNS pour le suivi des événements et erreurs.",
-      "Application optimisée pour la performance, la maintenabilité et la scalabilité."
-    ],
+    title: "Déploiement sur AWS avec Terraform – CI/CD, Docker & Monitoring",
+    description: 
     
-    image: "/images/portfolios/static-job.webp",
+[
+  "Développement d’une application web moderne avec React.js, TypeScript et TailwindCSS.",
+  "Automatisation du provisionnement de l’infrastructure AWS avec Terraform (Infrastructure as Code).",
+  "Conteneurisation des services applicatifs avec Docker et orchestration via Docker Compose.",
+  "Conception d’un pipeline CI/CD avec GitHub Actions pour automatiser la construction et la publication des images sur Amazon ECR.",
+  "Déploiement automatisé de l’application sur AWS EC2 via AWS Systems Manager (SSM).",
+  "Mise en place d’une solution de monitoring avec Prometheus et Grafana pour superviser les métriques de l’infrastructure et des services.",
+  "Configuration de Nginx pour assurer l’hébergement et l’accès à l’application web."
+]
+
+    ,
+    
+    image: "/images/portfolios/static-job-aws.png",
     tags: [
+      "Terraform",
+      "AWS EC2",
       "React.js",
       "TailwindCSS",
-      "TypeScript",
-      "AWS Amplify",
-      "Cloudwatch",
-      "AWS SNS",
+      "Amazon ECR",
+      "GitHub Actions",
+      "Docker",
+      "AWS Systems Manager",
+      "Prometheus",
+      "Grafana",
+      "Nginx",
+    
        
     ],
     link: "https://main.d12sna0yvan4qm.amplifyapp.com/",
@@ -52,7 +63,7 @@ export const portfolios: Portfolio[] = [
       "Déploiement et hébergement du site via AWS Amplify avec build automatisé depuis le dépôt GitHub.",
       "Optimisation et diffusion des images via Cloudflare pour de meilleures performances globales.",
     ],
-    image: "/images/portfolios/ticket.webp",
+    image: "/images/portfolios/schema_ticket.png",
     tags: [
       "React.js",
       "TypeScript",
