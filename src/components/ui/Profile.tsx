@@ -54,7 +54,7 @@ const categories: Category[] = [
     label: "Code",
     stacks: [
       { name: "Python", image: "/images/python.webp" },
-      { name: "Next.js", image: "/images/Next.js.webp" },
+      { name: "Next.js", image: "/images/next.js.webp" },
       { name: "TypeScript", image: "/images/typescript.webp" },
     ],
   },
