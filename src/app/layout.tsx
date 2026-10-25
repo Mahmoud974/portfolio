@@ -136,7 +136,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className="dark scroll-smooth">
+    <html lang="fr" className="dark bg-black scroll-smooth">
       <body
         className={`
           ${geistMono.className}
